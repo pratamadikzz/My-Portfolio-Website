@@ -1771,7 +1771,7 @@
                     badgeColor: "blue",
                     issuer: "Hacktiv8 Indonesia in partnership with Google AI",
                     year: "2026",
-                    image: "{{ asset('images/certificates/cert-hacktiv8-ai.jpg') }}",
+                    image: "{{ asset('images/certificates/hactiv_sertifkat.png') }}",
                     verifyUrl: "https://verify.hacktiv8.com/",
                     description: "Pelatihan intensif pemanfaatan Google AI tools, prompt engineering, generative AI workflows, dan kesiapan karir industri digital.",
                     skills: ["Google AI", "Prompt Engineering", "Generative AI", "Work Productivity", "Machine Learning"]
