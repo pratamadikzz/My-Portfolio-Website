@@ -652,8 +652,8 @@
                         <!-- Portrait Photo Container -->
                         <div class="relative z-10 p-2.5 rounded-[30px] bg-white/80 dark:bg-slate-900/70 backdrop-blur-md border border-slate-200/90 dark:border-white/15 shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:shadow-blue-500/15">
                             <div class="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 overflow-hidden rounded-[24px]">
-                                <img src="{{ asset('images/andhika-photo.jpg') }}" 
-                                     alt="Andhika Pratama — Web Developer" 
+                                <img src="{{ asset('images/Andhika-Pratama.png') }}"
+                                     alt="Andhika Pratama — Web Developer"
                                      class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
                                      loading="eager">
                                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950/30 via-transparent to-transparent opacity-60"></div>
@@ -799,7 +799,7 @@
                 <!-- 1. Universitas Gunadarma -->
                 <a href="https://www.gunadarma.ac.id/" target="_blank" rel="noopener noreferrer"
                     class="education-card group reveal stagger-1 relative flex flex-col justify-between rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-purple-500/40 hover:shadow-xl">
-                    
+
                     <div>
                         <!-- Logo with Grayscale to Color Effect -->
                         <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-purple-500/10 p-3 transition-all duration-300 filter grayscale contrast-125 opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105">
@@ -838,7 +838,7 @@
                 <!-- 2. Dicoding Indonesia -->
                 <a href="https://www.dicoding.com/" target="_blank" rel="noopener noreferrer"
                     class="education-card group reveal stagger-2 relative flex flex-col justify-between rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-cyan-500/40 hover:shadow-xl">
-                    
+
                     <div>
                         <!-- Logo -->
                         <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-cyan-500/10 p-3 transition-all duration-300 filter grayscale contrast-125 opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105">
@@ -876,7 +876,7 @@
                 <!-- 3. Hacktiv8 Indonesia -->
                 <a href="https://www.hacktiv8.com/" target="_blank" rel="noopener noreferrer"
                     class="education-card group reveal stagger-3 relative flex flex-col justify-between rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-500/40 hover:shadow-xl">
-                    
+
                     <div>
                         <!-- Logo -->
                         <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-500/10 p-3 transition-all duration-300 filter grayscale contrast-125 opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105">
@@ -914,7 +914,7 @@
                 <!-- 4. Vocational Software Engineering -->
                 <a href="https://psmk.kemdikbud.go.id/" target="_blank" rel="noopener noreferrer"
                     class="education-card group reveal stagger-1 relative flex flex-col justify-between rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-emerald-500/40 hover:shadow-xl">
-                    
+
                     <div>
                         <!-- Logo -->
                         <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-500/10 p-3 transition-all duration-300 filter grayscale contrast-125 opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105">
@@ -953,7 +953,7 @@
                 <!-- 5. Microsoft Learn -->
                 <a href="https://learn.microsoft.com/" target="_blank" rel="noopener noreferrer"
                     class="education-card group reveal stagger-2 relative flex flex-col justify-between rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-amber-500/40 hover:shadow-xl">
-                    
+
                     <div>
                         <!-- Logo -->
                         <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-amber-500/10 p-3 transition-all duration-300 filter grayscale contrast-125 opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105">
@@ -992,7 +992,7 @@
                 <!-- 6. Google for Developers -->
                 <a href="https://developers.google.com/" target="_blank" rel="noopener noreferrer"
                     class="education-card group reveal stagger-3 relative flex flex-col justify-between rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-red-500/40 hover:shadow-xl">
-                    
+
                     <div>
                         <!-- Logo -->
                         <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-red-500/10 p-3 transition-all duration-300 filter grayscale contrast-125 opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105">
@@ -1172,7 +1172,7 @@
 
                     <div class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4">
                         <span class="text-xs font-medium text-slate-500 dark:text-gray-400">Hacktiv8 • Google AI</span>
-                        <button type="button" 
+                        <button type="button"
                                 class="open-cert-modal inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition"
                                 data-cert-index="0">
                             <span>View Certificate</span>
@@ -1211,7 +1211,7 @@
 
                     <div class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4">
                         <span class="text-xs font-medium text-slate-500 dark:text-gray-400">Dicoding • Microsoft</span>
-                        <button type="button" 
+                        <button type="button"
                                 class="open-cert-modal inline-flex items-center gap-1.5 text-xs font-bold text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition"
                                 data-cert-index="1">
                             <span>View Certificate</span>
@@ -1250,7 +1250,7 @@
 
                     <div class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4">
                         <span class="text-xs font-medium text-slate-500 dark:text-gray-400">Dicoding Academy</span>
-                        <button type="button" 
+                        <button type="button"
                                 class="open-cert-modal inline-flex items-center gap-1.5 text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition"
                                 data-cert-index="2">
                             <span>View Certificate</span>
@@ -1289,7 +1289,7 @@
 
                     <div class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4">
                         <span class="text-xs font-medium text-slate-500 dark:text-gray-400">Global Tech Academy</span>
-                        <button type="button" 
+                        <button type="button"
                                 class="open-cert-modal inline-flex items-center gap-1.5 text-xs font-bold text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition"
                                 data-cert-index="3">
                             <span>View Certificate</span>
@@ -1340,7 +1340,7 @@
                         <img src="{{ asset('images/projects/apar&hydrant.png') }}"
                              alt="APAR & Hydrant Management System"
                              class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
-                        
+
                         <div class="status-live project-status">
                             <span class="status-dot"></span>
                             <span>Completed</span>
@@ -1657,7 +1657,7 @@
          CERTIFICATE LIGHTBOX MODAL (Req 3)
     ========================================================= -->
     <div id="certificate-modal" class="lightbox-modal fixed inset-0 z-[100000] hidden items-center justify-center p-3 sm:p-6 md:p-8 bg-slate-950/85 backdrop-blur-2xl transition-all duration-300">
-        
+
         <div class="relative flex flex-col w-full max-w-5xl max-h-[92vh] rounded-3xl bg-slate-900/95 border border-white/15 text-white shadow-2xl overflow-hidden backdrop-blur-3xl">
 
             <!-- Top Header Bar -->
@@ -1714,11 +1714,11 @@
 
             <!-- Viewport Container with Pan & Zoom -->
             <div id="modal-viewport" class="cert-drag-surface relative flex-1 min-h-[380px] sm:min-h-[460px] md:min-h-[520px] flex items-center justify-center overflow-hidden bg-slate-950 p-4 select-none">
-                
+
                 <!-- Main Image Element -->
-                <img id="modal-cert-image" 
-                     src="{{ asset('images/certificates/cert-hacktiv8-ai.jpg') }}" 
-                     alt="Certificate Preview" 
+                <img id="modal-cert-image"
+                     src="{{ asset('images/certificates/cert-hacktiv8-ai.jpg') }}"
+                     alt="Certificate Preview"
                      class="cert-preview-img rounded-xl shadow-2xl pointer-events-none">
 
                 <!-- Navigation Previous Arrow -->
@@ -1852,7 +1852,7 @@
                     modalVerify.classList.remove('hidden');
                 }
 
-                modalSkills.innerHTML = cert.skills.map(s => 
+                modalSkills.innerHTML = cert.skills.map(s =>
                     `<span class="rounded bg-white/10 px-2 py-0.5 text-[11px] text-gray-300">${s}</span>`
                 ).join('');
 
@@ -1862,7 +1862,7 @@
             function applyTransform() {
                 modalImage.style.transform = `translate(${panX}px, ${panY}px) scale(${currentZoom})`;
                 modalZoomVal.textContent = `${Math.round(currentZoom * 100)}%`;
-                
+
                 if (currentZoom > 1) {
                     modalPanHint.style.opacity = '1';
                 } else {
