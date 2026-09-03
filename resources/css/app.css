@@ -103,6 +103,23 @@ body.light-mode footer {
     border-color: rgba(15, 23, 42, 0.08) !important;
 }
 
+/* ---------------------------------------------------------
+   MOBILE MENU PANEL STYLES
+--------------------------------------------------------- */
+.mobile-menu-panel {
+    display: none;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+}
+
+.mobile-menu-panel.open {
+    display: block !important;
+    max-height: 500px !important;
+    opacity: 1 !important;
+}
+
 body.light-mode .timeline-base-line {
     background-color: rgba(15, 23, 42, 0.1) !important;
 }

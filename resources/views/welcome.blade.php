@@ -511,9 +511,14 @@
                 </a>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 dark:border-white/10 text-slate-700 dark:text-white transition md:hidden" aria-label="Open menu">
-                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="h-5 w-5">
+                <button id="mobile-menu-button" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 dark:border-white/10 bg-white/80 dark:bg-white/5 text-slate-700 dark:text-white shadow-sm transition hover:border-slate-300 dark:hover:border-white/20 md:hidden" aria-label="Toggle menu" aria-expanded="false">
+                    <!-- Hamburger Icon -->
+                    <svg id="menu-icon-hamburger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <!-- Close (X) Icon -->
+                    <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5 hidden">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
 
@@ -522,17 +527,18 @@
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="mobile-menu-panel hidden border-t border-slate-200 dark:border-white/10 px-6 py-5 md:hidden">
-            <nav class="flex flex-col gap-4">
-                <a href="#about" class="mobile-link text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-blue-600">About</a>
-                <a href="#education" class="mobile-link text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-blue-600">Education & Bootcamp</a>
-                <a href="#skills" class="mobile-link text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-blue-600">Skills</a>
-                <a href="#certificates" class="mobile-link text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-blue-600">Certificates</a>
-                <a href="#projects" class="mobile-link text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-blue-600">Projects</a>
-                <a href="#experience" class="mobile-link text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-blue-600">Journey</a>
-                <a href="#contact" class="mobile-link text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-blue-600">Contact</a>
-                <a href="{{ asset('cv/CV ATS ANDHIKA PRATAMA.pdf') }}" target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 py-2.5 text-xs font-semibold text-white">
+        <div id="mobile-menu" class="mobile-menu-panel border-t border-slate-200 dark:border-white/10 px-6 py-5 md:hidden">
+            <nav class="flex flex-col gap-3">
+                <a href="#about" class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">About</a>
+                <a href="#education" class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Education & Bootcamp</a>
+                <a href="#skills" class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Skills</a>
+                <a href="#certificates" class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Certificates</a>
+                <a href="#projects" class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Projects</a>
+                <a href="#experience" class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Journey</a>
+                <a href="#contact" class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Contact</a>
+                <a href="{{ asset('cv/CV ATS ANDHIKA PRATAMA.pdf') }}" target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 py-2.5 text-xs font-semibold text-white shadow-md transition hover:bg-blue-700">
                     <span>Download CV</span>
+                    <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
                 </a>
             </nav>
         </div>
@@ -591,7 +597,7 @@
                     <!-- CTAs -->
                     <div class="reveal stagger-3 mt-8 flex flex-wrap items-center gap-4">
                         <a href="#projects"
-                            class="inline-flex items-center gap-2 rounded-full bg-slate-900 px-7 py-3.5 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow-xl dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100">
+                            class="inline-flex items-center gap-2 rounded-full bg-slate-500 px-7 py-3.5 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-purple-700  hover:shadow-xl dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100">
                             <span>View My Projects</span>
                             <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                         </a>
@@ -652,7 +658,7 @@
                         <!-- Portrait Photo Container -->
                         <div class="relative z-10 p-2.5 rounded-[30px] bg-white/80 dark:bg-slate-900/70 backdrop-blur-md border border-slate-200/90 dark:border-white/15 shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:shadow-blue-500/15">
                             <div class="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 overflow-hidden rounded-[24px]">
-                                <img src="{{ asset('images/Andhika-Pratama.png') }}"
+                                <img src="{{ asset('images/andhika.png') }}"
                                      alt="Andhika Pratama — Web Developer"
                                      class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
                                      loading="eager">
@@ -1233,7 +1239,7 @@
                         </div>
 
                         <p class="mt-6 text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
-                            Course
+                            Course & Certification
                         </p>
 
                         <h3 class="mt-2 text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
@@ -1259,8 +1265,47 @@
                     </div>
                 </div>
 
-                <!-- Cert 4: Software Development -->
+                <!-- Cert 4: Spec-Driven Development (SDD) -->
                 <div class="certificate-card reveal stagger-2 group relative flex flex-col justify-between rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-purple-500/40 hover:shadow-xl">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-500/10 text-2xl">
+                                🤖
+                            </span>
+                            <span class="rounded-full bg-purple-50 dark:bg-purple-500/10 px-3 py-1 text-xs font-bold text-purple-600 dark:text-purple-400">
+                                2026
+                            </span>
+                        </div>
+
+                        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400">
+                            Course & Certification
+                        </p>
+
+                        <h3 class="mt-2 text-xl font-bold text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                            Spec-Driven Development (SDD)
+                        </h3>
+                        <p class="mt-1 text-xs font-semibold text-slate-500 dark:text-gray-400">
+                            Issued by Dicoding Academy Indonesia
+                        </p>
+
+                        <p class="mt-4 text-xs leading-relaxed text-slate-600 dark:text-gray-400">
+                            Belajar arsitektur perangkat lunak modern, implementasi berbasis spesifikasi (DDD), kualitas kode, API-first design, dan metodologi development berorientasi kualitas.
+                        </p>
+                    </div>
+
+                    <div class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4">
+                        <span class="text-xs font-medium text-slate-500 dark:text-gray-400">Dicoding Academy</span>
+                        <button type="button"
+                                class="open-cert-modal inline-flex items-center gap-1.5 text-xs font-bold text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition"
+                                data-cert-index="3">
+                            <span>View Certificate</span>
+                            <span class="text-sm">🔍</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cert 5: Software Development -->
+                <!-- <div class="certificate-card reveal stagger-2 group relative flex flex-col justify-between rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-purple-500/40 hover:shadow-xl">
                     <div>
                         <div class="flex items-center justify-between">
                             <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-500/10 text-2xl">
@@ -1296,7 +1341,7 @@
                             <span class="text-sm">🔍</span>
                         </button>
                     </div>
-                </div>
+                </div> -->
 
             </div>
 
@@ -1349,13 +1394,54 @@
 
                     <div class="p-8">
                         <p class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
-                            Management System • 2026
+                            Management System • 2025
                         </p>
                         <h3 class="mt-2 text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                             APAR & Hydrant Management System
                         </h3>
                         <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-gray-400">
                             A centralized web application for digitizing fire extinguisher and hydrant inspections, QR code scanning, tracking expiration dates, and generating maintenance reports.
+                        </p>
+
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Java Script</span>
+                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">PHP</span>
+                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">MySQL</span>
+                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">CSS</span>
+                        </div>
+
+                        <div class="mt-8 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-5">
+                            <a href="{{ route('projects.show', 'apar-hydrant') }}"
+                                class="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
+                                <span>View Project Details</span>
+                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: AFinance -->
+                <div class="project-card reveal stagger-2 group relative overflow-hidden rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-500/40 hover:shadow-2xl">
+                    <div class="relative h-64 overflow-hidden bg-slate-100 dark:bg-slate-900 sm:h-72">
+                        <img src="{{ asset('images/projects/afinance.png') }}"
+                             alt="APAR & Hydrant Management System"
+                             class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+                        <div class="status-live project-status">
+                            <span class="status-dot"></span>
+                            <span>Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="p-8">
+                        <p class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+                            Management System • 2026
+                        </p>
+                        <h3 class="mt-2 text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                            Pengelola Keuangan Pribadi 
+                        </h3>
+                        <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-gray-400">
+                            A centralized web application for digitizing personal income and expense management, QR code scanning, tracking expiration dates, and generating maintenance reports.
                         </p>
 
                         <div class="mt-6 flex flex-wrap gap-2">
@@ -1375,8 +1461,174 @@
                     </div>
                 </div>
 
-                <!-- Project 2: AFinance -->
-                <div class="project-card reveal stagger-2 group relative overflow-hidden rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-violet-500/40 hover:shadow-2xl">
+                <!-- Project 3: Audit & Pengecekan Mesin -->
+                <div class="project-card reveal stagger-2 group relative overflow-hidden rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-500/40 hover:shadow-2xl">
+                    <div class="relative h-64 overflow-hidden bg-slate-100 dark:bg-slate-900 sm:h-72">
+                        <img src="{{ asset('images/projects/cek_mesin.png') }}"
+                             alt="APAR & Hydrant Management System"
+                             class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+                        <div class="status-live project-status">
+                            <span class="status-dot"></span>
+                            <span>Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="p-8">
+                        <p class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+                            Management System • 2025
+                        </p>
+                        <h3 class="mt-2 text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                            Audit & Pengecekan Mesin 
+                        </h3>
+                        <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-gray-400">
+                            A centralized web application for maintenance, audit, and inspection of machines in factories.
+                        </p>
+
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Java Script</span>
+                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">PHP</span>
+                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">MySQL</span>
+                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">CSS</span>
+                        </div>
+
+                        <div class="mt-8 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-5">
+                            <a href="{{ route('projects.show', 'apar-hydrant') }}"
+                                class="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
+                                <span>View Project Details</span>
+                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Pengelola Limbah -->
+                <div class="project-card reveal stagger-2 group relative overflow-hidden rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-500/40 hover:shadow-2xl">
+                    <div class="relative h-64 overflow-hidden bg-slate-100 dark:bg-slate-900 sm:h-72">
+                        <img src="{{ asset('images/projects/pengelola_limbah.png') }}"
+                             alt="APAR & Hydrant Management System"
+                             class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+                        <div class="status-live project-status">
+                            <span class="status-dot"></span>
+                            <span>Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="p-8">
+                        <p class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+                            Management System • 2025
+                        </p>
+                        <h3 class="mt-2 text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                            Pengelola Limbah
+                        </h3>
+                        <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-gray-400">
+                            A centralized web application for digitizing waste management.
+                        </p>
+
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Java Script</span>
+                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">PHP</span>
+                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">MySQL</span>
+                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">CSS</span>
+                        </div>
+
+                        <div class="mt-8 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-5">
+                            <a href="{{ route('projects.show', 'apar-hydrant') }}"
+                                class="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
+                                <span>View Project Details</span>
+                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Cek Dokumen Berkendara -->
+                <div class="project-card reveal stagger-2 group relative overflow-hidden rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-500/40 hover:shadow-2xl">
+                    <div class="relative h-64 overflow-hidden bg-slate-100 dark:bg-slate-900 sm:h-72">
+                        <img src="{{ asset('images/projects/cek_dokumen.png') }}"
+                             alt="APAR & Hydrant Management System"
+                             class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+                        <div class="status-live project-status">
+                            <span class="status-dot"></span>
+                            <span>Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="p-8">
+                        <p class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+                            Check Vehicle Documents
+                        </p>
+                        <h3 class="mt-2 text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                            Cek Dokumen Berkendara
+                        </h3>
+                        <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-gray-400">
+                            A centralized web application for checking vehicle documents.
+                        </p>
+
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Java Script</span>
+                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">PHP</span>
+                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">MySQL</span>
+                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">CSS</span>
+                        </div>
+
+                        <div class="mt-8 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-5">
+                            <a href="{{ route('projects.show', 'apar-hydrant') }}"
+                                class="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
+                                <span>View Project Details</span>
+                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Permintaan Pemngambilan APD -->
+                <div class="project-card reveal stagger-2 group relative overflow-hidden rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-500/40 hover:shadow-2xl">
+                    <div class="relative h-64 overflow-hidden bg-slate-100 dark:bg-slate-900 sm:h-72">
+                        <img src="{{ asset('images/projects/apd-system.png') }}"
+                             alt="APAR & Hydrant Management System"
+                             class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+                        <div class="status-live project-status">
+                            <span class="status-dot"></span>
+                            <span>Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="p-8">
+                        <p class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+                            Management System • 2025
+                        </p>
+                        <h3 class="mt-2 text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                            Permintaan Pemngambilan APD 
+                        </h3>
+                        <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-gray-400">
+                            A web-based application designed to streamline the process of requesting and collecting personal protective equipment (PPE) within an organization.
+                        </p>
+
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Java Script</span>
+                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">PHP</span>
+                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">MySQL</span>
+                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">CSS</span>
+                        </div>
+
+                        <div class="mt-8 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-5">
+                            <a href="{{ route('projects.show', 'apar-hydrant') }}"
+                                class="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
+                                <span>View Project Details</span>
+                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <!-- Project 3: Audit Mesin -->
+                <div class="project-card reveal stagger-3 group relative overflow-hidden rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-violet-500/40 hover:shadow-2xl">
                     <div class="relative flex h-64 items-center justify-center bg-gradient-to-br from-violet-600/10 via-indigo-600/10 to-purple-600/10 dark:from-violet-950/40 dark:to-slate-900 sm:h-72">
                         <div class="flex flex-col items-center gap-3">
                             <span class="flex h-20 w-20 items-center justify-center rounded-3xl bg-violet-600/20 text-3xl font-extrabold text-violet-600 dark:text-violet-400 shadow-inner">
@@ -1590,7 +1842,7 @@
                             <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
                         </button>
 
-                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
+                        <a href="https://github.com/pratamadikzz?tab=overview&from=2026-09-01&to=2026-09-02" target="_blank" rel="noopener noreferrer"
                             class="inline-flex items-center gap-2 rounded-full border border-slate-300 dark:border-white/10 bg-white dark:bg-white/5 px-5 py-2.5 text-xs font-semibold text-slate-700 dark:text-white shadow-sm transition hover:border-slate-400 hover:bg-slate-50 dark:hover:bg-white/10">
                             <span>GitHub</span>
                             <svg class="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -1717,7 +1969,7 @@
 
                 <!-- Main Image Element -->
                 <img id="modal-cert-image"
-                     src="{{ asset('images/certificates/cert-hacktiv8-ai.jpg') }}"
+                     src="{{ asset('images/certificates/hactiv_sertifkat.png') }}"
                      alt="Certificate Preview"
                      class="cert-preview-img rounded-xl shadow-2xl pointer-events-none">
 
@@ -1782,33 +2034,44 @@
                     badgeColor: "cyan",
                     issuer: "Dicoding Indonesia x Microsoft Fabric",
                     year: "2025",
-                    image: "{{ asset('images/certificates/cert-dicoding-fabric.jpg') }}",
+                    image: "{{ asset('images/certificates/fabric_dicoding.png') }}",
                     verifyUrl: "https://www.dicoding.com/certificates/98XW04G29XM3",
                     description: "Mempelajari alur end-to-end data science dengan Microsoft Fabric: eksplorasi data, pembuatan model machine learning, deployment, hingga monitoring dalam satu platform.",
                     skills: ["Microsoft Fabric", "Data Science", "Machine Learning", "Dataflows", "Power BI", "Analytics"]
                 },
                 {
                     title: "Belajar Dasar AI (Artificial Intelligence)",
-                    category: "Course",
+                    category: "Course & Certification",
                     badgeColor: "indigo",
                     issuer: "Dicoding Academy Indonesia",
                     year: "2025",
-                    image: "{{ asset('images/certificates/cert-dicoding-ai.jpg') }}",
+                    image: "{{ asset('images/certificates/dasarAI_dicoding.png') }}",
                     verifyUrl: "https://www.dicoding.com/certificates/JMZVVO41RZN9",
                     description: "Fundamental konsep Artificial Intelligence, subbidang Machine Learning & Deep Learning, evaluasi model kecerdasan buatan, dan implementasi aplikatif.",
                     skills: ["Artificial Intelligence", "Machine Learning", "Neural Networks", "Model Evaluation", "Python"]
                 },
                 {
-                    title: "Software Development & Fullstack Web Engineering",
-                    category: "Achievement",
+                    title: "Spec-Driven Development dengan Kiro",
+                    category: "Course & Certification",
                     badgeColor: "purple",
-                    issuer: "Global Tech Academy & Certification Body",
+                    issuer: "Dicoding Academy Indonesia",
                     year: "2026",
-                    image: "{{ asset('images/certificates/cert-software-dev.jpg') }}",
+                    image: "{{ asset('images/certificates/specKiro_dicoding.png') }}",
                     verifyUrl: "#",
-                    description: "Kompetensi arsitektur aplikasi perangkat lunak web mencakup frontend modern, backend Laravel, database relational modeling, RESTful API, dan system deployment.",
-                    skills: ["Laravel", "Fullstack Web", "REST API", "MySQL Database", "UI/UX Architecture", "Git"]
+                    description: "Memasuki era kecerdasan buatan, implementasi Spec-Driven Development (SDD) pada pengembangan perangkat lunak menjadi elemen krusial. SDD bukan hanya pedoman coding, tetapi juga strategi esensial untuk memastikan kolaborasi tim berjalan mulus dan hasil akhir sesuai ekspektasi klien.",
+                    skills: ["Spec-Driven Development", "Kiro", "AI", "Software Development"]
                 }
+                // {
+                //     title: "Software Development & Fullstack Web Engineering",
+                //     category: "Achievement",
+                //     badgeColor: "purple",
+                //     issuer: "Global Tech Academy & Certification Body",
+                //     year: "2026",
+                //     image: "{{ asset('images/certificates/cert-software-dev.jpg') }}",
+                //     verifyUrl: "#",
+                //     description: "Kompetensi arsitektur aplikasi perangkat lunak web mencakup frontend modern, backend Laravel, database relational modeling, RESTful API, dan system deployment.",
+                //     skills: ["Laravel", "Fullstack Web", "REST API", "MySQL Database", "UI/UX Architecture", "Git"]
+                // }
             ];
 
             let activeCertIndex = 0;
@@ -2305,18 +2568,50 @@
 
 
             /* =====================================================
-               MOBILE MENU
+               MOBILE MENU TOGGLE
             ===================================================== */
             const mobileBtn = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            if (mobileBtn && mobileMenu) {
-                mobileBtn.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
-                document.querySelectorAll('.mobile-link').forEach(l => {
-                    l.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+            const hamburgerIcon = document.getElementById('menu-icon-hamburger');
+            const closeIcon = document.getElementById('menu-icon-close');
+
+            function toggleMobileMenu(forceClose = false) {
+                if (!mobileMenu) return;
+                const isOpen = forceClose ? false : !mobileMenu.classList.contains('open');
+
+                if (isOpen) {
+                    mobileMenu.classList.add('open');
+                    if (mobileBtn) mobileBtn.setAttribute('aria-expanded', 'true');
+                    if (hamburgerIcon) hamburgerIcon.classList.add('hidden');
+                    if (closeIcon) closeIcon.classList.remove('hidden');
+                } else {
+                    mobileMenu.classList.remove('open');
+                    if (mobileBtn) mobileBtn.setAttribute('aria-expanded', 'false');
+                    if (hamburgerIcon) hamburgerIcon.classList.remove('hidden');
+                    if (closeIcon) closeIcon.classList.add('hidden');
+                }
+            }
+
+            if (mobileBtn) {
+                mobileBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    toggleMobileMenu();
                 });
             }
+
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    toggleMobileMenu(true);
+                });
+            });
+
+            // Close on click outside navbar
+            document.addEventListener('click', (e) => {
+                const navbar = document.getElementById('navbar');
+                if (navbar && !navbar.contains(e.target) && mobileMenu && mobileMenu.classList.contains('open')) {
+                    toggleMobileMenu(true);
+                }
+            });
 
         });
 

@@ -502,8 +502,8 @@
     </div>
 
     <!-- Navbar -->
-    <header class="fixed left-0 right-0 top-0 z-50 border-b border-slate-200/80 bg-white/85 backdrop-blur-xl transition-all duration-300 dark:border-white/5 dark:bg-[#08090D]/80">
-        <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+    <header id="navbar" class="fixed left-0 right-0 top-0 z-50 border-b border-slate-200/80 bg-white/85 backdrop-blur-xl transition-all duration-300 dark:border-white/5 dark:bg-[#08090D]/80">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
             <a href="/" class="text-xl font-bold tracking-tight text-slate-900 transition hover:opacity-80 dark:text-white">
                 Andhika<span class="text-blue-600 dark:text-blue-500">.</span>
             </a>
@@ -520,11 +520,35 @@
                     </svg>
                 </button>
 
-                <a href="/#contact" class="rounded-full border border-slate-300 dark:border-white/10 bg-white dark:bg-white/5 px-5 py-2 text-xs font-semibold text-slate-800 dark:text-white shadow-sm transition hover:border-slate-400 hover:bg-slate-50 dark:hover:bg-white/10">
+                <a href="/#contact" class="hidden sm:inline-flex rounded-full border border-slate-300 dark:border-white/10 bg-white dark:bg-white/5 px-5 py-2 text-xs font-semibold text-slate-800 dark:text-white shadow-sm transition hover:border-slate-400 hover:bg-slate-50 dark:hover:bg-white/10">
                     Contact
                 </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 dark:border-white/10 bg-white/80 dark:bg-white/5 text-slate-700 dark:text-white shadow-sm transition hover:border-slate-300 dark:hover:border-white/20 md:hidden" aria-label="Toggle menu" aria-expanded="false">
+                    <!-- Hamburger Icon -->
+                    <svg id="menu-icon-hamburger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <!-- Close (X) Icon -->
+                    <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5 hidden">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
             </div>
-        </nav>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="mobile-menu-panel border-t border-slate-200 dark:border-white/10 px-6 py-5 md:hidden">
+            <nav class="flex flex-col gap-3">
+                <a href="/" class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Home</a>
+                <a href="/#education" class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Education & Bootcamp</a>
+                <a href="/#skills" class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Skills</a>
+                <a href="/#certificates" class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Certificates</a>
+                <a href="{{ route('projects') }}" class="mobile-link text-sm font-semibold text-blue-600 dark:text-blue-400 transition py-1">All Projects</a>
+                <a href="/#contact" class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Contact</a>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -834,6 +858,53 @@
             });
 
             searchInput.addEventListener('input', updateProjects);
+
+
+            /* =====================================================
+               MOBILE MENU TOGGLE
+            ===================================================== */
+            const mobileBtn = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const hamburgerIcon = document.getElementById('menu-icon-hamburger');
+            const closeIcon = document.getElementById('menu-icon-close');
+
+            function toggleMobileMenu(forceClose = false) {
+                if (!mobileMenu) return;
+                const isOpen = forceClose ? false : !mobileMenu.classList.contains('open');
+
+                if (isOpen) {
+                    mobileMenu.classList.add('open');
+                    if (mobileBtn) mobileBtn.setAttribute('aria-expanded', 'true');
+                    if (hamburgerIcon) hamburgerIcon.classList.add('hidden');
+                    if (closeIcon) closeIcon.classList.remove('hidden');
+                } else {
+                    mobileMenu.classList.remove('open');
+                    if (mobileBtn) mobileBtn.setAttribute('aria-expanded', 'false');
+                    if (hamburgerIcon) hamburgerIcon.classList.remove('hidden');
+                    if (closeIcon) closeIcon.classList.add('hidden');
+                }
+            }
+
+            if (mobileBtn) {
+                mobileBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    toggleMobileMenu();
+                });
+            }
+
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    toggleMobileMenu(true);
+                });
+            });
+
+            // Close on click outside navbar
+            document.addEventListener('click', (e) => {
+                const navbar = document.getElementById('navbar');
+                if (navbar && !navbar.contains(e.target) && mobileMenu && mobileMenu.classList.contains('open')) {
+                    toggleMobileMenu(true);
+                }
+            });
 
         });
     </script>
