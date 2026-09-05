@@ -1,0 +1,85 @@
+{
+    "tittle": "Andhika Pratama - Web Developer & Information System",
+    "nav_about": "About",
+    "nav_education": "Education",
+    "nav_skills": "Skills",
+    "nav_certificates": "Certificates",
+    "nav_projects": "Projects",
+    "nav_journey": "Journey",
+    "nav_experience": "Experience",
+    "nav_contact": "Contact",
+    "nav_download_cv": "Download CV",
+
+    "custom_cursor": "View",
+
+    "available_badge": "Open to opportunities",
+    "heading1": "Hi, I'm",
+    "heading2": "Web Developer",
+
+    "desc": "I build modern, scalable web applications, explore information systems, and craft intuitive digital experiences that solve real-world problems.",
+
+    "cta_projects": "View My Projects",
+    "cta_contact": "Let's Connect",
+    "cta_university": "Gunadarma University",
+    "cta_web_dev": "Web Development",
+
+    "float_education_badge": "Information System",
+    "float_project_badge": "10+ Projects Built",
+
+    "currently_building": "Currently Building",
+    "currently_building_project_name": "APAR & Hydrant Management System",
+    "currently_building_project_desc": "Digitizing fire protection inspections, QR Code asset tracking, and maintenance reporting into a unified web dashboard.",
+    "currently_building_project_explore": "Explore Project",
+
+    "about_me1": "Driven by curiosity,",
+    "about_me2": "learning & growing.",
+
+    "about_me1_desc": "I am an Information Systems student at Universitas Gunadarma with a passionate interest in modern web development, software engineering, and database systems.",
+    "about_me2_desc": "I enjoy creating clean, functional, and user-centered web applications that translate complex workflows into simple, intuitive interfaces. Constantly exploring new technologies, I keep expanding my capabilities in fullstack development and AI tooling.",
+
+    "stats_projects": "Project Built",
+    "stats_major": "Information System",
+    "stats_active_year": "Active Developer",
+    "stats_passion": "Passion to Learn",
+
+    "academic_title": "Academic & Training",
+    "edu_title": "Education &",
+    "boot_title": "Bootcamp",
+    "edu_boot_desc": "Formal institutions, academy partners, and intensive bootcamps that continue to shape my technical foundation.",
+
+    "grid_university_badge": "University • S1",
+    "grid_university_name": "Gunadarma University",
+    "grid_university_major": "Information Systems (Sistem Informasi)",
+    "grid_university_desc": "Studying core information systems, programming, database design, software engineering,and business analytics.",
+    "grid_university_year": "2026 — Present",
+
+    "grid_dicoding_badge": "Tech Academy • Partner",
+    "grid_dicoding_name": "Dicoding Indonesia",
+    "grid_dicoding_major": "AI & Microsoft Fabric Learning Path",
+    "grid_dicoding_desc": "Certified in Data Science with Microsoft Fabric and Artificial Intelligence Fundamentals by Dicoding Academy.",
+    "grid_dicoding_year": "2025 — Present",
+
+    "grid_hacktiv8_badge": "Intensive Bootcamp • Google AI",
+    "grid_hacktiv8_name": "hacktiv8 Indonesia",
+    "grid_hacktiv8_major": "AI for Work & Career Readiness",
+    "grid_hacktiv8_desc": "Google AI products mastery, prompt engineering, and career readiness program for modern tech industry.",
+    "grid_hacktiv8_year": "2026",
+
+    "grid_rpl_badge": "Vocational School • Foundation",
+    "grid_rpl_name": "SMKN 1 Gunungputri",
+    "grid_rpl_major": "Software Engineering Foundation (RPL)",
+    "grid_rpl_desc": "Built core programming foundations in algorithms, OOP, databases, HTML/CSS, and structured software development.",
+    "grid_rpl_year": "2022 — 2026",
+
+    "grid_microsoft_badge": "Cloud & Data • Microsoft",
+    "grid_microsoft_name": "Microsoft Learn",
+    "grid_microsoft_major": "Microsoft Fabric & Data Science",
+    "grid_microsoft_desc": "Cloud data workflows, Lakehouse concepts, Power BI analytics, and Machine Learning operations in Microsoft Fabric.",
+    "grid_microsoft_year": "2025",
+
+    "grid_google_badge": "Developer Ecosystem",
+    "grid_google_name": "Google for Developers",
+    "grid_google_major": "Google AI & Web Technologies",
+    "grid_google_desc": "Implementing modern web standards, developer tools, and Google AI ecosystem integrations.",
+    "grid_google_year": "2026"
+}

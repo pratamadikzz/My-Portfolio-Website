@@ -20,7 +20,8 @@ class ProjectController extends Controller
                 'category' => 'Management System',
                 'description' => 'A web-based system for digitizing inspection and monitoring of fire extinguishers and hydrant equipment.',
                 'year' => '2026',
-                'status' => 'Completed',
+                'status' => 'Completed • Deployed',
+                'link' => 'https://www.storage-cloud.my.id/landing.php',
                 'color' => 'red',
                 'likes' => 0,
 
@@ -88,7 +89,8 @@ class ProjectController extends Controller
                 'category' => 'Web Application',
                 'description' => 'A financial management application designed to organize, record, and monitor personal financial activity.',
                 'year' => '2026',
-                'status' => 'In Development',
+                'status' => 'Completed • Deployed',
+                'link' => 'https://afinance.infinityfree.me/',
                 'color' => 'violet',
                 'likes' => 0,
 
@@ -139,11 +141,320 @@ class ProjectController extends Controller
                 'github' => 'https://github.com/',
                 'demo' => '#',
 
-                'image' => null,
+                'image' => 'images/projects/afinance.png',
 
                 'screenshots' => [],
             ],
 
+            'cek_mesin' => [
+                'title' => 'Audit & Pengecekan Mesin',
+                'category' => 'Web Application',
+                'description' => 'A financial management application designed to organize, record, and monitor personal financial activity.',
+                'year' => '2026',
+                'status' => 'Completed • Deployed',
+                'link' => 'https://www.storage-cloud.my.id/mesin/landing.php',
+                'color' => 'violet',
+                'likes' => 0,
+
+                'overview' => 'A web-based financial management application designed to help users organize and monitor their financial activities.',
+
+                'problem' => 'Managing personal financial records manually can make it difficult to understand spending patterns and track financial activity.',
+
+                'solution' => 'AFinance provides a centralized platform for recording and monitoring financial transactions.',
+
+                'challenges' => [
+                    [
+                        'title' => 'Database Synchronization',
+                        'description' => 'Menyesuaikan struktur database dengan kebutuhan sistem.'
+                    ],
+                    [
+                        'title' => 'QR Scanner',
+                        'description' => 'Mengatasi masalah kamera yang tidak terdeteksi saat melakukan scanning.'
+                    ],
+                    [
+                        'title' => 'Deployment',
+                        'description' => 'Menyesuaikan konfigurasi Laravel agar dapat berjalan pada server hosting.'
+                    ],
+                ],
+
+                'features' => [
+                    'Financial Dashboard',
+                    'Income Management',
+                    'Expense Management',
+                    'Transaction Records',
+                    'Financial Statistics',
+                    'User Authentication',
+                ],
+
+                'technologies' => [
+                    'Laravel',
+                    'PHP',
+                    'MySQL',
+                    'Tailwind CSS',
+                ],
+
+                'role' => [
+                    'UI/UX Design',
+                    'Frontend Development',
+                    'Backend Development',
+                    'Database Design',
+                ],
+
+                'github' => 'https://github.com/',
+                'demo' => '#',
+
+                'image' => 'images/projects/cek_mesin.png',
+
+                'screenshots' => [],
+            ],
+
+             'limbah' => [
+                'title' => 'Pengelolaan Limbah',
+                'category' => 'Web Application',
+                'description' => 'A financial management application designed to organize, record, and monitor personal financial activity.',
+                'year' => '2026',
+                'status' => 'Completed • Deployed',
+                'link' => 'https://www.storage-cloud.my.id/limbah/landing.php',
+                'color' => 'violet',
+                'likes' => 0,
+
+                'overview' => 'A web-based financial management application designed to help users organize and monitor their financial activities.',
+
+                'problem' => 'Managing personal financial records manually can make it difficult to understand spending patterns and track financial activity.',
+
+                'solution' => 'AFinance provides a centralized platform for recording and monitoring financial transactions.',
+
+                'challenges' => [
+                    [
+                        'title' => 'Database Synchronization',
+                        'description' => 'Menyesuaikan struktur database dengan kebutuhan sistem.'
+                    ],
+                    [
+                        'title' => 'QR Scanner',
+                        'description' => 'Mengatasi masalah kamera yang tidak terdeteksi saat melakukan scanning.'
+                    ],
+                    [
+                        'title' => 'Deployment',
+                        'description' => 'Menyesuaikan konfigurasi Laravel agar dapat berjalan pada server hosting.'
+                    ],
+                ],
+
+                'features' => [
+                    'Financial Dashboard',
+                    'Income Management',
+                    'Expense Management',
+                    'Transaction Records',
+                    'Financial Statistics',
+                    'User Authentication',
+                ],
+
+                'technologies' => [
+                    'Laravel',
+                    'PHP',
+                    'MySQL',
+                    'Tailwind CSS',
+                ],
+
+                'role' => [
+                    'UI/UX Design',
+                    'Frontend Development',
+                    'Backend Development',
+                    'Database Design',
+                ],
+
+                'github' => 'https://github.com/',
+                'demo' => '#',
+
+                'image' => 'images/projects/pengelola_limbah.png',
+
+                'screenshots' => [],
+            ],
+
+            'apd' => [
+                'title' => 'Sistem Permintaan Peminjaman APD',
+                'category' => 'Web Application',
+                'description' => 'A financial management application designed to organize, record, and monitor personal financial activity.',
+                'year' => '2026',
+                'status' => 'Completed • Deployed',
+                'link' => 'https://www.storage-cloud.my.id/Apd-System/',
+                'color' => 'violet',
+                'likes' => 0,
+
+                'overview' => 'A web-based financial management application designed to help users organize and monitor their financial activities.',
+
+                'problem' => 'Managing personal financial records manually can make it difficult to understand spending patterns and track financial activity.',
+
+                'solution' => 'AFinance provides a centralized platform for recording and monitoring financial transactions.',
+
+                'challenges' => [
+                    [
+                        'title' => 'Database Synchronization',
+                        'description' => 'Menyesuaikan struktur database dengan kebutuhan sistem.'
+                    ],
+                    [
+                        'title' => 'QR Scanner',
+                        'description' => 'Mengatasi masalah kamera yang tidak terdeteksi saat melakukan scanning.'
+                    ],
+                    [
+                        'title' => 'Deployment',
+                        'description' => 'Menyesuaikan konfigurasi Laravel agar dapat berjalan pada server hosting.'
+                    ],
+                ],
+
+                'features' => [
+                    'Financial Dashboard',
+                    'Income Management',
+                    'Expense Management',
+                    'Transaction Records',
+                    'Financial Statistics',
+                    'User Authentication',
+                ],
+
+                'technologies' => [
+                    'Laravel',
+                    'PHP',
+                    'MySQL',
+                    'Tailwind CSS',
+                ],
+
+                'role' => [
+                    'UI/UX Design',
+                    'Frontend Development',
+                    'Backend Development',
+                    'Database Design',
+                ],
+
+                'github' => 'https://github.com/',
+                'demo' => '#',
+
+                'image' => 'images/projects/apd-system.png',
+
+                'screenshots' => [],
+            ],
+
+            'dokumen_berkendara' => [
+                'title' => 'Pengcekan Dokumen Berkendara',
+                'category' => 'Web Application',
+                'description' => 'A financial management application designed to organize, record, and monitor personal financial activity.',
+                'year' => '2026',
+                'status' => 'Completed • Deployed',
+                'link' => 'https://www.storage-cloud.my.id/cek-dokumen/landing.php',
+                'color' => 'violet',
+                'likes' => 0,
+
+                'overview' => 'A web-based financial management application designed to help users organize and monitor their financial activities.',
+
+                'problem' => 'Managing personal financial records manually can make it difficult to understand spending patterns and track financial activity.',
+
+                'solution' => 'AFinance provides a centralized platform for recording and monitoring financial transactions.',
+
+                'challenges' => [
+                    [
+                        'title' => 'Database Synchronization',
+                        'description' => 'Menyesuaikan struktur database dengan kebutuhan sistem.'
+                    ],
+                    [
+                        'title' => 'QR Scanner',
+                        'description' => 'Mengatasi masalah kamera yang tidak terdeteksi saat melakukan scanning.'
+                    ],
+                    [
+                        'title' => 'Deployment',
+                        'description' => 'Menyesuaikan konfigurasi Laravel agar dapat berjalan pada server hosting.'
+                    ],
+                ],
+
+                'features' => [
+                    'Financial Dashboard',
+                    'Income Management',
+                    'Expense Management',
+                    'Transaction Records',
+                    'Financial Statistics',
+                    'User Authentication',
+                ],
+
+                'technologies' => [
+                    'Laravel',
+                    'PHP',
+                    'MySQL',
+                    'Tailwind CSS',
+                ],
+
+                'role' => [
+                    'UI/UX Design',
+                    'Frontend Development',
+                    'Backend Development',
+                    'Database Design',
+                ],
+
+                'github' => 'https://github.com/',
+                'demo' => '#',
+
+                'image' => 'images/projects/cek_dokumen.png',
+
+                'screenshots' => [],
+            ],
+
+            'portofolio' => [
+                'title' => 'Portofolio',
+                'category' => 'Web Application',
+                'description' => 'A financial management application designed to organize, record, and monitor personal financial activity.',
+                'year' => '2026',
+                'status' => 'In Development',
+                'link' => 'https://www.storage-cloud.my.id/cek-dokumen/landing.php',
+                'color' => 'violet',
+                'likes' => 0,
+
+                'overview' => 'A web-based financial management application designed to help users organize and monitor their financial activities.',
+
+                'problem' => 'Managing personal financial records manually can make it difficult to understand spending patterns and track financial activity.',
+
+                'solution' => 'AFinance provides a centralized platform for recording and monitoring financial transactions.',
+
+                'challenges' => [
+                    [
+                        'title' => 'Database Synchronization',
+                        'description' => 'Menyesuaikan struktur database dengan kebutuhan sistem.'
+                    ],
+                    [
+                        'title' => 'QR Scanner',
+                        'description' => 'Mengatasi masalah kamera yang tidak terdeteksi saat melakukan scanning.'
+                    ],
+                    [
+                        'title' => 'Deployment',
+                        'description' => 'Menyesuaikan konfigurasi Laravel agar dapat berjalan pada server hosting.'
+                    ],
+                ],
+
+                'features' => [
+                    'Financial Dashboard',
+                    'Income Management',
+                    'Expense Management',
+                    'Transaction Records',
+                    'Financial Statistics',
+                    'User Authentication',
+                ],
+
+                'technologies' => [
+                    'Laravel',
+                    'PHP',
+                    'MySQL',
+                    'Tailwind CSS',
+                ],
+
+                'role' => [
+                    'UI/UX Design',
+                    'Frontend Development',
+                    'Backend Development',
+                    'Database Design',
+                ],
+
+                'github' => 'https://github.com/',
+                'demo' => '#',
+
+                'image' => 'images/projects/portofolio.png',
+
+                'screenshots' => [],
+            ],
 
             'ai-powered-website' => [
                 'title' => 'AI-Powered Website',

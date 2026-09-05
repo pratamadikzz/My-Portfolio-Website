@@ -8,20 +8,16 @@
     <meta name="description"
         content="Andhika Pratama — Web Developer and Information Systems Student. Explore my projects, skills, education, experience, and technology journey.">
 
-    <title>Andhika Pratama — Web Developer & Information Systems</title>
+    <title data-i18n="title">Andhika Pratama — Web Developer & Information Systems</title>
 
-    <!-- Theme Initialization Script: Default to Light Mode -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Theme toggle disabled: this portfolio is light-mode only. -->
     <script>
         (function() {
             try {
-                const savedTheme = localStorage.getItem('portfolio-theme');
-                if (savedTheme === 'dark') {
-                    document.documentElement.classList.add('dark-mode');
-                    document.documentElement.classList.remove('light-mode');
-                } else {
-                    document.documentElement.classList.add('light-mode');
-                    document.documentElement.classList.remove('dark-mode');
-                }
+                document.documentElement.classList.add('light-mode');
+                document.documentElement.classList.remove('dark-mode');
             } catch (e) {}
         })();
     </script>
@@ -275,8 +271,15 @@
         }
 
         @keyframes floatSlow {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
         }
 
         /* ---------------------------------------------------------
@@ -322,13 +325,27 @@
         }
 
         @keyframes toastIn {
-            from { opacity: 0; transform: translateY(15px) scale(0.95); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
+            from {
+                opacity: 0;
+                transform: translateY(15px) scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
         }
 
         @keyframes toastOut {
-            from { opacity: 1; transform: translateY(0) scale(1); }
-            to { opacity: 0; transform: translateY(15px) scale(0.95); }
+            from {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+
+            to {
+                opacity: 0;
+                transform: translateY(15px) scale(0.95);
+            }
         }
 
         /* ---------------------------------------------------------
@@ -427,8 +444,16 @@
         }
 
         @keyframes cursorBlink {
-            0%, 49% { opacity: 1; }
-            50%, 100% { opacity: 0; }
+
+            0%,
+            49% {
+                opacity: 1;
+            }
+
+            50%,
+            100% {
+                opacity: 0;
+            }
         }
 
         /* ---------------------------------------------------------
@@ -444,8 +469,316 @@
         }
 
         @keyframes floatParticle {
-            0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; }
-            50% { transform: translateY(-30px) scale(1.4); opacity: 0.8; }
+
+            0%,
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 0.3;
+            }
+
+            50% {
+                transform: translateY(-30px) scale(1.4);
+                opacity: 0.8;
+            }
+        }
+
+        .brand-logo,
+        .tech-logo {
+            filter: grayscale(1);
+            opacity: 0.65;
+            transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .brand-logo:hover,
+        .brand-logo:focus-visible,
+        .tech-logo:hover,
+        .tech-logo:focus-visible {
+            filter: grayscale(0);
+            opacity: 1;
+            transform: translateY(-4px) scale(1.04);
+        }
+
+        .experience-logo {
+            filter: grayscale(1);
+            opacity: 0.65;
+            transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .experience-card:hover .experience-logo,
+        .experience-card:focus-within .experience-logo {
+            filter: grayscale(0);
+            opacity: 1;
+            transform: translateY(-4px) scale(1.04);
+        }
+
+        #community-logo-row {
+            overflow: hidden;
+        }
+
+        .community-logo-track {
+            display: flex;
+            width: max-content;
+            animation: community-marquee 28s linear infinite;
+            will-change: transform;
+        }
+
+        .community-logo-track:hover,
+        .community-logo-track:focus-within {
+            animation-play-state: paused;
+        }
+
+        @keyframes community-marquee {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .community-logo-track {
+                animation: none;
+            }
+        }
+
+        .load-more-project {
+            display: none;
+        }
+
+        .load-more-project.is-visible {
+            display: block;
+        }
+
+        .social-link {
+            display: inline-flex;
+            width: 2.25rem;
+            height: 2.25rem;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #cbd5e1;
+            border-radius: 0.75rem;
+            color: #475569;
+            font-size: 0.7rem;
+            font-weight: 800;
+            transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .social-link:hover,
+        .social-link:focus-visible {
+            border-color: #2563eb;
+            color: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .language-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.15rem;
+            padding: 0.2rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 0.75rem;
+            background: #f8fafc;
+            color: #64748b;
+            font-size: 0.68rem;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+        }
+
+        .language-option {
+            min-width: 1.8rem;
+            padding: 0.35rem 0.4rem;
+            border-radius: 0.5rem;
+            transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .language-option:hover,
+        .language-option:focus-visible {
+            color: #2563eb;
+        }
+
+        .language-option.is-active {
+            background: #ffffff;
+            color: #1d4ed8;
+            box-shadow: 0 1px 3px rgba(15, 23, 42, 0.12);
+        }
+
+        /* =========================================================
+   TECH STACK MARQUEE
+========================================================= */
+
+        .marquee-wrapper {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+
+        /* Track */
+        .marquee {
+            display: flex;
+            width: max-content;
+            gap: 1rem;
+            will-change: transform;
+        }
+
+
+        /* =========================================================
+   TECH ITEM
+========================================================= */
+
+        .tech-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+
+            height: 64px;
+            padding: 0 1.4rem;
+
+            border: 1px solid rgb(226 232 240 / 0.9);
+            border-radius: 16px;
+
+            background: rgb(255 255 255 / 0.9);
+
+            color: rgb(51 65 85);
+
+            white-space: nowrap;
+
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                background-color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        /* Logo */
+        .tech-item i {
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+
+        /* Text */
+        .tech-item span {
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+
+        /* Hover */
+        .tech-item:hover {
+            transform: translateY(-3px);
+
+            border-color: rgb(148 163 184 / 0.8);
+
+            box-shadow:
+                0 10px 30px rgb(15 23 42 / 0.08);
+        }
+
+
+        /* =========================================================
+   DARK MODE
+========================================================= */
+
+        .dark .tech-item {
+            border-color: rgb(255 255 255 / 0.08);
+
+            background: rgb(255 255 255 / 0.035);
+
+            color: rgb(226 232 240);
+        }
+
+        .dark .tech-item:hover {
+            border-color: rgb(255 255 255 / 0.16);
+
+            background: rgb(255 255 255 / 0.06);
+
+            box-shadow:
+                0 10px 30px rgb(0 0 0 / 0.25);
+        }
+
+
+        /* =========================================================
+   MARQUEE ANIMATION
+========================================================= */
+
+        /* Baris 1 → kanan */
+        .marquee-right {
+            animation: marquee-right 35s linear infinite;
+        }
+
+
+        /* Baris 2 → kiri */
+        .marquee-left {
+            animation: marquee-left 35s linear infinite;
+        }
+
+
+        /* Gerak kanan */
+        @keyframes marquee-right {
+
+            0% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+
+        }
+
+
+        /* Gerak kiri */
+        @keyframes marquee-left {
+
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+
+        }
+
+
+        /* =========================================================
+   PAUSE SAAT HOVER
+========================================================= */
+
+        .marquee-wrapper:hover .marquee {
+            animation-play-state: paused;
+        }
+
+
+        /* =========================================================
+   MOBILE
+========================================================= */
+
+        @media (max-width: 640px) {
+
+            .tech-item {
+                height: 58px;
+                padding: 0 1.1rem;
+                gap: 0.6rem;
+            }
+
+            .tech-item i {
+                font-size: 1.7rem;
+            }
+
+            .tech-item span {
+                font-size: 0.8rem;
+            }
+
+            .marquee-right,
+            .marquee-left {
+                animation-duration: 28s;
+            }
+
         }
     </style>
 </head>
@@ -454,7 +787,7 @@
 
     <!-- UNIVERSAL CUSTOM CURSOR (Req 9) -->
     <div id="custom-cursor">
-        <span id="cursor-label">VIEW</span>
+        <span id="cursor-label" data-i18n="custom_cursor">VIEW</span>
     </div>
 
     <!-- SCROLL PROGRESS -->
@@ -465,7 +798,8 @@
 
     <!-- BACK TO TOP -->
     <button id="back-to-top" type="button" aria-label="Back to top">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+            stroke="currentColor" class="h-5 w-5">
             <path stroke-linecap="round" stroke-linejoin="round" d="m5 15 7-7 7 7" />
         </svg>
     </button>
@@ -474,50 +808,83 @@
     <!-- =========================================================
          NAVBAR
     ========================================================= -->
-    <header id="navbar" class="fixed left-0 right-0 top-0 z-50 border-b border-slate-200/80 bg-white/80 backdrop-blur-xl transition-all duration-300 dark:border-white/5 dark:bg-[#08090D]/80">
+    <header id="navbar"
+        class="fixed left-0 right-0 top-0 z-50 border-b border-slate-200/80 bg-white/80 backdrop-blur-xl transition-all duration-300 dark:border-white/5 dark:bg-[#08090D]/80">
         <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
 
             <!-- Logo -->
-            <a href="#" class="text-xl font-bold tracking-tight text-slate-900 transition hover:opacity-80 dark:text-white">
+            <a href="#"
+                class="text-xl font-bold tracking-tight text-slate-900 transition hover:opacity-80 dark:text-white">
                 Andhika<span class="text-blue-600 dark:text-blue-500">.</span>
             </a>
 
             <!-- Desktop Menu -->
             <nav class="hidden items-center gap-8 md:flex">
-                <a href="#about" class="text-sm font-medium text-slate-600 transition hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">About</a>
-                <a href="#education" class="text-sm font-medium text-slate-600 transition hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">Education</a>
-                <a href="#skills" class="text-sm font-medium text-slate-600 transition hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">Skills</a>
-                <a href="#certificates" class="text-sm font-medium text-slate-600 transition hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">Certificates</a>
-                <a href="#projects" class="text-sm font-medium text-slate-600 transition hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">Projects</a>
-                <a href="#experience" class="text-sm font-medium text-slate-600 transition hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">Journey</a>
-                <a href="#contact" class="text-sm font-medium text-slate-600 transition hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">Contact</a>
+                <a href="#about"
+                    class="text-sm font-medium text-slate-600 transition hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
+                    data-i18n="nav_about">About</a>
+                <a href="#education"
+                    class="text-sm font-medium text-slate-600 transition hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
+                    data-i18n="nav_education">Education</a>
+                <a href="#skills"
+                    class="text-sm font-medium text-slate-600 transition hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
+                    data-i18n="nav_skills">Skills</a>
+                <a href="#certificates"
+                    class="text-sm font-medium text-slate-600 transition hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
+                    data-i18n="nav_certificates">Certificates</a>
+                <a href="#projects"
+                    class="text-sm font-medium text-slate-600 transition hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
+                    data-i18n="nav_projects">Projects</a>
+                <a href="#experience"
+                    class="text-sm font-medium text-slate-600 transition hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
+                    data-i18n="nav_journey">Journey</a>
+                <a href="#work-experience"
+                    class="text-sm font-medium text-slate-600 transition hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
+                    data-i18n="nav_experience">Experience</a>
+                <a href="#contact"
+                    class="text-sm font-medium text-slate-600 transition hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
+                    data-i18n="nav_contact">Contact</a>
+                <div class="language-toggle" aria-label="Choose language">
+                    <button id="language-en-desktop" class="language-option" type="button" data-language="en"
+                        aria-label="English">EN</button>
+                    <button id="language-id-desktop" class="language-option" type="button" data-language="id"
+                        aria-label="Bahasa Indonesia">ID</button>
+                </div>
             </nav>
 
             <!-- Actions -->
             <div class="flex items-center gap-3">
 
-                <!-- Theme Toggle Button (Light / Dark) -->
-                <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Toggle theme">
+                <!-- Theme Toggle Button disabled: light mode only. -->
+                <!-- <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Toggle theme">
                     <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="h-5 w-5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.598.748-3.752A9.753 9.753 0 1 0 21.752 15.002Z" />
                     </svg>
-                </button>
+                </button> -->
 
                 <!-- CV Button -->
                 <a href="{{ asset('cv/CV ATS ANDHIKA PRATAMA.pdf') }}" target="_blank" rel="noopener noreferrer"
                     class="hidden rounded-full border border-slate-300 dark:border-white/10 bg-white dark:bg-white/5 px-4 py-2 text-xs font-semibold text-slate-700 dark:text-white shadow-sm transition hover:border-slate-400 hover:bg-slate-50 dark:hover:bg-white/10 sm:inline-flex items-center gap-1.5">
-                    <span>Download CV</span>
-                    <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                    <span data-i18n="nav_download_cv">Download CV</span>
+                    <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
                 </a>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 dark:border-white/10 bg-white/80 dark:bg-white/5 text-slate-700 dark:text-white shadow-sm transition hover:border-slate-300 dark:hover:border-white/20 md:hidden" aria-label="Toggle menu" aria-expanded="false">
+                <button id="mobile-menu-button" type="button"
+                    class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 dark:border-white/10 bg-white/80 dark:bg-white/5 text-slate-700 dark:text-white shadow-sm transition hover:border-slate-300 dark:hover:border-white/20 md:hidden"
+                    aria-label="Toggle menu" aria-expanded="false">
                     <!-- Hamburger Icon -->
-                    <svg id="menu-icon-hamburger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    <svg id="menu-icon-hamburger" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
                     <!-- Close (X) Icon -->
-                    <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5 hidden">
+                    <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor" class="h-5 w-5 hidden">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
@@ -527,18 +894,47 @@
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="mobile-menu-panel border-t border-slate-200 dark:border-white/10 px-6 py-5 md:hidden">
+        <div id="mobile-menu"
+            class="mobile-menu-panel border-t border-slate-200 dark:border-white/10 px-6 py-5 md:hidden">
             <nav class="flex flex-col gap-3">
-                <a href="#about" class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">About</a>
-                <a href="#education" class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Education & Bootcamp</a>
-                <a href="#skills" class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Skills</a>
-                <a href="#certificates" class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Certificates</a>
-                <a href="#projects" class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Projects</a>
-                <a href="#experience" class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Journey</a>
-                <a href="#contact" class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Contact</a>
-                <a href="{{ asset('cv/CV ATS ANDHIKA PRATAMA.pdf') }}" target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 py-2.5 text-xs font-semibold text-white shadow-md transition hover:bg-blue-700">
-                    <span>Download CV</span>
-                    <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                <a href="#about"
+                    class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1"
+                    data-i18n="nav_about">About</a>
+                <a href="#education"
+                    class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1"
+                    data-i18n="nav_education">Education
+                    & Bootcamp</a>
+                <a href="#skills"
+                    class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1"
+                    data-i18n="nav_skills">Skills</a>
+                <a href="#certificates"
+                    class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1"
+                    data-i18n="nav_certificates">Certificates</a>
+                <a href="#projects"
+                    class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1"
+                    data-i18n="nav_projects">Projects</a>
+                <a href="#experience"
+                    class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1"
+                    data-i18n="nav_journey">Journey</a>
+                <a href="#work-experience"
+                    class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1"
+                    data-i18n="nav_experience">Experience</a>
+                <a href="#contact"
+                    class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1"
+                    data-i18n="nav_contact">Contact</a>
+                <div class="language-toggle w-fit" aria-label="Choose language">
+                    <button id="language-en-mobile" class="language-option" type="button" data-language="en"
+                        aria-label="English">EN</button>
+                    <button id="language-id-mobile" class="language-option" type="button" data-language="id"
+                        aria-label="Bahasa Indonesia">ID</button>
+                </div>
+                <a href="{{ asset('cv/CV ATS ANDHIKA PRATAMA.pdf') }}" target="_blank" rel="noopener noreferrer"
+                    class="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 py-2.5 text-xs font-semibold text-white shadow-md transition hover:bg-blue-700">
+                    <span data-i18n="nav_download_cv">Download CV</span>
+                    <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
                 </a>
             </nav>
         </div>
@@ -552,9 +948,15 @@
 
         <!-- Ambient Background Orbs -->
         <div class="pointer-events-none absolute inset-0 overflow-hidden">
-            <div class="background-orb orb-one absolute left-[15%] top-[15%] h-[400px] w-[400px] rounded-full bg-blue-500/10 blur-[130px]"></div>
-            <div class="background-orb orb-two absolute right-[10%] top-[10%] h-[350px] w-[350px] rounded-full bg-indigo-500/10 blur-[120px]"></div>
-            <div class="background-orb orb-three absolute bottom-[5%] left-[5%] h-[300px] w-[300px] rounded-full bg-cyan-500/10 blur-[110px]"></div>
+            <div
+                class="background-orb orb-one absolute left-[15%] top-[15%] h-[400px] w-[400px] rounded-full bg-blue-500/10 blur-[130px]">
+            </div>
+            <div
+                class="background-orb orb-two absolute right-[10%] top-[10%] h-[350px] w-[350px] rounded-full bg-indigo-500/10 blur-[120px]">
+            </div>
+            <div
+                class="background-orb orb-three absolute bottom-[5%] left-[5%] h-[300px] w-[300px] rounded-full bg-cyan-500/10 blur-[110px]">
+            </div>
 
             <!-- Floating Particles -->
             <span class="particle left-[15%] top-[55%]" style="animation-duration: 7s;"></span>
@@ -571,53 +973,62 @@
                 <div class="max-w-3xl reveal lg:col-span-7">
 
                     <!-- Availability Badge -->
-                    <div class="reveal stagger-1 mb-6 inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-white/10 bg-white/90 dark:bg-white/[0.04] px-4 py-2 text-xs sm:text-sm font-medium text-slate-700 dark:text-gray-300 shadow-sm backdrop-blur-md">
+                    <div
+                        class="reveal stagger-1 mb-6 inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-white/10 bg-white/90 dark:bg-white/[0.04] px-4 py-2 text-xs sm:text-sm font-medium text-slate-700 dark:text-gray-300 shadow-sm backdrop-blur-md">
                         <span class="h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_8px_#10b981]"></span>
-                        <span>Open to opportunities</span>
+                        <span data-i18n="available_badge">Open to opportunities</span>
                     </div>
 
                     <!-- Heading -->
-                    <h1 class="text-4xl font-extrabold leading-[1.12] tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl xl:text-7xl">
-                        Hi, I'm
-                        <span class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                    <h1
+                        class="text-4xl font-extrabold leading-[1.12] tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl xl:text-7xl">
+                        <span data-i18n="heading1">Hi, I'm</span>
+                        <span
+                            class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
                             Andhika Pratama.
                         </span>
                         <br>
                         <span class="text-slate-800 dark:text-white inline-block mt-2">
-                            <span id="typing-text">Web Developer</span>
+                            <span id="typing-text" data-i18n="heading2">Web Developer</span>
                             <span class="typing-cursor"></span>
                         </span>
                     </h1>
 
                     <!-- Description -->
-                    <p class="reveal stagger-2 mt-6 max-w-2xl text-base sm:text-lg leading-relaxed text-slate-600 dark:text-gray-400">
-                        I build modern, scalable web applications, explore information systems, and craft intuitive digital experiences that solve real-world problems.
+                    <p class="reveal stagger-2 mt-6 max-w-2xl text-base sm:text-lg leading-relaxed text-slate-600 dark:text-gray-400"
+                        data-i18n="desc">
+                        I build modern, scalable web applications, explore information systems, and craft intuitive
+                        digital experiences that solve real-world problems.
                     </p>
 
                     <!-- CTAs -->
                     <div class="reveal stagger-3 mt-8 flex flex-wrap items-center gap-4">
                         <a href="#projects"
                             class="inline-flex items-center gap-2 rounded-full bg-slate-500 px-7 py-3.5 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-purple-700  hover:shadow-xl dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100">
-                            <span>View My Projects</span>
-                            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            <span data-i18n="cta_projects">View My Projects</span>
+                            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
                         </a>
 
                         <a href="#contact"
                             class="inline-flex items-center gap-2 rounded-full border border-slate-300 dark:border-white/10 bg-white/80 dark:bg-white/5 px-6 py-3.5 text-sm font-semibold text-slate-700 dark:text-white backdrop-blur transition hover:-translate-y-0.5 hover:border-slate-400 hover:bg-slate-100 dark:hover:bg-white/10">
-                            <span>Let's Connect</span>
+                            <span data-i18n="cta_contact">Let's Connect</span>
                         </a>
                     </div>
 
                     <!-- Quick Info -->
-                    <div class="reveal stagger-4 mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm font-medium text-slate-600 dark:text-gray-500">
+                    <div
+                        class="reveal stagger-4 mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm font-medium text-slate-600 dark:text-gray-500">
                         <span class="inline-flex items-center gap-1.5">
-                            <span class="text-base">📍</span> Indonesia
+                            <i class="fa-solid fa-location-dot"></i>Indonesia
                         </span>
                         <span class="inline-flex items-center gap-1.5">
-                            <span class="text-base">🎓</span> Universitas Gunadarma
+                            <i class="fa-solid fa-graduation-cap"></i><span>Universitas Gunadarma</span>
                         </span>
                         <span class="inline-flex items-center gap-1.5">
-                            <span class="text-base">💻</span> Web Development
+                            <i class="fa-solid fa-code"></i>Web Development
                         </span>
                     </div>
 
@@ -628,63 +1039,89 @@
                     <div class="hero-photo-wrapper relative flex items-center justify-center">
 
                         <!-- Artistic Multi-layer Organic Brush Stroke SVG -->
-                        <div class="hero-brush-backdrop absolute inset-0 -m-10 pointer-events-none flex items-center justify-center">
-                            <svg class="w-[360px] h-[360px] sm:w-[420px] sm:h-[420px] transform scale-110 rotate-2 opacity-85 dark:opacity-75 transition-transform duration-700 hover:rotate-6 hover:scale-115" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div
+                            class="hero-brush-backdrop absolute inset-0 -m-10 pointer-events-none flex items-center justify-center">
+                            <svg class="w-[360px] h-[360px] sm:w-[420px] sm:h-[420px] transform scale-110 rotate-2 opacity-85 dark:opacity-75 transition-transform duration-700 hover:rotate-6 hover:scale-115"
+                                viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <defs>
-                                    <linearGradient id="heroBrushGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.85"/>
-                                        <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.8"/>
-                                        <stop offset="100%" stop-color="#ec4899" stop-opacity="0.75"/>
+                                    <linearGradient id="heroBrushGrad1" x1="0%" y1="0%" x2="100%"
+                                        y2="100%">
+                                        <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.85" />
+                                        <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.8" />
+                                        <stop offset="100%" stop-color="#ec4899" stop-opacity="0.75" />
                                     </linearGradient>
-                                    <linearGradient id="heroBrushGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
-                                        <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.7"/>
-                                        <stop offset="60%" stop-color="#3b82f6" stop-opacity="0.6"/>
-                                        <stop offset="100%" stop-color="#6366f1" stop-opacity="0.5"/>
+                                    <linearGradient id="heroBrushGrad2" x1="100%" y1="0%" x2="0%"
+                                        y2="100%">
+                                        <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.7" />
+                                        <stop offset="60%" stop-color="#3b82f6" stop-opacity="0.6" />
+                                        <stop offset="100%" stop-color="#6366f1" stop-opacity="0.5" />
                                     </linearGradient>
                                     <filter id="brushTexture" x="-20%" y="-20%" width="140%" height="140%">
-                                        <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" result="noise" />
-                                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="18" xChannelSelector="R" yChannelSelector="G" />
+                                        <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3"
+                                            result="noise" />
+                                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="18"
+                                            xChannelSelector="R" yChannelSelector="G" />
                                     </filter>
                                 </defs>
                                 <!-- Splash Paths with Artistic Distortion -->
-                                <path d="M410,210 C435,300 380,400 300,425 C210,450 120,410 75,335 C30,260 45,150 110,95 C175,40 300,55 365,105 C405,138 395,165 410,210 Z" fill="url(#heroBrushGrad1)" filter="url(#brushTexture)"/>
-                                <path d="M380,170 C410,250 360,350 280,380 C200,410 130,370 80,300 C35,230 60,130 130,80 C200,30 300,50 355,100 C385,128 365,135 380,170 Z" fill="url(#heroBrushGrad2)" filter="url(#brushTexture)" opacity="0.65"/>
-                                <path d="M50,180 Q170,110 370,150 Q450,170 420,270 Q380,370 240,410 Q90,420 60,290 Q40,220 50,180 Z" fill="none" stroke="url(#heroBrushGrad1)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" opacity="0.35" filter="url(#brushTexture)"/>
+                                <path
+                                    d="M410,210 C435,300 380,400 300,425 C210,450 120,410 75,335 C30,260 45,150 110,95 C175,40 300,55 365,105 C405,138 395,165 410,210 Z"
+                                    fill="url(#heroBrushGrad1)" filter="url(#brushTexture)" />
+                                <path
+                                    d="M380,170 C410,250 360,350 280,380 C200,410 130,370 80,300 C35,230 60,130 130,80 C200,30 300,50 355,100 C385,128 365,135 380,170 Z"
+                                    fill="url(#heroBrushGrad2)" filter="url(#brushTexture)" opacity="0.65" />
+                                <path
+                                    d="M50,180 Q170,110 370,150 Q450,170 420,270 Q380,370 240,410 Q90,420 60,290 Q40,220 50,180 Z"
+                                    fill="none" stroke="url(#heroBrushGrad1)" stroke-width="14"
+                                    stroke-linecap="round" stroke-linejoin="round" opacity="0.35"
+                                    filter="url(#brushTexture)" />
                             </svg>
                             <!-- Glow Halo -->
-                            <div class="absolute inset-0 rounded-full bg-blue-500/15 blur-[50px] dark:bg-blue-600/20"></div>
+                            <div class="absolute inset-0 rounded-full bg-blue-500/15 blur-[50px] dark:bg-blue-600/20">
+                            </div>
                         </div>
 
                         <!-- Portrait Photo Container -->
-                        <div class="relative z-10 p-2.5 rounded-[30px] bg-white/80 dark:bg-slate-900/70 backdrop-blur-md border border-slate-200/90 dark:border-white/15 shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:shadow-blue-500/15">
-                            <div class="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 overflow-hidden rounded-[24px]">
-                                <img src="{{ asset('images/andhika.png') }}"
-                                     alt="Andhika Pratama — Web Developer"
-                                     class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
-                                     loading="eager">
-                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/30 via-transparent to-transparent opacity-60"></div>
+                        <div
+                            class="relative z-10 p-2.5 rounded-[30px] bg-white/80 dark:bg-slate-900/70 backdrop-blur-md border border-slate-200/90 dark:border-white/15 shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:shadow-blue-500/15">
+                            <div
+                                class="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 overflow-hidden rounded-[24px]">
+                                <img src="{{ asset('images/andhika.png') }}" alt="Andhika Pratama — Web Developer"
+                                    class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
+                                    loading="eager">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950/30 via-transparent to-transparent opacity-60">
+                                </div>
                             </div>
                         </div>
 
                         <!-- Floating Skill Badge (Top Right) -->
-                        <div class="hero-float-badge absolute -right-3 -top-3 z-20 flex items-center gap-2 rounded-2xl border border-slate-200 dark:border-white/10 bg-white/95 dark:bg-slate-900/95 px-3.5 py-2 text-xs font-bold text-slate-800 dark:text-white shadow-lg backdrop-blur-md">
-                            <span class="flex h-5 w-5 items-center justify-center rounded-lg bg-blue-500/15 text-blue-600 dark:text-blue-400">⚡</span>
+                        <div
+                            class="hero-float-badge absolute -right-3 -top-3 z-20 flex items-center gap-2 rounded-2xl border border-slate-200 dark:border-white/10 bg-white/95 dark:bg-slate-900/95 px-3.5 py-2 text-xs font-bold text-slate-800 dark:text-white shadow-lg backdrop-blur-md">
+                            <span
+                                class="flex h-5 w-5 items-center justify-center rounded-lg bg-blue-500/15 text-blue-600 dark:text-blue-400">⚡</span>
                             <span>Fullstack Dev</span>
                         </div>
 
                         <!-- Floating Education Badge (Bottom Left) -->
-                        <div class="hero-float-badge hero-float-delay absolute -bottom-4 -left-4 z-20 flex items-center gap-2.5 rounded-2xl border border-slate-200 dark:border-white/10 bg-white/95 dark:bg-slate-900/95 px-4 py-2.5 text-xs font-semibold text-slate-800 dark:text-white shadow-lg backdrop-blur-md">
-                            <span class="flex h-6 w-6 items-center justify-center rounded-lg bg-indigo-500/15 text-indigo-600 dark:text-indigo-400 text-sm">🎓</span>
+                        <div
+                            class="hero-float-badge hero-float-delay absolute -bottom-4 -left-4 z-20 flex items-center gap-2.5 rounded-2xl border border-slate-200 dark:border-white/10 bg-white/95 dark:bg-slate-900/95 px-4 py-2.5 text-xs font-semibold text-slate-800 dark:text-white shadow-lg backdrop-blur-md">
+                            <span
+                                class="flex h-6 w-6 items-center justify-center rounded-lg bg-indigo-500/15 text-indigo-600 dark:text-indigo-400 text-sm">🎓</span>
                             <div>
-                                <p class="font-bold text-[11px] leading-none text-indigo-600 dark:text-indigo-400">Gunadarma</p>
-                                <p class="text-[10px] text-slate-500 dark:text-gray-400 mt-0.5 leading-none">Information Systems</p>
+                                <p class="font-bold text-[11px] leading-none text-indigo-600 dark:text-indigo-400">
+                                    Gunadarma</p>
+                                <p class="text-[10px] text-slate-500 dark:text-gray-400 mt-0.5 leading-none"
+                                    data-i18n="float_education_badge">
+                                    Information Systems</p>
                             </div>
                         </div>
 
                         <!-- Floating Project Counter Badge (Bottom Right) -->
-                        <div class="hero-float-badge absolute -bottom-2 -right-2 z-20 hidden sm:flex items-center gap-2 rounded-xl border border-slate-200 dark:border-white/10 bg-white/95 dark:bg-slate-900/95 px-3 py-1.5 text-xs font-medium text-slate-700 dark:text-gray-300 shadow-md backdrop-blur-md">
+                        <div
+                            class="hero-float-badge absolute -bottom-2 -right-2 z-20 hidden sm:flex items-center gap-2 rounded-xl border border-slate-200 dark:border-white/10 bg-white/95 dark:bg-slate-900/95 px-3 py-1.5 text-xs font-medium text-slate-700 dark:text-gray-300 shadow-md backdrop-blur-md">
                             <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                            <span>10+ Projects Built</span>
+                            <span data-i18n="float_project_badge">10+ Projects Built</span>
                         </div>
 
                     </div>
@@ -701,24 +1138,31 @@
     ========================================================= -->
     <section class="px-6 pb-20">
         <div class="mx-auto max-w-6xl">
-            <div class="reveal rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-8 shadow-sm backdrop-blur-xl">
+            <div
+                class="reveal rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-8 shadow-sm backdrop-blur-xl">
                 <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
                     <div>
-                        <span class="text-xs font-bold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400">
+                        <span class="text-xs font-bold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400"
+                            data-i18n="currently_building">
                             Currently Building
                         </span>
-                        <h2 class="mt-2 text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
+                        <h2 class="mt-2 text-2xl font-bold tracking-tight text-slate-900 dark:text-white"
+                            data-i18n="currently_building_project_name">
                             APAR & Hydrant Management System
                         </h2>
-                        <p class="mt-2 max-w-2xl text-sm leading-6 text-slate-600 dark:text-gray-400">
-                            Digitizing fire protection inspections, QR Code asset tracking, and maintenance reporting into a unified web dashboard.
+                        <p class="mt-2 max-w-2xl text-sm leading-6 text-slate-600 dark:text-gray-400"
+                            data-i18n="currently_building_project_desc">
+                            Digitizing fire protection inspections, QR Code asset tracking, and maintenance reporting
+                            into a unified web dashboard.
                         </p>
                     </div>
 
                     <a href="{{ route('projects.show', 'apar-hydrant') }}"
                         class="inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-blue-700 hover:shadow-lg">
-                        <span>Explore Project</span>
-                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        <span data-i18n="currently_building_project_explore">Explore Project</span>
+                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -733,45 +1177,58 @@
         <div class="mx-auto max-w-6xl">
 
             <div class="max-w-2xl reveal">
-                <p class="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600 dark:text-blue-400">
+                <p class="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600 dark:text-blue-400"
+                    data-i18n="about_me">
                     About Me
                 </p>
-                <h2 class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl lg:text-5xl">
+                <h2 class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl lg:text-5xl"
+                    data-i18n="about_me1">
                     Driven by curiosity,
-                    <span class="text-slate-500 dark:text-gray-400">learning & growing.</span>
+                    <span class="text-slate-500 dark:text-gray-400" data-i18n="about_me2">learning & growing.</span>
                 </h2>
             </div>
 
             <div class="mt-12 grid gap-10 lg:grid-cols-2">
                 <div class="reveal space-y-6 text-base leading-relaxed text-slate-600 dark:text-gray-400">
-                    <p>
-                        I am an Information Systems student at Universitas Gunadarma with a passionate interest in modern web development, software engineering, and database systems.
+                    <p data-i18n="about_me1_desc">
+                        I am an Information Systems student at Universitas Gunadarma with a passionate interest in
+                        modern web development, software engineering, and database systems.
                     </p>
-                    <p>
-                        I enjoy creating clean, functional, and user-centered web applications that translate complex workflows into simple, intuitive interfaces. Constantly exploring new technologies, I keep expanding my capabilities in fullstack development and AI tooling.
+                    <p data-i18n="about_me2_desc">
+                        I enjoy creating clean, functional, and user-centered web applications that translate complex
+                        workflows into simple, intuitive interfaces. Constantly exploring new technologies, I keep
+                        expanding my capabilities in fullstack development and AI tooling.
                     </p>
                 </div>
 
                 <!-- Stats Grid -->
                 <div class="grid grid-cols-2 gap-4 sm:gap-6">
-                    <div class="reveal stagger-1 rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-6 shadow-sm">
+                    <div
+                        class="reveal stagger-1 rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-6 shadow-sm">
                         <p class="text-3xl font-extrabold text-blue-600 dark:text-blue-400">10+</p>
-                        <p class="mt-2 text-sm font-medium text-slate-600 dark:text-gray-400">Projects Built</p>
+                        <p class="mt-2 text-sm font-medium text-slate-600 dark:text-gray-400"
+                            data-i18n="stats_projects">Projects Built</p>
                     </div>
 
-                    <div class="reveal stagger-2 rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-6 shadow-sm">
+                    <div
+                        class="reveal stagger-2 rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-6 shadow-sm">
                         <p class="text-3xl font-extrabold text-indigo-600 dark:text-indigo-400">UG</p>
-                        <p class="mt-2 text-sm font-medium text-slate-600 dark:text-gray-400">Information Systems</p>
+                        <p class="mt-2 text-sm font-medium text-slate-600 dark:text-gray-400" data-i18n="stats_major">
+                            Information Systems</p>
                     </div>
 
-                    <div class="reveal stagger-3 rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-6 shadow-sm">
+                    <div
+                        class="reveal stagger-3 rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-6 shadow-sm">
                         <p class="text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">2026</p>
-                        <p class="mt-2 text-sm font-medium text-slate-600 dark:text-gray-400">Active Developer</p>
+                        <p class="mt-2 text-sm font-medium text-slate-600 dark:text-gray-400"
+                            data-i18n="stats_active_year">Active Developer</p>
                     </div>
 
-                    <div class="reveal stagger-4 rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-6 shadow-sm">
+                    <div
+                        class="reveal stagger-4 rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-6 shadow-sm">
                         <p class="text-3xl font-extrabold text-purple-600 dark:text-purple-400">100%</p>
-                        <p class="mt-2 text-sm font-medium text-slate-600 dark:text-gray-400">Passion to Learn</p>
+                        <p class="mt-2 text-sm font-medium text-slate-600 dark:text-gray-400"
+                            data-i18n="stats_passion">Passion to Learn</p>
                     </div>
                 </div>
             </div>
@@ -783,19 +1240,23 @@
     <!-- =========================================================
          EDUCATION & BOOTCAMP (Req 7: Monochrome to Color on Hover)
     ========================================================= -->
-    <section id="education" class="border-t border-slate-200/80 dark:border-white/5 px-6 py-28 bg-slate-50/50 dark:bg-transparent">
+    <section id="education"
+        class="border-t border-slate-200/80 dark:border-white/5 px-6 py-28 bg-slate-50/50 dark:bg-transparent">
         <div class="mx-auto max-w-6xl">
 
             <div class="max-w-2xl reveal">
-                <p class="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600 dark:text-blue-400">
+                <p class="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600 dark:text-blue-400"
+                    data-i18n="academic_title">
                     Academic & Training
                 </p>
-                <h2 class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl lg:text-5xl">
+                <h2 class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl lg:text-5xl"
+                    data-i18n="edu_title">
                     Education &
-                    <span class="text-slate-500 dark:text-gray-400">Bootcamps.</span>
+                    <span class="text-slate-500 dark:text-gray-400" data-i18n="boot_title">Bootcamps.</span>
                 </h2>
-                <p class="mt-4 text-base leading-relaxed text-slate-600 dark:text-gray-400">
-                    Formal institutions, academy partners, and intensive bootcamps that continue to shape my technical foundation.
+                <p class="mt-4 text-base leading-relaxed text-slate-600 dark:text-gray-400" data-i18n="edu_boot_desc">
+                    Formal institutions, academy partners, and intensive bootcamps that continue to shape my technical
+                    foundation.
                 </p>
             </div>
 
@@ -808,34 +1269,44 @@
 
                     <div>
                         <!-- Logo with Grayscale to Color Effect -->
-                        <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-purple-500/10 p-3 transition-all duration-300 filter grayscale contrast-125 opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105">
+                        <div
+                            class="flex h-16 w-16 items-center justify-center rounded-2xl bg-purple-500/10 p-3 transition-all duration-300 filter grayscale contrast-125 opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105">
                             <svg class="h-10 w-10 text-purple-700" viewBox="0 0 48 48" fill="currentColor">
-                                <circle cx="24" cy="24" r="22" fill="#7e22ce" opacity="0.15"/>
-                                <path d="M24 6L6 16L24 26L42 16L24 6Z" fill="#7e22ce"/>
-                                <path d="M12 21.5V31.5C12 36.5 24 41 24 41C24 41 36 36.5 36 31.5V21.5L24 28.5L12 21.5Z" fill="#a855f7"/>
-                                <circle cx="42" cy="18" r="3" fill="#eab308"/>
+                                <circle cx="24" cy="24" r="22" fill="#7e22ce" opacity="0.15" />
+                                <path d="M24 6L6 16L24 26L42 16L24 6Z" fill="#7e22ce" />
+                                <path d="M12 21.5V31.5C12 36.5 24 41 24 41C24 41 36 36.5 36 31.5V21.5L24 28.5L12 21.5Z"
+                                    fill="#a855f7" />
+                                <circle cx="42" cy="18" r="3" fill="#eab308" />
                             </svg>
                         </div>
 
                         <div class="mt-6">
-                            <span class="inline-block text-[11px] font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400">
+                            <span
+                                class="inline-block text-[11px] font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400"
+                                data-i18n="grid_university_badge">
                                 University • S1
                             </span>
-                            <h3 class="mt-1 text-lg font-bold text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                            <h3 class="mt-1 text-lg font-bold text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors"
+                                data-i18n="grid_university_name">
                                 Universitas Gunadarma
                             </h3>
-                            <p class="mt-1 text-xs font-semibold text-slate-500 dark:text-gray-400">
+                            <p class="mt-1 text-xs font-semibold text-slate-500 dark:text-gray-400"
+                                data-i18n="grid_university_major">
                                 Information Systems (Sistem Informasi)
                             </p>
-                            <p class="mt-3 text-xs leading-relaxed text-slate-600 dark:text-gray-400">
-                                Studying core information systems, programming, database design, software engineering, and business analytics.
+                            <p
+                                class="mt-3 text-xs leading-relaxed text-slate-600 dark:text-gray-400"data-i18n="grid_university_desc">
+                                Studying core information systems, programming, database design, software engineering,
+                                and business analytics.
                             </p>
                         </div>
                     </div>
 
-                    <div class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4 text-xs font-medium text-slate-500 dark:text-gray-400">
-                        <span>2024 — Present</span>
-                        <span class="flex items-center gap-1 font-semibold text-purple-600 dark:text-purple-400 group-hover:underline">
+                    <div
+                        class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4 text-xs font-medium text-slate-500 dark:text-gray-400">
+                        <span data-i18n="grid_university_year">2024 — Present</span>
+                        <span
+                            class="flex items-center gap-1 font-semibold text-purple-600 dark:text-purple-400 group-hover:underline">
                             gunadarma.ac.id ↗
                         </span>
                     </div>
@@ -847,33 +1318,45 @@
 
                     <div>
                         <!-- Logo -->
-                        <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-cyan-500/10 p-3 transition-all duration-300 filter grayscale contrast-125 opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105">
+                        <div
+                            class="flex h-16 w-16 items-center justify-center rounded-2xl bg-cyan-500/10 p-3 transition-all duration-300 filter grayscale contrast-125 opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105">
                             <svg class="h-10 w-10 text-cyan-600" viewBox="0 0 48 48" fill="none">
-                                <rect width="48" height="48" rx="12" fill="#0891b2" fill-opacity="0.15"/>
-                                <path d="M14 12H26C33.732 12 40 18.268 40 26C40 33.732 33.732 40 26 40H14V12Z" fill="#0891b2"/>
-                                <path d="M22 20H26C29.3137 20 32 22.6863 32 26C32 29.3137 29.3137 32 26 32H22V20Z" fill="white"/>
+                                <rect width="48" height="48" rx="12" fill="#0891b2"
+                                    fill-opacity="0.15" />
+                                <path d="M14 12H26C33.732 12 40 18.268 40 26C40 33.732 33.732 40 26 40H14V12Z"
+                                    fill="#0891b2" />
+                                <path d="M22 20H26C29.3137 20 32 22.6863 32 26C32 29.3137 29.3137 32 26 32H22V20Z"
+                                    fill="white" />
                             </svg>
                         </div>
 
                         <div class="mt-6">
-                            <span class="inline-block text-[11px] font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">
+                            <span
+                                class="inline-block text-[11px] font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400"
+                                data-i18n="grid_dicoding_badge">
                                 Tech Academy • Partner
                             </span>
-                            <h3 class="mt-1 text-lg font-bold text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
+                            <h3
+                                class="mt-1 text-lg font-bold text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
                                 Dicoding Indonesia
                             </h3>
-                            <p class="mt-1 text-xs font-semibold text-slate-500 dark:text-gray-400">
+                            <p class="mt-1 text-xs font-semibold text-slate-500 dark:text-gray-400"
+                                data-i18n="grid_dicoding_major">
                                 AI & Microsoft Fabric Learning Path
                             </p>
-                            <p class="mt-3 text-xs leading-relaxed text-slate-600 dark:text-gray-400">
-                                Certified in Data Science with Microsoft Fabric and Artificial Intelligence Fundamentals by Dicoding Academy.
+                            <p class="mt-3 text-xs leading-relaxed text-slate-600 dark:text-gray-400"
+                                data-i18n="grid_dicoding_desc">
+                                Certified in Data Science with Microsoft Fabric and Artificial Intelligence Fundamentals
+                                by Dicoding Academy.
                             </p>
                         </div>
                     </div>
 
-                    <div class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4 text-xs font-medium text-slate-500 dark:text-gray-400">
-                        <span>2025</span>
-                        <span class="flex items-center gap-1 font-semibold text-cyan-600 dark:text-cyan-400 group-hover:underline">
+                    <div
+                        class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4 text-xs font-medium text-slate-500 dark:text-gray-400">
+                        <span data-i18n="grid_dicoding_year">2025 — Present</span>
+                        <span
+                            class="flex items-center gap-1 font-semibold text-cyan-600 dark:text-cyan-400 group-hover:underline">
                             dicoding.com ↗
                         </span>
                     </div>
@@ -885,33 +1368,44 @@
 
                     <div>
                         <!-- Logo -->
-                        <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-500/10 p-3 transition-all duration-300 filter grayscale contrast-125 opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105">
+                        <div
+                            class="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-500/10 p-3 transition-all duration-300 filter grayscale contrast-125 opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105">
                             <svg class="h-10 w-10 text-blue-600" viewBox="0 0 48 48" fill="none">
-                                <rect width="48" height="48" rx="12" fill="#2563eb" fill-opacity="0.15"/>
-                                <path d="M12 12V36M36 12V36M12 24H36" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
-                                <circle cx="36" cy="14" r="3" fill="#f59e0b"/>
+                                <rect width="48" height="48" rx="12" fill="#2563eb"
+                                    fill-opacity="0.15" />
+                                <path d="M12 12V36M36 12V36M12 24H36" stroke="#2563eb" stroke-width="6"
+                                    stroke-linecap="round" />
+                                <circle cx="36" cy="14" r="3" fill="#f59e0b" />
                             </svg>
                         </div>
 
                         <div class="mt-6">
-                            <span class="inline-block text-[11px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+                            <span
+                                class="inline-block text-[11px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400"
+                                data-i18n="grid_hacktiv8_badge">
                                 Intensive Bootcamp • Google AI
                             </span>
-                            <h3 class="mt-1 text-lg font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                            <h3
+                                class="mt-1 text-lg font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                 Hacktiv8 Indonesia
                             </h3>
-                            <p class="mt-1 text-xs font-semibold text-slate-500 dark:text-gray-400">
+                            <p class="mt-1 text-xs font-semibold text-slate-500 dark:text-gray-400"
+                                data-i18n="grid_hacktiv8_major">
                                 AI for Work & Career Readiness
                             </p>
-                            <p class="mt-3 text-xs leading-relaxed text-slate-600 dark:text-gray-400">
-                                Google AI products mastery, prompt engineering, and career readiness program for modern tech industry.
+                            <p class="mt-3 text-xs leading-relaxed text-slate-600 dark:text-gray-400"
+                                data-i18n="grid_hacktiv8_desc">
+                                Google AI products mastery, prompt engineering, and career readiness program for modern
+                                tech industry.
                             </p>
                         </div>
                     </div>
 
-                    <div class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4 text-xs font-medium text-slate-500 dark:text-gray-400">
+                    <div
+                        class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4 text-xs font-medium text-slate-500 dark:text-gray-400">
                         <span>2026</span>
-                        <span class="flex items-center gap-1 font-semibold text-blue-600 dark:text-blue-400 group-hover:underline">
+                        <span
+                            class="flex items-center gap-1 font-semibold text-blue-600 dark:text-blue-400 group-hover:underline">
                             hacktiv8.com ↗
                         </span>
                     </div>
@@ -923,34 +1417,46 @@
 
                     <div>
                         <!-- Logo -->
-                        <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-500/10 p-3 transition-all duration-300 filter grayscale contrast-125 opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105">
+                        <div
+                            class="flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-500/10 p-3 transition-all duration-300 filter grayscale contrast-125 opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105">
                             <svg class="h-10 w-10 text-emerald-600" viewBox="0 0 48 48" fill="none">
-                                <rect width="48" height="48" rx="12" fill="#059669" fill-opacity="0.15"/>
-                                <path d="M14 16L24 10L34 16L24 22L14 16Z" fill="#059669"/>
-                                <path d="M14 24L24 30L34 24" stroke="#059669" stroke-width="3" stroke-linecap="round"/>
-                                <path d="M14 32L24 38L34 32" stroke="#059669" stroke-width="3" stroke-linecap="round"/>
+                                <rect width="48" height="48" rx="12" fill="#059669"
+                                    fill-opacity="0.15" />
+                                <path d="M14 16L24 10L34 16L24 22L14 16Z" fill="#059669" />
+                                <path d="M14 24L24 30L34 24" stroke="#059669" stroke-width="3"
+                                    stroke-linecap="round" />
+                                <path d="M14 32L24 38L34 32" stroke="#059669" stroke-width="3"
+                                    stroke-linecap="round" />
                             </svg>
                         </div>
 
                         <div class="mt-6">
-                            <span class="inline-block text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
-                                Vocational Education • Foundation
+                            <span
+                                class="inline-block text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400"
+                                data-i18n="grid_rpl_badge">
+                                Vocational School • Foundation
                             </span>
-                            <h3 class="mt-1 text-lg font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                                Rekayasa Perangkat Lunak
+                            <h3
+                                class="mt-1 text-lg font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                                SMKN 1 Gunungputri
                             </h3>
-                            <p class="mt-1 text-xs font-semibold text-slate-500 dark:text-gray-400">
+                            <p class="mt-1 text-xs font-semibold text-slate-500 dark:text-gray-400"
+                                data-i18n="grid_rpl_major">
                                 Software Engineering Foundation (RPL)
                             </p>
-                            <p class="mt-3 text-xs leading-relaxed text-slate-600 dark:text-gray-400">
-                                Built core programming foundations in algorithms, OOP, databases, HTML/CSS, and structured software development.
+                            <p class="mt-3 text-xs leading-relaxed text-slate-600 dark:text-gray-400"
+                                data-i18n="grid_rpl_desc">
+                                Built core programming foundations in algorithms, OOP, databases, HTML/CSS, and
+                                structured software development.
                             </p>
                         </div>
                     </div>
 
-                    <div class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4 text-xs font-medium text-slate-500 dark:text-gray-400">
-                        <span>Foundation</span>
-                        <span class="flex items-center gap-1 font-semibold text-emerald-600 dark:text-emerald-400 group-hover:underline">
+                    <div
+                        class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4 text-xs font-medium text-slate-500 dark:text-gray-400">
+                        <span>2022-2026</span>
+                        <span
+                            class="flex items-center gap-1 font-semibold text-emerald-600 dark:text-emerald-400 group-hover:underline">
                             kemdikbud.go.id ↗
                         </span>
                     </div>
@@ -962,34 +1468,43 @@
 
                     <div>
                         <!-- Logo -->
-                        <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-amber-500/10 p-3 transition-all duration-300 filter grayscale contrast-125 opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105">
+                        <div
+                            class="flex h-16 w-16 items-center justify-center rounded-2xl bg-amber-500/10 p-3 transition-all duration-300 filter grayscale contrast-125 opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105">
                             <svg class="h-9 w-9" viewBox="0 0 24 24">
-                                <rect x="1" y="1" width="10" height="10" fill="#f25022"/>
-                                <rect x="13" y="1" width="10" height="10" fill="#7fba00"/>
-                                <rect x="1" y="13" width="10" height="10" fill="#00a4ef"/>
-                                <rect x="13" y="13" width="10" height="10" fill="#ffb900"/>
+                                <rect x="1" y="1" width="10" height="10" fill="#f25022" />
+                                <rect x="13" y="1" width="10" height="10" fill="#7fba00" />
+                                <rect x="1" y="13" width="10" height="10" fill="#00a4ef" />
+                                <rect x="13" y="13" width="10" height="10" fill="#ffb900" />
                             </svg>
                         </div>
 
                         <div class="mt-6">
-                            <span class="inline-block text-[11px] font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">
+                            <span
+                                class="inline-block text-[11px] font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400"
+                                data-i18n="grid_microsoft_badge">
                                 Cloud & Data • Microsoft
                             </span>
-                            <h3 class="mt-1 text-lg font-bold text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+                            <h3 class="mt-1 text-lg font-bold text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors"
+                                data-i18n="grid_microsoft_name">
                                 Microsoft Learn
                             </h3>
-                            <p class="mt-1 text-xs font-semibold text-slate-500 dark:text-gray-400">
+                            <p class="mt-1 text-xs font-semibold text-slate-500 dark:text-gray-400"
+                                data-i18n="grid_microsoft_major">
                                 Microsoft Fabric & Data Science
                             </p>
-                            <p class="mt-3 text-xs leading-relaxed text-slate-600 dark:text-gray-400">
-                                Cloud data workflows, Lakehouse concepts, Power BI analytics, and Machine Learning operations in Microsoft Fabric.
+                            <p class="mt-3 text-xs leading-relaxed text-slate-600 dark:text-gray-400"
+                                data-i18n="grid_microsoft_desc">
+                                Cloud data workflows, Lakehouse concepts, Power BI analytics, and Machine Learning
+                                operations in Microsoft Fabric.
                             </p>
                         </div>
                     </div>
 
-                    <div class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4 text-xs font-medium text-slate-500 dark:text-gray-400">
+                    <div
+                        class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4 text-xs font-medium text-slate-500 dark:text-gray-400">
                         <span>2025</span>
-                        <span class="flex items-center gap-1 font-semibold text-amber-600 dark:text-amber-400 group-hover:underline">
+                        <span
+                            class="flex items-center gap-1 font-semibold text-amber-600 dark:text-amber-400 group-hover:underline">
                             learn.microsoft.com ↗
                         </span>
                     </div>
@@ -1001,34 +1516,47 @@
 
                     <div>
                         <!-- Logo -->
-                        <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-red-500/10 p-3 transition-all duration-300 filter grayscale contrast-125 opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105">
+                        <div
+                            class="flex h-16 w-16 items-center justify-center rounded-2xl bg-red-500/10 p-3 transition-all duration-300 filter grayscale contrast-125 opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105">
                             <svg class="h-9 w-9" viewBox="0 0 24 24">
-                                <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.8-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17Z"/>
-                                <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24Z"/>
-                                <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15Z"/>
-                                <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98Z"/>
+                                <path fill="#4285F4"
+                                    d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.8-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17Z" />
+                                <path fill="#34A853"
+                                    d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24Z" />
+                                <path fill="#FBBC05"
+                                    d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15Z" />
+                                <path fill="#EA4335"
+                                    d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98Z" />
                             </svg>
                         </div>
 
                         <div class="mt-6">
-                            <span class="inline-block text-[11px] font-bold uppercase tracking-wider text-red-600 dark:text-red-400">
+                            <span
+                                class="inline-block text-[11px] font-bold uppercase tracking-wider text-red-600 dark:text-red-400"
+                                data-i18n="grid_google_badge">
                                 Developer Ecosystem
                             </span>
-                            <h3 class="mt-1 text-lg font-bold text-slate-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">
+                            <h3 class="mt-1 text-lg font-bold text-slate-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors"
+                                data-i18n="grid_google_name">
                                 Google for Developers
                             </h3>
-                            <p class="mt-1 text-xs font-semibold text-slate-500 dark:text-gray-400">
+                            <p class="mt-1 text-xs font-semibold text-slate-500 dark:text-gray-400"
+                                data-i18n="grid_google_major">
                                 Google AI & Web Technologies
                             </p>
-                            <p class="mt-3 text-xs leading-relaxed text-slate-600 dark:text-gray-400">
-                                Implementing modern web standards, developer tools, and Google AI ecosystem integrations.
+                            <p class="mt-3 text-xs leading-relaxed text-slate-600 dark:text-gray-400"
+                                data-i18n="grid_google_desc">
+                                Implementing modern web standards, developer tools, and Google AI ecosystem
+                                integrations.
                             </p>
                         </div>
                     </div>
 
-                    <div class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4 text-xs font-medium text-slate-500 dark:text-gray-400">
+                    <div
+                        class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4 text-xs font-medium text-slate-500 dark:text-gray-400">
                         <span>2026</span>
-                        <span class="flex items-center gap-1 font-semibold text-red-600 dark:text-red-400 group-hover:underline">
+                        <span
+                            class="flex items-center gap-1 font-semibold text-red-600 dark:text-red-400 group-hover:underline">
                             developers.google.com ↗
                         </span>
                     </div>
@@ -1041,102 +1569,376 @@
 
 
     <!-- =========================================================
-         SKILLS SECTION
+         ORGANIZATIONS & COMMUNITIES
     ========================================================= -->
-    <section id="skills" class="border-t border-slate-200/80 dark:border-white/5 px-6 py-28">
-        <div class="mx-auto max-w-6xl">
+    <section class="border-t border-slate-200/80 bg-slate-50/50 px-6 py-20">
+        <div class="mx-auto flex max-w-6xl flex-col items-center gap-8">
+            <div class="max-w-xl text-center">
+                <p class="text-xs font-bold uppercase tracking-[0.22em] text-blue-600">Communities & Networks</p>
+                <h2 class="mt-3 text-2xl font-extrabold tracking-tight text-slate-900">Learning with the community.
+                </h2>
+            </div>
 
+            <div id="community-logo-row" class="flex w-full min-w-0 items-center justify-start px-1 pb-2 sm:px-2">
+                <a class="brand-logo flex h-36 w-36 shrink-0 items-center justify-center rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"
+                    href="https://www.gunadarma.ac.id/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Universitas Gunadarma" title="Universitas Gunadarma">
+                    <img src="{{ asset('images/Gunadarma Untuk Indonesia.jpeg') }}" alt="Universitas Gunadarma"
+                        class="h-20 w-20 object-contain">
+                </a>
+                <a class="brand-logo flex h-36 w-36 shrink-0 items-center justify-center rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"
+                    href="https://smkn1gnputri.sch.id/" target="_blank" rel="noopener noreferrer"
+                    aria-label="SMKN 1 Gunungputri" title="SMKN 1 Gunungputri">
+                    <img src="{{ asset('images/smkn1_logo1.jpeg') }}" alt="SMKN 1 Gunungputri"
+                        class="h-20 w-20 object-contain">
+                </a>
+                <a class="brand-logo flex h-36 w-36 shrink-0 items-center justify-center rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"
+                    href="https://me.developers.google.com/u/me" target="_blank" rel="noopener noreferrer"
+                    aria-label="Google For Developer Program" title="Google For Developer Program">
+                    <img src="{{ asset('images/Google Developers Logo PNG Vector (SVG) Free Download.jpeg') }}"
+                        alt="Google For Developer Program" class="h-20 w-20 object-contain">
+                </a>
+                <a class="brand-logo flex h-36 w-36 shrink-0 items-center justify-center rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"
+                    href="https://www.dicoding.com/users/andhika_pratama_r16d/academies" target="_blank"
+                    rel="noopener noreferrer" aria-label="Dicoding Indonesia" title="Dicoding Indonesia">
+                    <img src="{{ asset('images/dicoding_logo.jpeg') }}" alt="Dicoding Indonesia"
+                        class="h-20 w-20 object-contain">
+                </a>
+                <a class="brand-logo flex h-36 w-36 shrink-0 items-center justify-center rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"
+                    href="https://me.developers.google.com/u/me" target="_blank" rel="noopener noreferrer"
+                    aria-label="Google Developer Program" title="Google Developer Program">
+                    <img src="https://www.gstatic.com/_/boq-gdp/_/r/T95W305dVbs.svg" alt="Google Developer Program"
+                        class="h-20 w-20 object-contain">
+                </a>
+                <a class="brand-logo flex h-36 w-36 shrink-0 items-center justify-center rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"
+                    href="https://www.hacktiv8.com/?utm_source=google&utm_medium=cpc&utm_campaign=Brand-all&utm_content=hacktiv8&utm_term=responsive-ads&gad_source=1&gad_campaignid=15141267081&gbraid=0AAAAADSnsWDXxK1Lu7fdHbinZVqVGexZp&gclid=Cj0KCQjw--7UBhCpARIsAGJBpthOsfczfyo2iC4zNjqBC00M8BlpYZ6MjlnGNh9Gpx9EI7rDTXhfzsEaAgctEALw_wcB"
+                    target="_blank" rel="noopener noreferrer" aria-label="Hacktiv8 Program"
+                    title="Hacktiv8 Program">
+                    <img src="https://www.hacktiv8.com/_next/image?url=%2Flogo.png&w=1920&q=75" alt="Hacktiv8 Program"
+                        class="h-20 w-28 object-contain">
+                </a>
+                <a class="brand-logo flex h-36 w-36 shrink-0 items-center justify-center rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"
+                    href="https://www.skills.google/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Google Skills Program" title="Google Skills Program">
+                    <img src="https://cdn.qwiklabs.com/lqJbxogu4tSLez1OvjDcIO8rwow6cPLwvrfIdmQLf6U%3D"
+                        alt="Google Skills Program" class="h-14 w-28 object-contain">
+                </a>
+                <a class="brand-logo flex h-36 w-36 shrink-0 items-center justify-center rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"
+                    href="https://cloud.google.com/gcp?%7B_dsmrktparam%7D=&utm_source=google&utm_medium=cpc&utm_campaign=Cloud-SS-DR-GCP-1713664-GCP-DR-APAC-ID-id-Google-BKWS-MIX-GenericCloud&utm_content=c-Hybrid+%7C+BKWS+-+BRO+%7C+Txt+-+Generic+Cloud-Cloud+Generic-Core+GCP-ID_id-6458750523&utm_term=google%20cloud&gclsrc=aw.ds&gad_source=1&gad_campaignid=12297519321&gclid=Cj0KCQjw--7UBhCpARIsAGJBptidfcdR0KQpByODN5U35rqeKlcWNR_K6Bz2D7x03vEs2U9FScSLuhQaAotAEALw_wcB"
+                    target="_blank" rel="noopener noreferrer" aria-label="Google Cloud Console"
+                    title="Google Cloud Console">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScD-0SUH1NfMkJuuTHYGa-3VpWQ5CdyGhuLGFbVSi2GA&s=10"
+                        alt="Google Cloud Console" class="h-20 w-20 object-contain">
+                </a>
+                <a class="brand-logo flex h-36 w-36 shrink-0 items-center justify-center rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"
+                    href="https://dicoding.elevaite.id/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Microsoft Elevate" title="Microsoft Elevate">
+                    <img src="https://framerusercontent.com/images/a0xpZiBSQRLW91EFUQ4pJv7dlk.png?scale-down-to=512&width=720&height=192"
+                        alt="Microsoft Elevate" class="h-14 w-28 object-contain">
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================================
+         WORK EXPERIENCE
+    ========================================================= -->
+    <section id="work-experience" class="border-t border-slate-200/80 bg-slate-50/50 px-6 py-20">
+        <div class="mx-auto flex max-w-6xl flex-col items-center gap-8">
+            <div class="max-w-xl text-center">
+                <p class="text-xs font-bold uppercase tracking-[0.22em] text-blue-600">Work Experience</p>
+                <h2 class="mt-3 text-2xl font-extrabold tracking-tight text-slate-900">Companies and teams.</h2>
+            </div>
+
+            <div class="flex w-full min-w-0 items-center justify-start gap-4 overflow-x-auto pb-2 sm:gap-6">
+                <a class="brand-logo flex h-36 w-36 shrink-0 items-center justify-center rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"
+                    href="https://corinthiandoors.asia/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Company logo" title="Company logo">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzEegoEXj96c_a58mLXgPxMkBNJIl1uL2O3N3IDqkwhQ&s=10"
+                        alt="Company logo" class="h-28 w-28 object-contain">
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================================
+     SKILLS SECTION
+========================================================= -->
+    <section id="skills"
+        class="relative overflow-hidden border-t border-slate-200/80 px-0 py-28 dark:border-white/5">
+
+        <!-- Header -->
+        <div class="mx-auto max-w-6xl px-6">
             <div class="max-w-2xl reveal">
+
                 <p class="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600 dark:text-blue-400">
                     Tech Stack
                 </p>
-                <h2 class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl lg:text-5xl">
+
+                <h2
+                    class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl lg:text-5xl">
                     Skills &
-                    <span class="text-slate-500 dark:text-gray-400">technologies.</span>
+                    <span class="text-slate-500 dark:text-gray-400">
+                        technologies.
+                    </span>
                 </h2>
+
                 <p class="mt-4 text-base leading-relaxed text-slate-600 dark:text-gray-400">
-                    Tools, languages, and frameworks I use to bring digital products to life.
+                    Tools, languages, and technologies I use to build modern digital experiences.
                 </p>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+         TECH STACK MARQUEE
+    ====================================================== -->
+
+        <div class="relative mt-16">
+
+            <!-- Fade kiri -->
+            <div
+                class="pointer-events-none absolute left-0 top-0 z-10 h-full w-16 bg-gradient-to-r from-white to-transparent dark:from-slate-950">
             </div>
 
-            <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <!-- Fade kanan -->
+            <div
+                class="pointer-events-none absolute right-0 top-0 z-10 h-full w-16 bg-gradient-to-l from-white to-transparent dark:from-slate-950">
+            </div>
 
-                <!-- Frontend -->
-                <div class="skill-card reveal stagger-1 rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-6 shadow-sm">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-xl font-bold text-blue-600 dark:text-blue-400">
-                        🎨
+
+            <!-- =================================================
+             ROW 1
+             Bergerak ke KANAN
+        ================================================== -->
+            <div class="marquee-wrapper">
+
+                <div class="marquee marquee-right">
+
+                    <!-- SET 1 -->
+                    <div class="tech-item">
+                        <i class="devicon-html5-plain colored"></i>
+                        <span>HTML5</span>
                     </div>
-                    <h3 class="mt-4 text-lg font-bold text-slate-900 dark:text-white">Frontend</h3>
-                    <p class="mt-2 text-xs leading-relaxed text-slate-500 dark:text-gray-400">Responsive, performant, and interactive UI engineering.</p>
-                    <div class="mt-5 flex flex-wrap gap-2">
-                        <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">HTML5</span>
-                        <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">CSS3</span>
-                        <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">JavaScript</span>
-                        <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Tailwind CSS</span>
+
+                    <div class="tech-item">
+                        <i class="devicon-css3-plain colored"></i>
+                        <span>CSS3</span>
                     </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-javascript-plain colored"></i>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-tailwindcss-original colored"></i>
+                        <span>Tailwind CSS</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-react-original colored"></i>
+                        <span>React</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-bootstrap-plain colored"></i>
+                        <span>Bootstrap</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-vitejs-plain colored"></i>
+                        <span>Vite</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-figma-plain colored"></i>
+                        <span>Figma</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-canva-original colored"></i>
+                        <span>Canva</span>
+                    </div>
+
+
+                    <!-- SET 2 - DUPLIKAT -->
+                    <div class="tech-item">
+                        <i class="devicon-html5-plain colored"></i>
+                        <span>HTML5</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-css3-plain colored"></i>
+                        <span>CSS3</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-javascript-plain colored"></i>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-tailwindcss-original colored"></i>
+                        <span>Tailwind CSS</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-react-original colored"></i>
+                        <span>React</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-bootstrap-plain colored"></i>
+                        <span>Bootstrap</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-vitejs-plain colored"></i>
+                        <span>Vite</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-figma-plain colored"></i>
+                        <span>Figma</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-canva-original colored"></i>
+                        <span>Canva</span>
+                    </div>
+
                 </div>
+            </div>
 
-                <!-- Backend -->
-                <div class="skill-card reveal stagger-2 rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-6 shadow-sm">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500/10 text-xl font-bold text-indigo-600 dark:text-indigo-400">
-                        ⚙️
+
+
+            <!-- =================================================
+             ROW 2
+             Bergerak ke KIRI
+        ================================================== -->
+
+            <div class="marquee-wrapper mt-5">
+
+                <div class="marquee marquee-left">
+
+                    <!-- SET 1 -->
+                    <div class="tech-item">
+                        <i class="devicon-laravel-original colored"></i>
+                        <span>Laravel</span>
                     </div>
-                    <h3 class="mt-4 text-lg font-bold text-slate-900 dark:text-white">Backend</h3>
-                    <p class="mt-2 text-xs leading-relaxed text-slate-500 dark:text-gray-400">Robust server logic, RESTful APIs, and authentication.</p>
-                    <div class="mt-5 flex flex-wrap gap-2">
-                        <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Laravel</span>
-                        <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">PHP</span>
-                        <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">REST API</span>
-                        <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Blade</span>
+
+                    <div class="tech-item">
+                        <i class="devicon-php-plain colored"></i>
+                        <span>PHP</span>
                     </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-nodejs-plain colored"></i>
+                        <span>Node.js</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-mysql-original colored"></i>
+                        <span>MySQL</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-git-plain colored"></i>
+                        <span>Git</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-github-original colored"></i>
+                        <span>GitHub</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-docker-plain colored"></i>
+                        <span>Docker</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-linux-plain colored"></i>
+                        <span>Linux</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-vscode-plain colored"></i>
+                        <span>VS Code</span>
+                    </div>
+
+
+                    <!-- SET 2 - DUPLIKAT -->
+                    <div class="tech-item">
+                        <i class="devicon-laravel-original colored"></i>
+                        <span>Laravel</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-php-plain colored"></i>
+                        <span>PHP</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-nodejs-plain colored"></i>
+                        <span>Node.js</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-mysql-original colored"></i>
+                        <span>MySQL</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-git-plain colored"></i>
+                        <span>Git</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-github-original colored"></i>
+                        <span>GitHub</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-docker-plain colored"></i>
+                        <span>Docker</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-linux-plain colored"></i>
+                        <span>Linux</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="devicon-vscode-plain colored"></i>
+                        <span>VS Code</span>
+                    </div>
+
                 </div>
-
-                <!-- Database -->
-                <div class="skill-card reveal stagger-3 rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-6 shadow-sm">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-xl font-bold text-cyan-600 dark:text-cyan-400">
-                        🗄️
-                    </div>
-                    <h3 class="mt-4 text-lg font-bold text-slate-900 dark:text-white">Database</h3>
-                    <p class="mt-2 text-xs leading-relaxed text-slate-500 dark:text-gray-400">Relational data modeling, indexing, and query optimization.</p>
-                    <div class="mt-5 flex flex-wrap gap-2">
-                        <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">MySQL</span>
-                        <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Eloquent ORM</span>
-                        <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Relational DB</span>
-                    </div>
-                </div>
-
-                <!-- Tools & AI -->
-                <div class="skill-card reveal stagger-4 rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-6 shadow-sm">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-500/10 text-xl font-bold text-purple-600 dark:text-purple-400">
-                        🚀
-                    </div>
-                    <h3 class="mt-4 text-lg font-bold text-slate-900 dark:text-white">Tools & AI</h3>
-                    <p class="mt-2 text-xs leading-relaxed text-slate-500 dark:text-gray-400">Version control, deployment, and AI workflow integration.</p>
-                    <div class="mt-5 flex flex-wrap gap-2">
-                        <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Git & GitHub</span>
-                        <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Vite</span>
-                        <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Google AI</span>
-                        <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Fabric</span>
-                    </div>
-                </div>
-
             </div>
 
         </div>
+
     </section>
 
 
     <!-- =========================================================
          CERTIFICATES (Req 3: Rich Lightbox Modal with Zoom/Pan)
     ========================================================= -->
-    <section id="certificates" class="border-t border-slate-200/80 dark:border-white/5 px-6 py-28 bg-slate-50/50 dark:bg-transparent">
+    <section id="certificates"
+        class="border-t border-slate-200/80 dark:border-white/5 px-6 py-28 bg-slate-50/50 dark:bg-transparent">
         <div class="mx-auto max-w-6xl">
 
             <div class="max-w-2xl reveal">
                 <p class="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600 dark:text-blue-400">
                     Certifications
                 </p>
-                <h2 class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl lg:text-5xl">
+                <h2
+                    class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl lg:text-5xl">
                     Certificates &
                     <span class="text-slate-500 dark:text-gray-400">achievements.</span>
                 </h2>
@@ -1149,13 +1951,16 @@
             <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-2">
 
                 <!-- Cert 1: Hacktiv8 AI -->
-                <div class="certificate-card reveal stagger-1 group relative flex flex-col justify-between rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-500/40 hover:shadow-xl">
+                <div
+                    class="certificate-card reveal stagger-1 group relative flex flex-col justify-between rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-500/40 hover:shadow-xl">
                     <div>
                         <div class="flex items-center justify-between">
-                            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-2xl">
+                            <span
+                                class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-2xl">
                                 📜
                             </span>
-                            <span class="rounded-full bg-blue-50 dark:bg-blue-500/10 px-3 py-1 text-xs font-bold text-blue-600 dark:text-blue-400">
+                            <span
+                                class="rounded-full bg-blue-50 dark:bg-blue-500/10 px-3 py-1 text-xs font-bold text-blue-600 dark:text-blue-400">
                                 2026
                             </span>
                         </div>
@@ -1164,7 +1969,8 @@
                             Course & Workshop
                         </p>
 
-                        <h3 class="mt-2 text-xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                        <h3
+                            class="mt-2 text-xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                             AI for Work & Career Readiness with Google AI Products
                         </h3>
                         <p class="mt-1 text-xs font-semibold text-slate-500 dark:text-gray-400">
@@ -1172,15 +1978,17 @@
                         </p>
 
                         <p class="mt-4 text-xs leading-relaxed text-slate-600 dark:text-gray-400">
-                            Pelatihan komprehensif implementasi teknologi Artificial Intelligence, prompt engineering, generative AI workflows, dan otomatisasi produktivitas digital.
+                            Pelatihan komprehensif implementasi teknologi Artificial Intelligence, prompt engineering,
+                            generative AI workflows, dan otomatisasi produktivitas digital.
                         </p>
                     </div>
 
-                    <div class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4">
+                    <div
+                        class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4">
                         <span class="text-xs font-medium text-slate-500 dark:text-gray-400">Hacktiv8 • Google AI</span>
                         <button type="button"
-                                class="open-cert-modal inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition"
-                                data-cert-index="0">
+                            class="open-cert-modal inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition"
+                            data-cert-index="0">
                             <span>View Certificate</span>
                             <span class="text-sm">🔍</span>
                         </button>
@@ -1188,13 +1996,16 @@
                 </div>
 
                 <!-- Cert 2: Dicoding Microsoft Fabric -->
-                <div class="certificate-card reveal stagger-2 group relative flex flex-col justify-between rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-cyan-500/40 hover:shadow-xl">
+                <div
+                    class="certificate-card reveal stagger-2 group relative flex flex-col justify-between rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-cyan-500/40 hover:shadow-xl">
                     <div>
                         <div class="flex items-center justify-between">
-                            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-2xl">
+                            <span
+                                class="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-2xl">
                                 📊
                             </span>
-                            <span class="rounded-full bg-cyan-50 dark:bg-cyan-500/10 px-3 py-1 text-xs font-bold text-cyan-600 dark:text-cyan-400">
+                            <span
+                                class="rounded-full bg-cyan-50 dark:bg-cyan-500/10 px-3 py-1 text-xs font-bold text-cyan-600 dark:text-cyan-400">
                                 2025
                             </span>
                         </div>
@@ -1203,7 +2014,8 @@
                             Course & Certification
                         </p>
 
-                        <h3 class="mt-2 text-xl font-bold text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
+                        <h3
+                            class="mt-2 text-xl font-bold text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
                             Belajar Penerapan Data Science dengan Microsoft Fabric
                         </h3>
                         <p class="mt-1 text-xs font-semibold text-slate-500 dark:text-gray-400">
@@ -1211,15 +2023,17 @@
                         </p>
 
                         <p class="mt-4 text-xs leading-relaxed text-slate-600 dark:text-gray-400">
-                            Mempelajari alur end-to-end data science dengan Microsoft Fabric: eksplorasi data, pembuatan model machine learning, deployment, hingga monitoring dalam satu platform.
+                            Mempelajari alur end-to-end data science dengan Microsoft Fabric: eksplorasi data, pembuatan
+                            model machine learning, deployment, hingga monitoring dalam satu platform.
                         </p>
                     </div>
 
-                    <div class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4">
+                    <div
+                        class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4">
                         <span class="text-xs font-medium text-slate-500 dark:text-gray-400">Dicoding • Microsoft</span>
                         <button type="button"
-                                class="open-cert-modal inline-flex items-center gap-1.5 text-xs font-bold text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition"
-                                data-cert-index="1">
+                            class="open-cert-modal inline-flex items-center gap-1.5 text-xs font-bold text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition"
+                            data-cert-index="1">
                             <span>View Certificate</span>
                             <span class="text-sm">🔍</span>
                         </button>
@@ -1227,22 +2041,27 @@
                 </div>
 
                 <!-- Cert 3: Dicoding Dasar AI -->
-                <div class="certificate-card reveal stagger-1 group relative flex flex-col justify-between rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-indigo-500/40 hover:shadow-xl">
+                <div
+                    class="certificate-card reveal stagger-1 group relative flex flex-col justify-between rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-indigo-500/40 hover:shadow-xl">
                     <div>
                         <div class="flex items-center justify-between">
-                            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500/10 text-2xl">
+                            <span
+                                class="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500/10 text-2xl">
                                 🤖
                             </span>
-                            <span class="rounded-full bg-indigo-50 dark:bg-indigo-500/10 px-3 py-1 text-xs font-bold text-indigo-600 dark:text-indigo-400">
+                            <span
+                                class="rounded-full bg-indigo-50 dark:bg-indigo-500/10 px-3 py-1 text-xs font-bold text-indigo-600 dark:text-indigo-400">
                                 2025
                             </span>
                         </div>
 
-                        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
+                        <p
+                            class="mt-6 text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
                             Course & Certification
                         </p>
 
-                        <h3 class="mt-2 text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                        <h3
+                            class="mt-2 text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                             Belajar Dasar AI (Artificial Intelligence)
                         </h3>
                         <p class="mt-1 text-xs font-semibold text-slate-500 dark:text-gray-400">
@@ -1250,15 +2069,17 @@
                         </p>
 
                         <p class="mt-4 text-xs leading-relaxed text-slate-600 dark:text-gray-400">
-                            Fundamental konsep Artificial Intelligence, subbidang Machine Learning & Deep Learning, evaluasi model kecerdasan buatan, dan implementasi aplikatif.
+                            Fundamental konsep Artificial Intelligence, subbidang Machine Learning & Deep Learning,
+                            evaluasi model kecerdasan buatan, dan implementasi aplikatif.
                         </p>
                     </div>
 
-                    <div class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4">
+                    <div
+                        class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4">
                         <span class="text-xs font-medium text-slate-500 dark:text-gray-400">Dicoding Academy</span>
                         <button type="button"
-                                class="open-cert-modal inline-flex items-center gap-1.5 text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition"
-                                data-cert-index="2">
+                            class="open-cert-modal inline-flex items-center gap-1.5 text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition"
+                            data-cert-index="2">
                             <span>View Certificate</span>
                             <span class="text-sm">🔍</span>
                         </button>
@@ -1266,22 +2087,27 @@
                 </div>
 
                 <!-- Cert 4: Spec-Driven Development (SDD) -->
-                <div class="certificate-card reveal stagger-2 group relative flex flex-col justify-between rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-purple-500/40 hover:shadow-xl">
+                <div
+                    class="certificate-card reveal stagger-2 group relative flex flex-col justify-between rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-purple-500/40 hover:shadow-xl">
                     <div>
                         <div class="flex items-center justify-between">
-                            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-500/10 text-2xl">
+                            <span
+                                class="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-500/10 text-2xl">
                                 🤖
                             </span>
-                            <span class="rounded-full bg-purple-50 dark:bg-purple-500/10 px-3 py-1 text-xs font-bold text-purple-600 dark:text-purple-400">
+                            <span
+                                class="rounded-full bg-purple-50 dark:bg-purple-500/10 px-3 py-1 text-xs font-bold text-purple-600 dark:text-purple-400">
                                 2026
                             </span>
                         </div>
 
-                        <p class="mt-6 text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400">
+                        <p
+                            class="mt-6 text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400">
                             Course & Certification
                         </p>
 
-                        <h3 class="mt-2 text-xl font-bold text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                        <h3
+                            class="mt-2 text-xl font-bold text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
                             Spec-Driven Development (SDD)
                         </h3>
                         <p class="mt-1 text-xs font-semibold text-slate-500 dark:text-gray-400">
@@ -1289,15 +2115,17 @@
                         </p>
 
                         <p class="mt-4 text-xs leading-relaxed text-slate-600 dark:text-gray-400">
-                            Belajar arsitektur perangkat lunak modern, implementasi berbasis spesifikasi (DDD), kualitas kode, API-first design, dan metodologi development berorientasi kualitas.
+                            Belajar arsitektur perangkat lunak modern, implementasi berbasis spesifikasi (DDD), kualitas
+                            kode, API-first design, dan metodologi development berorientasi kualitas.
                         </p>
                     </div>
 
-                    <div class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4">
+                    <div
+                        class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4">
                         <span class="text-xs font-medium text-slate-500 dark:text-gray-400">Dicoding Academy</span>
                         <button type="button"
-                                class="open-cert-modal inline-flex items-center gap-1.5 text-xs font-bold text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition"
-                                data-cert-index="3">
+                            class="open-cert-modal inline-flex items-center gap-1.5 text-xs font-bold text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition"
+                            data-cert-index="3">
                             <span>View Certificate</span>
                             <span class="text-sm">🔍</span>
                         </button>
@@ -1360,7 +2188,8 @@
                     <p class="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600 dark:text-blue-400">
                         Selected Work
                     </p>
-                    <h2 class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl lg:text-5xl">
+                    <h2
+                        class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl lg:text-5xl">
                         Featured
                         <span class="text-slate-500 dark:text-gray-400">projects.</span>
                     </h2>
@@ -1372,7 +2201,10 @@
                 <a href="{{ route('projects') }}"
                     class="reveal inline-flex items-center gap-2 rounded-full border border-slate-300 dark:border-white/10 bg-white dark:bg-white/5 px-6 py-3 text-sm font-semibold text-slate-800 dark:text-white shadow-sm transition hover:border-slate-400 hover:bg-slate-50 dark:hover:bg-white/10">
                     <span>Explore All Projects</span>
-                    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
                 </a>
             </div>
 
@@ -1380,11 +2212,12 @@
             <div class="mt-14 grid gap-8 md:grid-cols-2">
 
                 <!-- Project 1: APAR & Hydrant -->
-                <div class="project-card reveal stagger-1 group relative overflow-hidden rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-500/40 hover:shadow-2xl">
+                <div
+                    class="project-card reveal stagger-1 group relative overflow-hidden rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-500/40 hover:shadow-2xl">
                     <div class="relative h-64 overflow-hidden bg-slate-100 dark:bg-slate-900 sm:h-72">
                         <img src="{{ asset('images/projects/apar&hydrant.png') }}"
-                             alt="APAR & Hydrant Management System"
-                             class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            alt="APAR & Hydrant Management System"
+                            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
 
                         <div class="status-live project-status">
                             <span class="status-dot"></span>
@@ -1396,36 +2229,47 @@
                         <p class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
                             Management System • 2025
                         </p>
-                        <h3 class="mt-2 text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                        <h3
+                            class="mt-2 text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                             APAR & Hydrant Management System
                         </h3>
                         <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-gray-400">
-                            A centralized web application for digitizing fire extinguisher and hydrant inspections, QR code scanning, tracking expiration dates, and generating maintenance reports.
+                            A centralized web application for digitizing fire extinguisher and hydrant inspections, QR
+                            code scanning, tracking expiration dates, and generating maintenance reports.
                         </p>
 
                         <div class="mt-6 flex flex-wrap gap-2">
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Java Script</span>
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">PHP</span>
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">MySQL</span>
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">CSS</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Java
+                                Script</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">PHP</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">MySQL</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">CSS</span>
                         </div>
 
-                        <div class="mt-8 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-5">
+                        <div
+                            class="mt-8 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-5">
                             <a href="{{ route('projects.show', 'apar-hydrant') }}"
                                 class="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
                                 <span>View Project Details</span>
-                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 2: AFinance -->
-                <div class="project-card reveal stagger-2 group relative overflow-hidden rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-500/40 hover:shadow-2xl">
+                <div
+                    class="project-card reveal stagger-2 group relative overflow-hidden rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-500/40 hover:shadow-2xl">
                     <div class="relative h-64 overflow-hidden bg-slate-100 dark:bg-slate-900 sm:h-72">
-                        <img src="{{ asset('images/projects/afinance.png') }}"
-                             alt="APAR & Hydrant Management System"
-                             class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <img src="{{ asset('images/projects/afinance.png') }}" alt="APAR & Hydrant Management System"
+                            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
 
                         <div class="status-live project-status">
                             <span class="status-dot"></span>
@@ -1437,36 +2281,48 @@
                         <p class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
                             Management System • 2026
                         </p>
-                        <h3 class="mt-2 text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                            Pengelola Keuangan Pribadi 
+                        <h3
+                            class="mt-2 text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                            Pengelola Keuangan Pribadi
                         </h3>
                         <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-gray-400">
-                            A centralized web application for digitizing personal income and expense management, QR code scanning, tracking expiration dates, and generating maintenance reports.
+                            A centralized web application for digitizing personal income and expense management, QR code
+                            scanning, tracking expiration dates, and generating maintenance reports.
                         </p>
 
                         <div class="mt-6 flex flex-wrap gap-2">
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Laravel</span>
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">PHP</span>
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">MySQL</span>
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Tailwind CSS</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Laravel</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">PHP</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">MySQL</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Tailwind
+                                CSS</span>
                         </div>
 
-                        <div class="mt-8 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-5">
+                        <div
+                            class="mt-8 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-5">
                             <a href="{{ route('projects.show', 'apar-hydrant') }}"
                                 class="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
                                 <span>View Project Details</span>
-                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 3: Audit & Pengecekan Mesin -->
-                <div class="project-card reveal stagger-2 group relative overflow-hidden rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-500/40 hover:shadow-2xl">
+                <div
+                    class="project-card reveal stagger-2 group relative overflow-hidden rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-500/40 hover:shadow-2xl">
                     <div class="relative h-64 overflow-hidden bg-slate-100 dark:bg-slate-900 sm:h-72">
                         <img src="{{ asset('images/projects/cek_mesin.png') }}"
-                             alt="APAR & Hydrant Management System"
-                             class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            alt="APAR & Hydrant Management System"
+                            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
 
                         <div class="status-live project-status">
                             <span class="status-dot"></span>
@@ -1478,36 +2334,48 @@
                         <p class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
                             Management System • 2025
                         </p>
-                        <h3 class="mt-2 text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                            Audit & Pengecekan Mesin 
+                        <h3
+                            class="mt-2 text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                            Audit & Pengecekan Mesin
                         </h3>
                         <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-gray-400">
-                            A centralized web application for maintenance, audit, and inspection of machines in factories.
+                            A centralized web application for maintenance, audit, and inspection of machines in
+                            factories.
                         </p>
 
                         <div class="mt-6 flex flex-wrap gap-2">
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Java Script</span>
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">PHP</span>
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">MySQL</span>
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">CSS</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Java
+                                Script</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">PHP</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">MySQL</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">CSS</span>
                         </div>
 
-                        <div class="mt-8 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-5">
+                        <div
+                            class="mt-8 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-5">
                             <a href="{{ route('projects.show', 'apar-hydrant') }}"
                                 class="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
                                 <span>View Project Details</span>
-                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 4: Pengelola Limbah -->
-                <div class="project-card reveal stagger-2 group relative overflow-hidden rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-500/40 hover:shadow-2xl">
+                <div
+                    class="project-card load-more-project reveal stagger-2 group relative overflow-hidden rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-500/40 hover:shadow-2xl">
                     <div class="relative h-64 overflow-hidden bg-slate-100 dark:bg-slate-900 sm:h-72">
                         <img src="{{ asset('images/projects/pengelola_limbah.png') }}"
-                             alt="APAR & Hydrant Management System"
-                             class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            alt="APAR & Hydrant Management System"
+                            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
 
                         <div class="status-live project-status">
                             <span class="status-dot"></span>
@@ -1519,7 +2387,8 @@
                         <p class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
                             Management System • 2025
                         </p>
-                        <h3 class="mt-2 text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                        <h3
+                            class="mt-2 text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                             Pengelola Limbah
                         </h3>
                         <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-gray-400">
@@ -1527,28 +2396,38 @@
                         </p>
 
                         <div class="mt-6 flex flex-wrap gap-2">
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Java Script</span>
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">PHP</span>
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">MySQL</span>
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">CSS</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Java
+                                Script</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">PHP</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">MySQL</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">CSS</span>
                         </div>
 
-                        <div class="mt-8 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-5">
+                        <div
+                            class="mt-8 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-5">
                             <a href="{{ route('projects.show', 'apar-hydrant') }}"
                                 class="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
                                 <span>View Project Details</span>
-                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 5: Cek Dokumen Berkendara -->
-                <div class="project-card reveal stagger-2 group relative overflow-hidden rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-500/40 hover:shadow-2xl">
+                <div
+                    class="project-card load-more-project reveal stagger-2 group relative overflow-hidden rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-500/40 hover:shadow-2xl">
                     <div class="relative h-64 overflow-hidden bg-slate-100 dark:bg-slate-900 sm:h-72">
                         <img src="{{ asset('images/projects/cek_dokumen.png') }}"
-                             alt="APAR & Hydrant Management System"
-                             class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            alt="APAR & Hydrant Management System"
+                            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
 
                         <div class="status-live project-status">
                             <span class="status-dot"></span>
@@ -1560,7 +2439,8 @@
                         <p class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
                             Check Vehicle Documents
                         </p>
-                        <h3 class="mt-2 text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                        <h3
+                            class="mt-2 text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                             Cek Dokumen Berkendara
                         </h3>
                         <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-gray-400">
@@ -1568,28 +2448,38 @@
                         </p>
 
                         <div class="mt-6 flex flex-wrap gap-2">
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Java Script</span>
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">PHP</span>
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">MySQL</span>
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">CSS</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Java
+                                Script</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">PHP</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">MySQL</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">CSS</span>
                         </div>
 
-                        <div class="mt-8 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-5">
+                        <div
+                            class="mt-8 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-5">
                             <a href="{{ route('projects.show', 'apar-hydrant') }}"
                                 class="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
                                 <span>View Project Details</span>
-                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 6: Permintaan Pemngambilan APD -->
-                <div class="project-card reveal stagger-2 group relative overflow-hidden rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-500/40 hover:shadow-2xl">
+                <div
+                    class="project-card load-more-project reveal stagger-2 group relative overflow-hidden rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-500/40 hover:shadow-2xl">
                     <div class="relative h-64 overflow-hidden bg-slate-100 dark:bg-slate-900 sm:h-72">
                         <img src="{{ asset('images/projects/apd-system.png') }}"
-                             alt="APAR & Hydrant Management System"
-                             class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            alt="APAR & Hydrant Management System"
+                            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
 
                         <div class="status-live project-status">
                             <span class="status-dot"></span>
@@ -1601,40 +2491,55 @@
                         <p class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
                             Management System • 2025
                         </p>
-                        <h3 class="mt-2 text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                            Permintaan Pemngambilan APD 
+                        <h3
+                            class="mt-2 text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                            Permintaan Pemngambilan APD
                         </h3>
                         <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-gray-400">
-                            A web-based application designed to streamline the process of requesting and collecting personal protective equipment (PPE) within an organization.
+                            A web-based application designed to streamline the process of requesting and collecting
+                            personal protective equipment (PPE) within an organization.
                         </p>
 
                         <div class="mt-6 flex flex-wrap gap-2">
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Java Script</span>
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">PHP</span>
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">MySQL</span>
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">CSS</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Java
+                                Script</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">PHP</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">MySQL</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">CSS</span>
                         </div>
 
-                        <div class="mt-8 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-5">
+                        <div
+                            class="mt-8 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-5">
                             <a href="{{ route('projects.show', 'apar-hydrant') }}"
                                 class="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
                                 <span>View Project Details</span>
-                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                
+
 
                 <!-- Project 3: Audit Mesin -->
-                <div class="project-card reveal stagger-3 group relative overflow-hidden rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-violet-500/40 hover:shadow-2xl">
-                    <div class="relative flex h-64 items-center justify-center bg-gradient-to-br from-violet-600/10 via-indigo-600/10 to-purple-600/10 dark:from-violet-950/40 dark:to-slate-900 sm:h-72">
+                <div
+                    class="project-card load-more-project reveal stagger-3 group relative overflow-hidden rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-violet-500/40 hover:shadow-2xl">
+                    <div
+                        class="relative flex h-64 items-center justify-center bg-gradient-to-br from-violet-600/10 via-indigo-600/10 to-purple-600/10 dark:from-violet-950/40 dark:to-slate-900 sm:h-72">
                         <div class="flex flex-col items-center gap-3">
-                            <span class="flex h-20 w-20 items-center justify-center rounded-3xl bg-violet-600/20 text-3xl font-extrabold text-violet-600 dark:text-violet-400 shadow-inner">
+                            <span
+                                class="flex h-20 w-20 items-center justify-center rounded-3xl bg-violet-600/20 text-3xl font-extrabold text-violet-600 dark:text-violet-400 shadow-inner">
                                 AF
                             </span>
-                            <span class="text-sm font-bold text-violet-700 dark:text-violet-300">AFinance Platform</span>
+                            <span class="text-sm font-bold text-violet-700 dark:text-violet-300">AFinance
+                                Platform</span>
                         </div>
 
                         <div class="status-development project-status">
@@ -1647,29 +2552,50 @@
                         <p class="text-xs font-bold uppercase tracking-wider text-violet-600 dark:text-violet-400">
                             Web Application • 2026
                         </p>
-                        <h3 class="mt-2 text-2xl font-bold text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
+                        <h3
+                            class="mt-2 text-2xl font-bold text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
                             AFinance
                         </h3>
                         <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-gray-400">
-                            A personal financial management and bookkeeping platform designed to organize, monitor, and visualize daily income, expense workflows, and savings targets.
+                            A personal financial management and bookkeeping platform designed to organize, monitor, and
+                            visualize daily income, expense workflows, and savings targets.
                         </p>
 
                         <div class="mt-6 flex flex-wrap gap-2">
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Laravel</span>
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">MySQL</span>
-                            <span class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Tailwind CSS</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Laravel</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">MySQL</span>
+                            <span
+                                class="rounded-lg bg-slate-100 dark:bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-gray-300">Tailwind
+                                CSS</span>
                         </div>
 
-                        <div class="mt-8 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-5">
+                        <div
+                            class="mt-8 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-5">
                             <a href="{{ route('projects.show', 'afinance') }}"
                                 class="inline-flex items-center gap-1.5 text-sm font-bold text-violet-600 dark:text-violet-400 hover:text-violet-700 dark:hover:text-violet-300">
                                 <span>View Project Details</span>
-                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
                             </a>
                         </div>
                     </div>
                 </div>
 
+            </div>
+
+            <div class="mt-10 flex justify-center">
+                <button id="load-more-projects" type="button"
+                    class="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-800 shadow-sm transition hover:border-blue-500 hover:text-blue-600">
+                    <span>Load More Projects</span>
+                    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 5v14m-7-7 7 7 7-7" />
+                    </svg>
+                </button>
             </div>
 
         </div>
@@ -1679,14 +2605,16 @@
     <!-- =========================================================
          JOURNEY / TIMELINE (Req 4: Live Animated Scroll Line)
     ========================================================= -->
-    <section id="experience" class="border-t border-slate-200/80 dark:border-white/5 px-6 py-28 bg-slate-50/50 dark:bg-transparent">
+    <section id="experience"
+        class="border-t border-slate-200/80 dark:border-white/5 px-6 py-28 bg-slate-50/50 dark:bg-transparent">
         <div class="mx-auto max-w-6xl">
 
             <div class="max-w-2xl reveal">
                 <p class="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600 dark:text-blue-400">
                     My Journey
                 </p>
-                <h2 class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl lg:text-5xl">
+                <h2
+                    class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl lg:text-5xl">
                     Learning,
                     <span class="text-slate-500 dark:text-gray-400">building & growing.</span>
                 </h2>
@@ -1699,20 +2627,25 @@
             <div id="timeline-wrapper" class="relative mt-16">
 
                 <!-- Base Muted Line -->
-                <div class="timeline-base-line absolute left-[7px] top-2 hidden h-[calc(100%-16px)] w-[2px] bg-slate-200 dark:bg-white/10 md:block rounded-full">
+                <div
+                    class="timeline-base-line absolute left-[7px] top-2 hidden h-[calc(100%-16px)] w-[2px] bg-slate-200 dark:bg-white/10 md:block rounded-full">
                 </div>
 
                 <!-- Live Animated Gradient Fill Line -->
-                <div id="timeline-progress-line" class="absolute left-[7px] top-2 hidden w-[2px] bg-gradient-to-b from-blue-500 via-indigo-500 to-purple-500 md:block rounded-full shadow-[0_0_12px_rgba(59,130,246,0.6)]" style="height: 0px;">
+                <div id="timeline-progress-line"
+                    class="absolute left-[7px] top-2 hidden w-[2px] bg-gradient-to-b from-blue-500 via-indigo-500 to-purple-500 md:block rounded-full shadow-[0_0_12px_rgba(59,130,246,0.6)]"
+                    style="height: 0px;">
                 </div>
 
                 <!-- Live Glowing Head Dot -->
-                <div id="timeline-progress-head" class="absolute left-[3px] top-2 hidden h-3 w-3 -translate-y-1/2 rounded-full bg-blue-500 ring-4 ring-blue-500/30 shadow-[0_0_15px_#3b82f6] md:block opacity-0 transition-transform duration-75">
+                <div id="timeline-progress-head"
+                    class="absolute left-[3px] top-2 hidden h-3 w-3 -translate-y-1/2 rounded-full bg-blue-500 ring-4 ring-blue-500/30 shadow-[0_0_15px_#3b82f6] md:block opacity-0 transition-transform duration-75">
                 </div>
 
                 <!-- Milestone 1: Education -->
                 <div class="timeline-item reveal relative grid gap-8 pb-16 md:grid-cols-[180px_1fr]">
-                    <div class="timeline-node absolute left-0 top-1 hidden h-4 w-4 rounded-full border-4 border-slate-100 dark:border-[#08090D] bg-blue-500 md:block transition-all duration-300">
+                    <div
+                        class="timeline-node absolute left-0 top-1 hidden h-4 w-4 rounded-full border-4 border-slate-100 dark:border-[#08090D] bg-blue-500 md:block transition-all duration-300">
                     </div>
 
                     <div class="text-sm font-semibold text-slate-500 dark:text-gray-500 md:pl-8">
@@ -1730,14 +2663,16 @@
                             Universitas Gunadarma
                         </p>
                         <p class="mt-4 max-w-2xl text-sm leading-relaxed text-slate-600 dark:text-gray-400">
-                            Studying Information Systems while actively developing practical skills in web development, database management, software design, and modern technologies.
+                            Studying Information Systems while actively developing practical skills in web development,
+                            database management, software design, and modern technologies.
                         </p>
                     </div>
                 </div>
 
                 <!-- Milestone 2: Development -->
                 <div class="timeline-item reveal stagger-2 relative grid gap-8 pb-16 md:grid-cols-[180px_1fr]">
-                    <div class="timeline-node absolute left-0 top-1 hidden h-4 w-4 rounded-full border-4 border-slate-100 dark:border-[#08090D] bg-violet-500 md:block transition-all duration-300">
+                    <div
+                        class="timeline-node absolute left-0 top-1 hidden h-4 w-4 rounded-full border-4 border-slate-100 dark:border-[#08090D] bg-violet-500 md:block transition-all duration-300">
                     </div>
 
                     <div class="text-sm font-semibold text-slate-500 dark:text-gray-500 md:pl-8">
@@ -1755,14 +2690,16 @@
                             Fullstack Web Solutions
                         </p>
                         <p class="mt-4 max-w-2xl text-sm leading-relaxed text-slate-600 dark:text-gray-400">
-                            Developed fullstack web applications exploring backend architecture, REST API design, relational databases, responsive frontend interfaces, and server deployment.
+                            Developed fullstack web applications exploring backend architecture, REST API design,
+                            relational databases, responsive frontend interfaces, and server deployment.
                         </p>
                     </div>
                 </div>
 
                 <!-- Milestone 3: Foundation -->
                 <div class="timeline-item reveal stagger-3 relative grid gap-8 md:grid-cols-[180px_1fr]">
-                    <div class="timeline-node absolute left-0 top-1 hidden h-4 w-4 rounded-full border-4 border-slate-100 dark:border-[#08090D] bg-cyan-500 md:block transition-all duration-300">
+                    <div
+                        class="timeline-node absolute left-0 top-1 hidden h-4 w-4 rounded-full border-4 border-slate-100 dark:border-[#08090D] bg-cyan-500 md:block transition-all duration-300">
                     </div>
 
                     <div class="text-sm font-semibold text-slate-500 dark:text-gray-500 md:pl-8">
@@ -1780,7 +2717,8 @@
                             Vocational Software Engineering
                         </p>
                         <p class="mt-4 max-w-2xl text-sm leading-relaxed text-slate-600 dark:text-gray-400">
-                            Built a strong technical foundation in computer programming, logic, algorithms, databases, and problem solving through vocational software engineering education.
+                            Built a strong technical foundation in computer programming, logic, algorithms, databases,
+                            and problem solving through vocational software engineering education.
                         </p>
                     </div>
                 </div>
@@ -1804,18 +2742,21 @@
                     <p class="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600 dark:text-blue-400">
                         Get In Touch
                     </p>
-                    <h2 class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl lg:text-5xl">
+                    <h2
+                        class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl lg:text-5xl">
                         Let's build something
                         <span class="text-slate-500 dark:text-gray-400">meaningful.</span>
                     </h2>
                     <p class="mt-4 text-base leading-relaxed text-slate-600 dark:text-gray-400">
-                        Whether you have an interesting project idea, a collaboration proposal, or just want to chat about web technology and software engineering, feel free to reach out.
+                        Whether you have an interesting project idea, a collaboration proposal, or just want to chat
+                        about web technology and software engineering, feel free to reach out.
                     </p>
 
                     <!-- Contact Details -->
                     <div class="mt-8 space-y-4 text-sm">
                         <div class="flex items-center gap-3">
-                            <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 font-bold">
+                            <span
+                                class="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 font-bold">
                                 ✉️
                             </span>
                             <div>
@@ -1825,7 +2766,8 @@
                         </div>
 
                         <div class="flex items-center gap-3">
-                            <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-bold">
+                            <span
+                                class="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-bold">
                                 📍
                             </span>
                             <div>
@@ -1839,34 +2781,49 @@
                         <button id="copy-email" type="button"
                             class="inline-flex items-center gap-2 rounded-full border border-slate-300 dark:border-white/10 bg-white dark:bg-white/5 px-5 py-2.5 text-xs font-semibold text-slate-700 dark:text-white shadow-sm transition hover:border-slate-400 hover:bg-slate-50 dark:hover:bg-white/10">
                             <span>Copy Email</span>
-                            <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                            <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+                            </svg>
                         </button>
 
-                        <a href="https://github.com/pratamadikzz?tab=overview&from=2026-09-01&to=2026-09-02" target="_blank" rel="noopener noreferrer"
+                        <a href="https://github.com/pratamadikzz?tab=overview&from=2026-09-01&to=2026-09-02"
+                            target="_blank" rel="noopener noreferrer"
                             class="inline-flex items-center gap-2 rounded-full border border-slate-300 dark:border-white/10 bg-white dark:bg-white/5 px-5 py-2.5 text-xs font-semibold text-slate-700 dark:text-white shadow-sm transition hover:border-slate-400 hover:bg-slate-50 dark:hover:bg-white/10">
                             <span>GitHub</span>
-                            <svg class="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                            <svg class="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                            </svg>
                         </a>
                     </div>
                 </div>
 
                 <!-- Right Column: Interactive Contact Form -->
-                <div class="reveal stagger-1 rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-8 shadow-sm backdrop-blur-xl">
-                    <form onsubmit="event.preventDefault(); showToast('✨ Message received! Thanks for reaching out.'); this.reset();" class="space-y-5">
+                <div
+                    class="reveal stagger-1 rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-8 shadow-sm backdrop-blur-xl">
+                    <form
+                        onsubmit="event.preventDefault(); showToast('✨ Message received! Thanks for reaching out.'); this.reset();"
+                        class="space-y-5">
                         <div>
-                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-gray-300">Your Name</label>
+                            <label
+                                class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-gray-300">Your
+                                Name</label>
                             <input type="text" required placeholder="John Doe"
                                 class="mt-2 w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/5 px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 outline-none transition focus:border-blue-500 focus:bg-white dark:focus:bg-white/10">
                         </div>
 
                         <div>
-                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-gray-300">Your Email</label>
+                            <label
+                                class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-gray-300">Your
+                                Email</label>
                             <input type="email" required placeholder="john@example.com"
                                 class="mt-2 w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/5 px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 outline-none transition focus:border-blue-500 focus:bg-white dark:focus:bg-white/10">
                         </div>
 
                         <div>
-                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-gray-300">Message</label>
+                            <label
+                                class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-gray-300">Message</label>
                             <textarea rows="4" required placeholder="Tell me about your project or inquiry..."
                                 class="mt-2 w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/5 px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 outline-none transition focus:border-blue-500 focus:bg-white dark:focus:bg-white/10"></textarea>
                         </div>
@@ -1888,7 +2845,8 @@
          FOOTER
     ========================================================= -->
     <footer class="border-t border-slate-200/80 bg-slate-50 px-6 py-12 dark:border-white/5 dark:bg-[#08090D]">
-        <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 text-center sm:flex-row sm:text-left">
+        <div
+            class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 text-center sm:flex-row sm:text-left">
             <div>
                 <p class="text-sm font-bold text-slate-900 dark:text-white">
                     Andhika Pratama
@@ -1896,6 +2854,27 @@
                 <p class="mt-1 text-xs text-slate-500 dark:text-gray-400">
                     Web Developer & Information Systems Student
                 </p>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a href="https://www.instagram.com/pratamadikzz/" target="_blank" rel="noopener noreferrer"
+                    class="social-link" aria-label="Instagram" title="Instagram"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/andhika-pratama/" target="_blank" rel="noopener noreferrer"
+                    class="social-link" aria-label="LinkedIn" title="LinkedIn"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://wa.me/?text=Halo%20Andhika" target="_blank" rel="noopener noreferrer"
+                    class="social-link" aria-label="WhatsApp" title="WhatsApp"><i
+                        class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.youtube.com/@andhikapratama" target="_blank" rel="noopener noreferrer"
+                    class="social-link" aria-label="YouTube" title="YouTube"><i
+                        class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@andhikapratama" target="_blank" rel="noopener noreferrer"
+                    class="social-link" aria-label="TikTok" title="TikTok"><i
+                        class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.tiktok.com/@andhikapratama" target="_blank" rel="noopener noreferrer"
+                    class="social-link" aria-label="Discord" title="Discord"><i
+                        class="fa-brands fa-discord"></i></a>
             </div>
 
             <p class="text-xs text-slate-500 dark:text-gray-500">
@@ -1908,14 +2887,17 @@
     <!-- =========================================================
          CERTIFICATE LIGHTBOX MODAL (Req 3)
     ========================================================= -->
-    <div id="certificate-modal" class="lightbox-modal fixed inset-0 z-[100000] hidden items-center justify-center p-3 sm:p-6 md:p-8 bg-slate-950/85 backdrop-blur-2xl transition-all duration-300">
+    <div id="certificate-modal"
+        class="lightbox-modal fixed inset-0 z-[100000] hidden items-center justify-center p-3 sm:p-6 md:p-8 bg-slate-950/85 backdrop-blur-2xl transition-all duration-300">
 
-        <div class="relative flex flex-col w-full max-w-5xl max-h-[92vh] rounded-3xl bg-slate-900/95 border border-white/15 text-white shadow-2xl overflow-hidden backdrop-blur-3xl">
+        <div
+            class="relative flex flex-col w-full max-w-5xl max-h-[92vh] rounded-3xl bg-slate-900/95 border border-white/15 text-white shadow-2xl overflow-hidden backdrop-blur-3xl">
 
             <!-- Top Header Bar -->
             <div class="flex items-center justify-between border-b border-white/10 px-6 py-4 bg-slate-950/60">
                 <div class="flex items-center gap-3">
-                    <span id="modal-cert-badge" class="rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30 px-3 py-0.5 text-xs font-bold">
+                    <span id="modal-cert-badge"
+                        class="rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30 px-3 py-0.5 text-xs font-bold">
                         Certification
                     </span>
                     <h3 id="modal-cert-title" class="text-sm sm:text-base font-bold text-white truncate max-w-md">
@@ -1929,71 +2911,111 @@
                 <!-- Action Controls -->
                 <div class="flex items-center gap-2">
                     <!-- Zoom Out -->
-                    <button id="modal-zoom-out" type="button" class="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white transition" title="Zoom Out (-)">
-                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/></svg>
+                    <button id="modal-zoom-out" type="button"
+                        class="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white transition"
+                        title="Zoom Out (-)">
+                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
+                        </svg>
                     </button>
                     <!-- Zoom Indicator -->
                     <span id="modal-zoom-val" class="text-xs font-bold text-gray-300 min-w-[42px] text-center">
                         100%
                     </span>
                     <!-- Zoom In -->
-                    <button id="modal-zoom-in" type="button" class="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white transition" title="Zoom In (+)">
-                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                    <button id="modal-zoom-in" type="button"
+                        class="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white transition"
+                        title="Zoom In (+)">
+                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 4v16m8-8H4" />
+                        </svg>
                     </button>
                     <!-- Reset Zoom -->
-                    <button id="modal-zoom-reset" type="button" class="hidden sm:flex px-2.5 py-1 text-xs font-bold rounded-lg bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white transition" title="Fit to Screen (0)">
+                    <button id="modal-zoom-reset" type="button"
+                        class="hidden sm:flex px-2.5 py-1 text-xs font-bold rounded-lg bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white transition"
+                        title="Fit to Screen (0)">
                         Fit
                     </button>
                     <!-- Fullscreen Toggle -->
-                    <button id="modal-fullscreen-btn" type="button" class="hidden sm:flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white transition" title="Fullscreen (F)">
-                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
+                    <button id="modal-fullscreen-btn" type="button"
+                        class="hidden sm:flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white transition"
+                        title="Fullscreen (F)">
+                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                        </svg>
                     </button>
                     <!-- Download Link -->
-                    <a id="modal-download-link" href="#" download="Certificate.jpg" class="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white transition" title="Download Certificate">
-                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                    <a id="modal-download-link" href="#" download="Certificate.jpg"
+                        class="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white transition"
+                        title="Download Certificate">
+                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
                     </a>
                     <!-- Direct Verification URL -->
-                    <a id="modal-verify-link" href="#" target="_blank" rel="noopener noreferrer" class="hidden md:flex items-center gap-1 px-3 py-1 text-xs font-bold rounded-lg bg-blue-600 hover:bg-blue-500 text-white transition" title="Verify Online">
+                    <a id="modal-verify-link" href="#" target="_blank" rel="noopener noreferrer"
+                        class="hidden md:flex items-center gap-1 px-3 py-1 text-xs font-bold rounded-lg bg-blue-600 hover:bg-blue-500 text-white transition"
+                        title="Verify Online">
                         <span>Verify</span>
-                        <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                        <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
                     </a>
                     <!-- Close Button -->
-                    <button id="modal-close-btn" type="button" class="ml-2 flex h-8 w-8 items-center justify-center rounded-full bg-white/15 text-white hover:bg-rose-600 transition" title="Close (Esc)">
+                    <button id="modal-close-btn" type="button"
+                        class="ml-2 flex h-8 w-8 items-center justify-center rounded-full bg-white/15 text-white hover:bg-rose-600 transition"
+                        title="Close (Esc)">
                         ✕
                     </button>
                 </div>
             </div>
 
             <!-- Viewport Container with Pan & Zoom -->
-            <div id="modal-viewport" class="cert-drag-surface relative flex-1 min-h-[380px] sm:min-h-[460px] md:min-h-[520px] flex items-center justify-center overflow-hidden bg-slate-950 p-4 select-none">
+            <div id="modal-viewport"
+                class="cert-drag-surface relative flex-1 min-h-[380px] sm:min-h-[460px] md:min-h-[520px] flex items-center justify-center overflow-hidden bg-slate-950 p-4 select-none">
 
                 <!-- Main Image Element -->
-                <img id="modal-cert-image"
-                     src="{{ asset('images/certificates/hactiv_sertifkat.png') }}"
-                     alt="Certificate Preview"
-                     class="cert-preview-img rounded-xl shadow-2xl pointer-events-none">
+                <img id="modal-cert-image" src="{{ asset('images/certificates/hactiv_sertifkat.png') }}"
+                    alt="Certificate Preview" class="cert-preview-img rounded-xl shadow-2xl pointer-events-none">
 
                 <!-- Navigation Previous Arrow -->
-                <button id="modal-prev-btn" type="button" class="absolute left-4 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full bg-slate-900/80 hover:bg-blue-600 text-white border border-white/20 shadow-xl backdrop-blur transition" title="Previous (←)">
-                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                <button id="modal-prev-btn" type="button"
+                    class="absolute left-4 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full bg-slate-900/80 hover:bg-blue-600 text-white border border-white/20 shadow-xl backdrop-blur transition"
+                    title="Previous (←)">
+                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                            d="M15 19l-7-7 7-7" />
+                    </svg>
                 </button>
 
                 <!-- Navigation Next Arrow -->
-                <button id="modal-next-btn" type="button" class="absolute right-4 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full bg-slate-900/80 hover:bg-blue-600 text-white border border-white/20 shadow-xl backdrop-blur transition" title="Next (→)">
-                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                <button id="modal-next-btn" type="button"
+                    class="absolute right-4 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full bg-slate-900/80 hover:bg-blue-600 text-white border border-white/20 shadow-xl backdrop-blur transition"
+                    title="Next (→)">
+                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                            d="M9 5l7 7-7 7" />
+                    </svg>
                 </button>
 
                 <!-- Floating Pan Hint -->
-                <div id="modal-pan-hint" class="absolute bottom-4 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-black/60 text-[11px] text-gray-300 backdrop-blur pointer-events-none opacity-0 transition-opacity">
+                <div id="modal-pan-hint"
+                    class="absolute bottom-4 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-black/60 text-[11px] text-gray-300 backdrop-blur pointer-events-none opacity-0 transition-opacity">
                     Drag to pan • Scroll to zoom
                 </div>
             </div>
 
             <!-- Bottom Details Bar -->
-            <div class="border-t border-white/10 px-6 py-4 bg-slate-950/80 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-xs">
+            <div
+                class="border-t border-white/10 px-6 py-4 bg-slate-950/80 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-xs">
                 <div>
                     <p id="modal-cert-issuer" class="font-bold text-white">Issued by Hacktiv8 Indonesia</p>
-                    <p id="modal-cert-desc" class="text-gray-400 mt-0.5 line-clamp-1">AI for Work & Career Readiness</p>
+                    <p id="modal-cert-desc" class="text-gray-400 mt-0.5 line-clamp-1">AI for Work & Career Readiness
+                    </p>
                 </div>
 
                 <div id="modal-skills-list" class="flex flex-wrap gap-1.5">
@@ -2016,8 +3038,7 @@
             /* =====================================================
                CERTIFICATES DATA FOR RICH MODAL
             ===================================================== */
-            const certificatesData = [
-                {
+            const certificatesData = [{
                     title: "AI for Work & Career Readiness with Google AI Products",
                     category: "Course & Workshop",
                     badgeColor: "blue",
@@ -2026,7 +3047,9 @@
                     image: "{{ asset('images/certificates/hactiv_sertifkat.png') }}",
                     verifyUrl: "https://verify.hacktiv8.com/",
                     description: "Pelatihan intensif pemanfaatan Google AI tools, prompt engineering, generative AI workflows, dan kesiapan karir industri digital.",
-                    skills: ["Google AI", "Prompt Engineering", "Generative AI", "Work Productivity", "Machine Learning"]
+                    skills: ["Google AI", "Prompt Engineering", "Generative AI", "Work Productivity",
+                        "Machine Learning"
+                    ]
                 },
                 {
                     title: "Belajar Penerapan Data Science dengan Microsoft Fabric",
@@ -2037,7 +3060,9 @@
                     image: "{{ asset('images/certificates/fabric_dicoding.png') }}",
                     verifyUrl: "https://www.dicoding.com/certificates/98XW04G29XM3",
                     description: "Mempelajari alur end-to-end data science dengan Microsoft Fabric: eksplorasi data, pembuatan model machine learning, deployment, hingga monitoring dalam satu platform.",
-                    skills: ["Microsoft Fabric", "Data Science", "Machine Learning", "Dataflows", "Power BI", "Analytics"]
+                    skills: ["Microsoft Fabric", "Data Science", "Machine Learning", "Dataflows", "Power BI",
+                        "Analytics"
+                    ]
                 },
                 {
                     title: "Belajar Dasar AI (Artificial Intelligence)",
@@ -2048,7 +3073,9 @@
                     image: "{{ asset('images/certificates/dasarAI_dicoding.png') }}",
                     verifyUrl: "https://www.dicoding.com/certificates/JMZVVO41RZN9",
                     description: "Fundamental konsep Artificial Intelligence, subbidang Machine Learning & Deep Learning, evaluasi model kecerdasan buatan, dan implementasi aplikatif.",
-                    skills: ["Artificial Intelligence", "Machine Learning", "Neural Networks", "Model Evaluation", "Python"]
+                    skills: ["Artificial Intelligence", "Machine Learning", "Neural Networks",
+                        "Model Evaluation", "Python"
+                    ]
                 },
                 {
                     title: "Spec-Driven Development dengan Kiro",
@@ -2241,7 +3268,9 @@
                 } else {
                     zoomOut();
                 }
-            }, { passive: false });
+            }, {
+                passive: false
+            });
 
             // Keyboard Shortcuts
             window.addEventListener('keydown', (e) => {
@@ -2301,67 +3330,99 @@
                 });
             }
 
-            window.addEventListener('scroll', updateTimeline, { passive: true });
-            window.addEventListener('resize', updateTimeline, { passive: true });
+            window.addEventListener('scroll', updateTimeline, {
+                passive: true
+            });
+            window.addEventListener('resize', updateTimeline, {
+                passive: true
+            });
             updateTimeline();
 
 
             /* =====================================================
-               THEME TOGGLE & PERSISTENCE (Light default + Full Dark)
-            ===================================================== */
-            const themeToggle = document.getElementById('theme-toggle');
-            const themeIcon = document.getElementById('theme-icon');
+                            THEME TOGGLE & PERSISTENCE DISABLED (LIGHT MODE ONLY)
+                        =====================================================
+                    const themeToggle = document.getElementById('theme-toggle');
+                    const themeIcon = document.getElementById('theme-icon');
 
-            function applyTheme(theme) {
-                if (theme === 'dark') {
-                    document.documentElement.classList.add('dark-mode');
-                    document.documentElement.classList.remove('light-mode');
-                    document.body.classList.add('dark-mode');
-                    document.body.classList.remove('light-mode');
-                } else {
-                    document.documentElement.classList.add('light-mode');
-                    document.documentElement.classList.remove('dark-mode');
-                    document.body.classList.add('light-mode');
-                    document.body.classList.remove('dark-mode');
-                }
-                updateThemeIcon();
-            }
+                    function applyTheme(theme) {
+                        if (theme === 'dark') {
+                            document.documentElement.classList.add('dark-mode');
+                            document.documentElement.classList.remove('light-mode');
+                            document.body.classList.add('dark-mode');
+                            document.body.classList.remove('light-mode');
+                        } else {
+                            document.documentElement.classList.add('light-mode');
+                            document.documentElement.classList.remove('dark-mode');
+                            document.body.classList.add('light-mode');
+                            document.body.classList.remove('dark-mode');
+                        }
+                        updateThemeIcon();
+                    }
 
-            function updateThemeIcon() {
-                if (!themeIcon) return;
-                const isDark = document.body.classList.contains('dark-mode');
+                    function updateThemeIcon() {
+                        if (!themeIcon) return;
+                        const isDark = document.body.classList.contains('dark-mode');
 
-                if (isDark) {
-                    // Sun icon (click to switch to light)
-                    themeIcon.innerHTML = `
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1.5m0 15V21m9-9h-1.5M4.5 12H3m15.364-6.364-1.06 1.06M6.697 17.303l-1.06 1.061m12.728 0-1.06-1.061M6.697 6.697l-1.06-1.06M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Z" />
-                    `;
-                } else {
-                    // Moon icon (click to switch to dark)
-                    themeIcon.innerHTML = `
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.598.748-3.752A9.753 9.753 0 1 0 21.752 15.002Z" />
-                    `;
-                }
-            }
+                        if (isDark) {
+                            // Sun icon (click to switch to light)
+                            themeIcon.innerHTML = `
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1.5m0 15V21m9-9h-1.5M4.5 12H3m15.364-6.364-1.06 1.06M6.697 17.303l-1.06 1.061m12.728 0-1.06-1.061M6.697 6.697l-1.06-1.06M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Z" />
+        `;
+                        } else {
+                            // Moon icon (click to switch to dark)
+                            themeIcon.innerHTML = `
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.598.748-3.752A9.753 9.753 0 1 0 21.752 15.002Z" />
+        `;
+                        }
+                    }
 
-            const savedTheme = localStorage.getItem('portfolio-theme') || 'light';
-            applyTheme(savedTheme);
+                    const savedTheme = localStorage.getItem('portfolio-theme') || 'light';
+                    applyTheme(savedTheme);
 
-            if (themeToggle) {
-                themeToggle.addEventListener('click', () => {
-                    const isCurrentlyDark = document.body.classList.contains('dark-mode');
-                    const nextTheme = isCurrentlyDark ? 'light' : 'dark';
+                    if (themeToggle) {
+                        themeToggle.addEventListener('click', () => {
+                            const isCurrentlyDark = document.body.classList.contains('dark-mode');
+                            const nextTheme = isCurrentlyDark ? 'light' : 'dark';
 
-                    localStorage.setItem('portfolio-theme', nextTheme);
-                    applyTheme(nextTheme);
+                            localStorage.setItem('portfolio-theme', nextTheme);
+                            applyTheme(nextTheme);
 
-                    showToast(
-                        nextTheme === 'dark' ? '🌙 Dark mode activated' : '☀️ Light mode activated',
-                        'info'
-                    );
+                            showToast(
+                                nextTheme === 'dark' ? '🌙 Dark mode activated' : '☀️ Light mode activated',
+                                'info'
+                            );
+                        });
+                    }
+
+
+                    */
+
+            const loadMoreButton = document.getElementById('load-more-projects');
+            if (loadMoreButton) {
+                loadMoreButton.addEventListener('click', () => {
+                    document.querySelectorAll('.load-more-project').forEach(card => {
+                        card.classList.add('is-visible');
+                    });
+                    loadMoreButton.remove();
                 });
             }
 
+            const communityLogoRow = document.getElementById('community-logo-row');
+            if (communityLogoRow) {
+                const logoTrack = document.createElement('div');
+                logoTrack.className = 'community-logo-track gap-4 sm:gap-6';
+
+                while (communityLogoRow.firstElementChild) {
+                    logoTrack.appendChild(communityLogoRow.firstElementChild);
+                }
+
+                [...logoTrack.children].forEach((logo) => {
+                    logoTrack.appendChild(logo.cloneNode(true));
+                });
+
+                communityLogoRow.appendChild(logoTrack);
+            }
 
             /* =====================================================
                UNIVERSAL CUSTOM CURSOR (Req 9)
@@ -2493,7 +3554,9 @@
                             entry.target.classList.add('show');
                         }
                     });
-                }, { threshold: 0.1 });
+                }, {
+                    threshold: 0.1
+                });
 
                 reveals.forEach(r => observer.observe(r));
             } else {
@@ -2511,13 +3574,16 @@
                 } else {
                     navbar.classList.remove('scrolled');
                 }
-            }, { passive: true });
+            }, {
+                passive: true
+            });
 
 
             /* =====================================================
                SCROLL PROGRESS BAR
             ===================================================== */
             const scrollProgress = document.getElementById('scroll-progress');
+
             function updateScrollProgress() {
                 if (!scrollProgress) return;
                 const scrollTop = window.scrollY;
@@ -2525,7 +3591,9 @@
                 const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
                 scrollProgress.style.width = `${progress}%`;
             }
-            window.addEventListener('scroll', updateScrollProgress, { passive: true });
+            window.addEventListener('scroll', updateScrollProgress, {
+                passive: true
+            });
             updateScrollProgress();
 
 
@@ -2533,6 +3601,7 @@
                BACK TO TOP BUTTON
             ===================================================== */
             const backToTop = document.getElementById('back-to-top');
+
             function handleBackToTop() {
                 if (!backToTop) return;
                 if (window.scrollY > 400) {
@@ -2541,12 +3610,17 @@
                     backToTop.classList.remove('show');
                 }
             }
-            window.addEventListener('scroll', handleBackToTop, { passive: true });
+            window.addEventListener('scroll', handleBackToTop, {
+                passive: true
+            });
             handleBackToTop();
 
             if (backToTop) {
                 backToTop.addEventListener('click', () => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
                 });
             }
 
@@ -2608,7 +3682,8 @@
             // Close on click outside navbar
             document.addEventListener('click', (e) => {
                 const navbar = document.getElementById('navbar');
-                if (navbar && !navbar.contains(e.target) && mobileMenu && mobileMenu.classList.contains('open')) {
+                if (navbar && !navbar.contains(e.target) && mobileMenu && mobileMenu.classList.contains(
+                        'open')) {
                     toggleMobileMenu(true);
                 }
             });
@@ -2635,6 +3710,44 @@
                 setTimeout(() => toast.remove(), 320);
             }, 2600);
         }
+
+
+
+        /* =====================================================
+           Langueange
+        ===================================================== */
+        const languageButtons = document.querySelectorAll('[data-language]');
+        let currentLanguage = localStorage.getItem('language') || 'en';
+
+        async function changeLanguage(language) {
+            const response = await fetch(`/lang/${language}.json`);
+            const translations = await response.json();
+
+            document.querySelectorAll('[data-i18n]').forEach((element) => {
+                const key = element.dataset.i18n;
+
+                if (translations[key]) {
+                    element.textContent = translations[key];
+                }
+            });
+
+            currentLanguage = language;
+            localStorage.setItem('language', language);
+
+            languageButtons.forEach((button) => {
+                const isActive = button.dataset.language === language;
+                button.classList.toggle('is-active', isActive);
+                button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+            });
+        }
+
+        changeLanguage(currentLanguage);
+
+        languageButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                changeLanguage(button.dataset.language);
+            });
+        });
     </script>
 
 </body>

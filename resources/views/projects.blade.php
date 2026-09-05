@@ -1,32 +1,115 @@
 @php
     $projects = [
-
         [
             'title' => 'APAR & Hydrant Management System',
             'category' => 'information',
             'category_name' => 'Information System',
             'status' => 'Completed',
             'status_class' => 'green',
-            'description' => 'A web-based system for managing APAR and hydrant inspections, equipment records, QR scanning, and inspection history.',
+            'description' =>
+                'A web-based system for managing APAR and hydrant inspections, equipment records, QR scanning, and inspection history.',
             'initial' => 'APAR',
             'gradient' => 'from-red-950 via-[#111217] to-[#08090D]',
             'accent' => 'red',
             'slug' => 'apar-hydrant',
             'tech' => ['Laravel', 'PHP', 'MySQL', 'Tailwind CSS', 'JavaScript'],
+            'image' => 'images/projects/apar&hydrant.png',
         ],
 
         [
             'title' => 'AFinance',
             'category' => 'web',
             'category_name' => 'Web Application',
-            'status' => 'In Development',
+            'status' => 'Completed',
             'status_class' => 'blue',
-            'description' => 'A financial management application designed to help users record, organize, and monitor personal financial activities.',
+            'description' =>
+                'A financial management application designed to help users record, organize, and monitor personal financial activities.',
             'initial' => 'AF',
             'gradient' => 'from-violet-950 via-[#111217] to-[#08090D]',
             'accent' => 'violet',
             'slug' => 'afinance',
             'tech' => ['Laravel', 'PHP', 'MySQL', 'Tailwind CSS'],
+            'image' => 'images/projects/afinance.png',
+        ],
+
+        [
+            'title' => 'Audit & Pengecekan Mesin',
+            'category' => 'web',
+            'category_name' => 'Web Application',
+            'status' => 'Completed',
+            'status_class' => 'blue',
+            'description' =>
+                'A financial management application designed to help users record, organize, and monitor personal financial activities.',
+            'initial' => 'AF',
+            'gradient' => 'from-violet-950 via-[#111217] to-[#08090D]',
+            'accent' => 'violet',
+            'slug' => 'cek_mesin',
+            'tech' => ['Laravel', 'PHP', 'MySQL', 'Tailwind CSS'],
+            'image' => 'images/projects/cek_mesin.png',
+        ],
+
+        [
+            'title' => 'Pengelolaan Limbah',
+            'category' => 'web',
+            'category_name' => 'Web Application',
+            'status' => 'Completed',
+            'status_class' => 'blue',
+            'description' =>
+                'A financial management application designed to help users record, organize, and monitor personal financial activities.',
+            'initial' => 'AF',
+            'gradient' => 'from-violet-950 via-[#111217] to-[#08090D]',
+            'accent' => 'violet',
+            'slug' => 'limbah',
+            'tech' => ['Laravel', 'PHP', 'MySQL', 'Tailwind CSS'],
+            'image' => 'images/projects/pengelola_limbah.png',
+        ],
+
+        [
+            'title' => 'Sistem Permintaan Peminjaman APD',
+            'category' => 'web',
+            'category_name' => 'Web Application',
+            'status' => 'Completed',
+            'status_class' => 'blue',
+            'description' =>
+                'A financial management application designed to help users record, organize, and monitor personal financial activities.',
+            'initial' => 'AF',
+            'gradient' => 'from-violet-950 via-[#111217] to-[#08090D]',
+            'accent' => 'violet',
+            'slug' => 'apd',
+            'tech' => ['Laravel', 'PHP', 'MySQL', 'Tailwind CSS'],
+            'image' => 'images/projects/apd-system.png',
+        ],
+
+        [
+            'title' => 'Pengecekan Dokumen Kendaraan',
+            'category' => 'web',
+            'category_name' => 'Web Application',
+            'status' => 'Completed',
+            'status_class' => 'blue',
+            'description' =>
+                'A financial management application designed to help users record, organize, and monitor personal financial activities.',
+            'initial' => 'AF',
+            'gradient' => 'from-violet-950 via-[#111217] to-[#08090D]',
+            'accent' => 'violet',
+            'slug' => 'dokumen_berkendara',
+            'tech' => ['Laravel', 'PHP', 'MySQL', 'Tailwind CSS'],
+            'image' => 'images/projects/cek_dokumen.png',
+        ],
+
+        [
+            'title' => 'Portofolio',
+            'category' => 'web',
+            'category_name' => 'Web Application',
+            'status' => 'In Development',
+            'status_class' => 'green',
+            'description' =>
+                'A digital inventory system for managing item data, stock levels, transactions, and inventory records.',
+            'initial' => 'INV',
+            'gradient' => 'from-cyan-950 via-[#111217] to-[#08090D]',
+            'accent' => 'cyan',
+            'slug' => 'portofolio',
+            'tech' => ['Laravel', 'MySQL', 'Tailwind CSS'],
+            'image' => 'images/projects/portofolio.png',
         ],
 
         [
@@ -35,12 +118,13 @@
             'category_name' => 'Artificial Intelligence',
             'status' => 'In Development',
             'status_class' => 'blue',
-            'description' => 'An exploration of integrating artificial intelligence into modern web experiences and digital workflows.',
+            'description' =>
+                'An exploration of integrating artificial intelligence into modern web experiences and digital workflows.',
             'initial' => 'AI',
             'gradient' => 'from-purple-950 via-[#111217] to-[#08090D]',
             'accent' => 'purple',
-            'slug' => 'ai-powered-website',
             'tech' => ['AI', 'JavaScript', 'API'],
+            'image' => 'images/projects/apar&hydrant.png',
         ],
 
         [
@@ -49,26 +133,28 @@
             'category_name' => 'Information System',
             'status' => 'In Development',
             'status_class' => 'blue',
-            'description' => 'A centralized system for managing student profiles, academic information, schedules, and educational records.',
+            'description' =>
+                'A centralized system for managing student profiles, academic information, schedules, and educational records.',
             'initial' => 'SIS',
             'gradient' => 'from-blue-950 via-[#111217] to-[#08090D]',
             'accent' => 'blue',
-            'slug' => 'student-information-system',
             'tech' => ['PHP', 'MySQL', 'JavaScript'],
+            'image' => 'images/projects/apar&hydrant.png',
         ],
 
         [
             'title' => 'Sistem Manajemen Inventaris',
             'category' => 'management',
             'category_name' => 'Management System',
-            'status' => 'Completed',
+            'status' => 'In Development',
             'status_class' => 'green',
-            'description' => 'A digital inventory system for managing item data, stock levels, transactions, and inventory records.',
+            'description' =>
+                'A digital inventory system for managing item data, stock levels, transactions, and inventory records.',
             'initial' => 'INV',
             'gradient' => 'from-cyan-950 via-[#111217] to-[#08090D]',
             'accent' => 'cyan',
-            'slug' => 'inventory-management',
             'tech' => ['Laravel', 'MySQL', 'Tailwind CSS'],
+            'image' => 'images/projects/apar&hydrant.png',
         ],
 
         [
@@ -77,12 +163,13 @@
             'category_name' => 'Fullstack Development',
             'status' => 'In Development',
             'status_class' => 'blue',
-            'description' => 'A fullstack e-commerce platform covering products, shopping carts, user accounts, orders, and transactions.',
+            'description' =>
+                'A fullstack e-commerce platform covering products, shopping carts, user accounts, orders, and transactions.',
             'initial' => 'SHOP',
             'gradient' => 'from-pink-950 via-[#111217] to-[#08090D]',
             'accent' => 'pink',
-            'slug' => 'ecommerce-fullstack',
             'tech' => ['Laravel', 'MySQL', 'JavaScript'],
+            'image' => 'images/projects/apar&hydrant.png',
         ],
 
         [
@@ -91,11 +178,13 @@
             'category_name' => 'Smart System',
             'status' => 'Concept',
             'status_class' => 'purple',
-            'description' => 'A smart canteen platform for digital ordering, menu management, transactions, and customer experience.',
+            'description' =>
+                'A smart canteen platform for digital ordering, menu management, transactions, and customer experience.',
             'initial' => 'SC',
             'gradient' => 'from-green-950 via-[#111217] to-[#08090D]',
             'accent' => 'green',
             'tech' => ['Web', 'Database', 'JavaScript'],
+            'image' => 'images/projects/apar&hydrant.png',
         ],
 
         [
@@ -104,11 +193,13 @@
             'category_name' => 'Smart System',
             'status' => 'Concept',
             'status_class' => 'purple',
-            'description' => 'A parking management solution for monitoring parking spaces, vehicle entry, exit, and availability.',
+            'description' =>
+                'A parking management solution for monitoring parking spaces, vehicle entry, exit, and availability.',
             'initial' => 'PARK',
             'gradient' => 'from-orange-950 via-[#111217] to-[#08090D]',
             'accent' => 'orange',
             'tech' => ['Web', 'Database', 'IoT Concept'],
+            'image' => 'images/projects/apar&hydrant.png',
         ],
 
         [
@@ -117,11 +208,13 @@
             'category_name' => 'Enterprise System',
             'status' => 'Concept',
             'status_class' => 'purple',
-            'description' => 'A warehouse management system for inventory, incoming goods, outgoing goods, and stock monitoring.',
+            'description' =>
+                'A warehouse management system for inventory, incoming goods, outgoing goods, and stock monitoring.',
             'initial' => 'WMS',
             'gradient' => 'from-yellow-950 via-[#111217] to-[#08090D]',
             'accent' => 'yellow',
             'tech' => ['Laravel', 'MySQL', 'Tailwind CSS'],
+            'image' => 'images/projects/apar&hydrant.png',
         ],
 
         [
@@ -130,11 +223,13 @@
             'category_name' => 'Property Management',
             'status' => 'Concept',
             'status_class' => 'purple',
-            'description' => 'A digital platform for managing rooms, tenants, payments, occupancy, and property information.',
+            'description' =>
+                'A digital platform for managing rooms, tenants, payments, occupancy, and property information.',
             'initial' => 'KOST',
             'gradient' => 'from-indigo-950 via-[#111217] to-[#08090D]',
             'accent' => 'indigo',
             'tech' => ['Laravel', 'MySQL', 'JavaScript'],
+            'image' => 'images/projects/apar&hydrant.png',
         ],
 
         [
@@ -143,11 +238,13 @@
             'category_name' => 'Event Platform',
             'status' => 'Concept',
             'status_class' => 'purple',
-            'description' => 'A platform for managing events, registrations, participants, schedules, and event information.',
+            'description' =>
+                'A platform for managing events, registrations, participants, schedules, and event information.',
             'initial' => 'EVENT',
             'gradient' => 'from-fuchsia-950 via-[#111217] to-[#08090D]',
             'accent' => 'fuchsia',
             'tech' => ['Laravel', 'MySQL', 'Tailwind CSS'],
+            'image' => 'images/projects/apar&hydrant.png',
         ],
 
         [
@@ -156,11 +253,13 @@
             'category_name' => 'Public Information System',
             'status' => 'Concept',
             'status_class' => 'purple',
-            'description' => 'A digital platform for presenting disaster information, locations, reports, and emergency resources.',
+            'description' =>
+                'A digital platform for presenting disaster information, locations, reports, and emergency resources.',
             'initial' => 'DISASTER',
             'gradient' => 'from-red-950 via-[#111217] to-[#08090D]',
             'accent' => 'red',
             'tech' => ['Web', 'Database', 'Mapping'],
+            'image' => 'images/projects/apar&hydrant.png',
         ],
 
         [
@@ -169,11 +268,13 @@
             'category_name' => 'Cybersecurity',
             'status' => 'Concept',
             'status_class' => 'purple',
-            'description' => 'A dashboard concept for visualizing security events, system activity, alerts, and cybersecurity metrics.',
+            'description' =>
+                'A dashboard concept for visualizing security events, system activity, alerts, and cybersecurity metrics.',
             'initial' => 'CYBER',
             'gradient' => 'from-emerald-950 via-[#111217] to-[#08090D]',
             'accent' => 'emerald',
             'tech' => ['Dashboard', 'JavaScript', 'Security'],
+            'image' => 'images/projects/apar&hydrant.png',
         ],
 
         [
@@ -182,11 +283,13 @@
             'category_name' => 'Productivity Platform',
             'status' => 'Concept',
             'status_class' => 'purple',
-            'description' => 'A personal productivity platform combining tasks, planning, notes, goals, and personal organization.',
+            'description' =>
+                'A personal productivity platform combining tasks, planning, notes, goals, and personal organization.',
             'initial' => 'P.OS',
             'gradient' => 'from-blue-950 via-[#111217] to-[#08090D]',
             'accent' => 'blue',
             'tech' => ['Laravel', 'MySQL', 'JavaScript'],
+            'image' => 'images/projects/apar&hydrant.png',
         ],
 
         [
@@ -195,11 +298,13 @@
             'category_name' => 'GIS / Information System',
             'status' => 'Concept',
             'status_class' => 'purple',
-            'description' => 'A mapping-based information system for discovering and managing public facility locations and information.',
+            'description' =>
+                'A mapping-based information system for discovering and managing public facility locations and information.',
             'initial' => 'GIS',
             'gradient' => 'from-teal-950 via-[#111217] to-[#08090D]',
             'accent' => 'teal',
             'tech' => ['GIS', 'Maps', 'Database'],
+            'image' => 'images/projects/apar&hydrant.png',
         ],
 
         [
@@ -208,11 +313,13 @@
             'category_name' => 'AI / Career Technology',
             'status' => 'Concept',
             'status_class' => 'purple',
-            'description' => 'An AI-powered concept for analyzing resumes and portfolios and providing career improvement insights.',
+            'description' =>
+                'An AI-powered concept for analyzing resumes and portfolios and providing career improvement insights.',
             'initial' => 'CV AI',
             'gradient' => 'from-purple-950 via-[#111217] to-[#08090D]',
             'accent' => 'purple',
             'tech' => ['AI', 'NLP', 'API'],
+            'image' => 'images/projects/apar&hydrant.png',
         ],
 
         [
@@ -221,11 +328,13 @@
             'category_name' => 'Competition Platform',
             'status' => 'Concept',
             'status_class' => 'purple',
-            'description' => 'A platform for managing competitions, participants, registration, submissions, judging, and results.',
+            'description' =>
+                'A platform for managing competitions, participants, registration, submissions, judging, and results.',
             'initial' => 'COMP',
             'gradient' => 'from-amber-950 via-[#111217] to-[#08090D]',
             'accent' => 'amber',
             'tech' => ['Laravel', 'MySQL', 'JavaScript'],
+            'image' => 'images/projects/apar&hydrant.png',
         ],
 
         [
@@ -234,11 +343,13 @@
             'category_name' => 'Environmental Technology',
             'status' => 'In Development',
             'status_class' => 'blue',
-            'description' => 'A digital waste management system for recording, monitoring, and organizing waste-related data.',
+            'description' =>
+                'A digital waste management system for recording, monitoring, and organizing waste-related data.',
             'initial' => 'WASTE',
             'gradient' => 'from-green-950 via-[#111217] to-[#08090D]',
             'accent' => 'green',
             'tech' => ['PHP', 'MySQL', 'JavaScript'],
+            'image' => 'images/projects/apar&hydrant.png',
         ],
 
         [
@@ -247,11 +358,13 @@
             'category_name' => 'Industrial System',
             'status' => 'In Development',
             'status_class' => 'blue',
-            'description' => 'A system for managing machine inspection schedules, records, findings, and maintenance information.',
+            'description' =>
+                'A system for managing machine inspection schedules, records, findings, and maintenance information.',
             'initial' => 'MACHINE',
             'gradient' => 'from-orange-950 via-[#111217] to-[#08090D]',
             'accent' => 'orange',
             'tech' => ['PHP', 'MySQL', 'JavaScript'],
+            'image' => 'images/projects/apar&hydrant.png',
         ],
 
         [
@@ -260,11 +373,13 @@
             'category_name' => 'Vehicle Management',
             'status' => 'In Development',
             'status_class' => 'blue',
-            'description' => 'A digital system for organizing vehicle documents, expiration dates, records, and administrative information.',
+            'description' =>
+                'A digital system for organizing vehicle documents, expiration dates, records, and administrative information.',
             'initial' => 'VEHICLE',
             'gradient' => 'from-sky-950 via-[#111217] to-[#08090D]',
             'accent' => 'sky',
             'tech' => ['PHP', 'MySQL', 'JavaScript'],
+            'image' => 'images/projects/apar&hydrant.png',
         ],
 
         [
@@ -273,11 +388,13 @@
             'category_name' => 'HR / Attendance',
             'status' => 'In Development',
             'status_class' => 'blue',
-            'description' => 'An employee attendance platform for recording attendance, monitoring schedules, and managing employee records.',
+            'description' =>
+                'An employee attendance platform for recording attendance, monitoring schedules, and managing employee records.',
             'initial' => 'HR',
             'gradient' => 'from-rose-950 via-[#111217] to-[#08090D]',
             'accent' => 'rose',
             'tech' => ['PHP', 'MySQL', 'JavaScript'],
+            'image' => 'images/projects/apar&hydrant.png',
         ],
 
         [
@@ -286,11 +403,13 @@
             'category_name' => 'Safety Management',
             'status' => 'In Development',
             'status_class' => 'blue',
-            'description' => 'A system for managing personal protective equipment distribution, stock records, recipients, and allocation.',
+            'description' =>
+                'A system for managing personal protective equipment distribution, stock records, recipients, and allocation.',
             'initial' => 'PPE',
             'gradient' => 'from-cyan-950 via-[#111217] to-[#08090D]',
             'accent' => 'cyan',
             'tech' => ['PHP', 'MySQL', 'Google Sheets'],
+            'image' => 'images/projects/apar&hydrant.png',
         ],
 
         [
@@ -299,13 +418,14 @@
             'category_name' => 'Digital Library',
             'status' => 'Concept',
             'status_class' => 'purple',
-            'description' => 'A digital library platform for managing books, members, borrowing records, returns, and library resources.',
+            'description' =>
+                'A digital library platform for managing books, members, borrowing records, returns, and library resources.',
             'initial' => 'LIB',
             'gradient' => 'from-indigo-950 via-[#111217] to-[#08090D]',
             'accent' => 'indigo',
             'tech' => ['Laravel', 'MySQL', 'Tailwind CSS'],
+            'image' => 'images/projects/apar&hydrant.png',
         ],
-
     ];
 @endphp
 
@@ -489,7 +609,8 @@
     </style>
 </head>
 
-<body class="light-mode min-h-screen bg-[#f8fafc] text-[#0f172a] antialiased custom-cursor-active transition-colors duration-300">
+<body
+    class="light-mode min-h-screen bg-[#f8fafc] text-[#0f172a] antialiased custom-cursor-active transition-colors duration-300">
 
     <!-- UNIVERSAL CUSTOM CURSOR (Req 9) -->
     <div id="custom-cursor">
@@ -498,40 +619,53 @@
 
     <!-- Background Ambient Glow -->
     <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-        <div class="absolute left-1/2 top-0 h-[500px] w-[700px] -translate-x-1/2 rounded-full bg-blue-500/[0.08] blur-[140px]"></div>
+        <div
+            class="absolute left-1/2 top-0 h-[500px] w-[700px] -translate-x-1/2 rounded-full bg-blue-500/[0.08] blur-[140px]">
+        </div>
     </div>
 
     <!-- Navbar -->
-    <header id="navbar" class="fixed left-0 right-0 top-0 z-50 border-b border-slate-200/80 bg-white/85 backdrop-blur-xl transition-all duration-300 dark:border-white/5 dark:bg-[#08090D]/80">
+    <header id="navbar"
+        class="fixed left-0 right-0 top-0 z-50 border-b border-slate-200/80 bg-white/85 backdrop-blur-xl transition-all duration-300 dark:border-white/5 dark:bg-[#08090D]/80">
         <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-            <a href="/" class="text-xl font-bold tracking-tight text-slate-900 transition hover:opacity-80 dark:text-white">
+            <a href="/"
+                class="text-xl font-bold tracking-tight text-slate-900 transition hover:opacity-80 dark:text-white">
                 Andhika<span class="text-blue-600 dark:text-blue-500">.</span>
             </a>
 
             <div class="flex items-center gap-3">
-                <a href="/" class="hidden rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:text-blue-600 dark:text-gray-400 dark:hover:text-white sm:block">
+                <a href="/"
+                    class="hidden rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:text-blue-600 dark:text-gray-400 dark:hover:text-white sm:block">
                     Home
                 </a>
 
                 <!-- Theme Toggle Button -->
-                <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Toggle theme">
-                    <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="h-5 w-5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.598.748-3.752A9.753 9.753 0 1 0 21.752 15.002Z" />
+                {{-- <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Toggle theme">
+                    <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.8" stroke="currentColor" class="h-5 w-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21.752 15.002A9.718 9.718 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.598.748-3.752A9.753 9.753 0 1 0 21.752 15.002Z" />
                     </svg>
-                </button>
+                </button> --}}
 
-                <a href="/#contact" class="hidden sm:inline-flex rounded-full border border-slate-300 dark:border-white/10 bg-white dark:bg-white/5 px-5 py-2 text-xs font-semibold text-slate-800 dark:text-white shadow-sm transition hover:border-slate-400 hover:bg-slate-50 dark:hover:bg-white/10">
+                <a href="/#contact"
+                    class="hidden sm:inline-flex rounded-full border border-slate-300 dark:border-white/10 bg-white dark:bg-white/5 px-5 py-2 text-xs font-semibold text-slate-800 dark:text-white shadow-sm transition hover:border-slate-400 hover:bg-slate-50 dark:hover:bg-white/10">
                     Contact
                 </a>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 dark:border-white/10 bg-white/80 dark:bg-white/5 text-slate-700 dark:text-white shadow-sm transition hover:border-slate-300 dark:hover:border-white/20 md:hidden" aria-label="Toggle menu" aria-expanded="false">
+                <button id="mobile-menu-button" type="button"
+                    class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 dark:border-white/10 bg-white/80 dark:bg-white/5 text-slate-700 dark:text-white shadow-sm transition hover:border-slate-300 dark:hover:border-white/20 md:hidden"
+                    aria-label="Toggle menu" aria-expanded="false">
                     <!-- Hamburger Icon -->
-                    <svg id="menu-icon-hamburger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    <svg id="menu-icon-hamburger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor" class="h-5 w-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
                     <!-- Close (X) Icon -->
-                    <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5 hidden">
+                    <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor" class="h-5 w-5 hidden">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
@@ -539,14 +673,23 @@
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="mobile-menu-panel border-t border-slate-200 dark:border-white/10 px-6 py-5 md:hidden">
+        <div id="mobile-menu"
+            class="mobile-menu-panel border-t border-slate-200 dark:border-white/10 px-6 py-5 md:hidden">
             <nav class="flex flex-col gap-3">
-                <a href="/" class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Home</a>
-                <a href="/#education" class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Education & Bootcamp</a>
-                <a href="/#skills" class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Skills</a>
-                <a href="/#certificates" class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Certificates</a>
-                <a href="{{ route('projects') }}" class="mobile-link text-sm font-semibold text-blue-600 dark:text-blue-400 transition py-1">All Projects</a>
-                <a href="/#contact" class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Contact</a>
+                <a href="/"
+                    class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Home</a>
+                <a href="/#education"
+                    class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Education
+                    & Bootcamp</a>
+                <a href="/#skills"
+                    class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Skills</a>
+                <a href="/#certificates"
+                    class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Certificates</a>
+                <a href="{{ route('projects') }}"
+                    class="mobile-link text-sm font-semibold text-blue-600 dark:text-blue-400 transition py-1">All
+                    Projects</a>
+                <a href="/#contact"
+                    class="mobile-link text-sm font-semibold text-slate-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition py-1">Contact</a>
             </nav>
         </div>
     </header>
@@ -559,11 +702,13 @@
                     <p class="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600 dark:text-blue-400">
                         Portfolio Collection
                     </p>
-                    <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl">
+                    <h1
+                        class="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl">
                         All Projects
                     </h1>
                     <p class="mt-4 text-base sm:text-lg leading-relaxed text-slate-600 dark:text-gray-400">
-                        A comprehensive archive of software systems, web applications, experiments, and digital solutions I've developed.
+                        A comprehensive archive of software systems, web applications, experiments, and digital
+                        solutions I've developed.
                     </p>
                 </div>
 
@@ -571,45 +716,66 @@
                 <div class="mt-10 flex flex-wrap gap-8 border-t border-slate-200 dark:border-white/5 pt-8">
                     <div>
                         <p class="text-3xl font-extrabold text-blue-600 dark:text-blue-400">{{ count($projects) }}</p>
-                        <p class="mt-1 text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-gray-500">Total Projects</p>
+                        <p
+                            class="mt-1 text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-gray-500">
+                            Total Projects</p>
                     </div>
                     <div>
                         <p class="text-3xl font-extrabold text-indigo-600 dark:text-indigo-400">6+</p>
-                        <p class="mt-1 text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-gray-500">Core Categories</p>
+                        <p
+                            class="mt-1 text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-gray-500">
+                            Core Categories</p>
                     </div>
                     <div>
                         <p class="text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">Laravel</p>
-                        <p class="mt-1 text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-gray-500">Primary Stack</p>
+                        <p
+                            class="mt-1 text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-gray-500">
+                            Primary Stack</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Filter & Search Sticky Bar -->
-        <section class="sticky top-[69px] z-40 border-y border-slate-200 bg-white/90 px-6 py-4 backdrop-blur-xl dark:border-white/5 dark:bg-[#08090D]/90">
+        <section
+            class="sticky top-[69px] z-40 border-y border-slate-200 bg-white/90 px-6 py-4 backdrop-blur-xl dark:border-white/5 dark:bg-[#08090D]/90">
             <div class="mx-auto flex max-w-6xl flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
 
                 <!-- Categories -->
                 <div class="flex gap-2 overflow-x-auto pb-1 scrollbar-none">
-                    <button class="project-filter active-filter shrink-0 rounded-full px-4 py-2 text-xs font-bold transition" data-filter="all">
+                    <button
+                        class="project-filter active-filter shrink-0 rounded-full px-4 py-2 text-xs font-bold transition"
+                        data-filter="all">
                         All ({{ count($projects) }})
                     </button>
-                    <button class="project-filter shrink-0 rounded-full border border-slate-200 dark:border-white/10 px-4 py-2 text-xs font-semibold text-slate-600 dark:text-gray-400 transition hover:border-slate-400 hover:text-slate-900 dark:hover:text-white" data-filter="web">
+                    <button
+                        class="project-filter shrink-0 rounded-full border border-slate-200 dark:border-white/10 px-4 py-2 text-xs font-semibold text-slate-600 dark:text-gray-400 transition hover:border-slate-400 hover:text-slate-900 dark:hover:text-white"
+                        data-filter="web">
                         Web Apps
                     </button>
-                    <button class="project-filter shrink-0 rounded-full border border-slate-200 dark:border-white/10 px-4 py-2 text-xs font-semibold text-slate-600 dark:text-gray-400 transition hover:border-slate-400 hover:text-slate-900 dark:hover:text-white" data-filter="information">
+                    <button
+                        class="project-filter shrink-0 rounded-full border border-slate-200 dark:border-white/10 px-4 py-2 text-xs font-semibold text-slate-600 dark:text-gray-400 transition hover:border-slate-400 hover:text-slate-900 dark:hover:text-white"
+                        data-filter="information">
                         Information Systems
                     </button>
-                    <button class="project-filter shrink-0 rounded-full border border-slate-200 dark:border-white/10 px-4 py-2 text-xs font-semibold text-slate-600 dark:text-gray-400 transition hover:border-slate-400 hover:text-slate-900 dark:hover:text-white" data-filter="ai">
+                    <button
+                        class="project-filter shrink-0 rounded-full border border-slate-200 dark:border-white/10 px-4 py-2 text-xs font-semibold text-slate-600 dark:text-gray-400 transition hover:border-slate-400 hover:text-slate-900 dark:hover:text-white"
+                        data-filter="ai">
                         AI
                     </button>
-                    <button class="project-filter shrink-0 rounded-full border border-slate-200 dark:border-white/10 px-4 py-2 text-xs font-semibold text-slate-600 dark:text-gray-400 transition hover:border-slate-400 hover:text-slate-900 dark:hover:text-white" data-filter="management">
+                    <button
+                        class="project-filter shrink-0 rounded-full border border-slate-200 dark:border-white/10 px-4 py-2 text-xs font-semibold text-slate-600 dark:text-gray-400 transition hover:border-slate-400 hover:text-slate-900 dark:hover:text-white"
+                        data-filter="management">
                         Management
                     </button>
-                    <button class="project-filter shrink-0 rounded-full border border-slate-200 dark:border-white/10 px-4 py-2 text-xs font-semibold text-slate-600 dark:text-gray-400 transition hover:border-slate-400 hover:text-slate-900 dark:hover:text-white" data-filter="smart">
+                    <button
+                        class="project-filter shrink-0 rounded-full border border-slate-200 dark:border-white/10 px-4 py-2 text-xs font-semibold text-slate-600 dark:text-gray-400 transition hover:border-slate-400 hover:text-slate-900 dark:hover:text-white"
+                        data-filter="smart">
                         Smart Systems
                     </button>
-                    <button class="project-filter shrink-0 rounded-full border border-slate-200 dark:border-white/10 px-4 py-2 text-xs font-semibold text-slate-600 dark:text-gray-400 transition hover:border-slate-400 hover:text-slate-900 dark:hover:text-white" data-filter="security">
+                    <button
+                        class="project-filter shrink-0 rounded-full border border-slate-200 dark:border-white/10 px-4 py-2 text-xs font-semibold text-slate-600 dark:text-gray-400 transition hover:border-slate-400 hover:text-slate-900 dark:hover:text-white"
+                        data-filter="security">
                         Security
                     </button>
                 </div>
@@ -627,22 +793,22 @@
         <section class="px-6 py-16">
             <div id="projects-grid" class="mx-auto grid max-w-6xl gap-6 md:grid-cols-2 lg:grid-cols-3">
                 @foreach ($projects as $project)
-                    <article class="project-card group overflow-hidden rounded-3xl border border-slate-200/90 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl dark:border-white/10 dark:bg-white/[0.03]"
-                        data-category="{{ $project['category'] }}"
-                        data-title="{{ strtolower($project['title']) }}">
-                        
+                    <article
+                        class="project-card group overflow-hidden rounded-3xl border border-slate-200/90 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl dark:border-white/10 dark:bg-white/[0.03]"
+                        data-category="{{ $project['category'] }}" data-title="{{ strtolower($project['title']) }}">
+
                         <!-- Card Banner Preview -->
-                        <div class="relative aspect-video overflow-hidden bg-gradient-to-br {{ $project['gradient'] }}">
+                        <div class="relative aspect-video overflow-hidden bg-gradient-to-br">
                             <div class="absolute inset-0 flex items-center justify-center">
-                                <span class="text-3xl font-black tracking-widest text-white/40 group-hover:scale-110 transition-transform duration-500">
-                                    {{ $project['initial'] }}
-                                </span>
+                                <img src="{{ $project['image'] }}" alt="">
                             </div>
 
                             <!-- Status Badge -->
                             <div class="absolute left-4 top-4 z-10">
-                                <span class="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[11px] font-bold backdrop-blur-md border {{ $project['status'] === 'Completed' ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' : ($project['status'] === 'In Development' ? 'bg-blue-500/20 text-blue-300 border-blue-500/30' : 'bg-purple-500/20 text-purple-300 border-purple-500/30') }}">
-                                    <span class="h-1.5 w-1.5 rounded-full {{ $project['status'] === 'Completed' ? 'bg-emerald-400' : ($project['status'] === 'In Development' ? 'bg-blue-400' : 'bg-purple-400') }}"></span>
+                                <span
+                                    class="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[11px] font-bold backdrop-blur-md border {{ $project['status'] === 'Completed' ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' : ($project['status'] === 'In Development' ? 'bg-blue-500/20 text-blue-300 border-blue-500/30' : 'bg-purple-500/20 text-purple-300 border-purple-500/30') }}">
+                                    <span
+                                        class="h-1.5 w-1.5 rounded-full {{ $project['status'] === 'Completed' ? 'bg-emerald-400' : ($project['status'] === 'In Development' ? 'bg-blue-400' : 'bg-purple-400') }}"></span>
                                     <span>{{ $project['status'] }}</span>
                                 </span>
                             </div>
@@ -650,11 +816,13 @@
 
                         <!-- Card Content -->
                         <div class="p-6">
-                            <span class="text-[11px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+                            <span
+                                class="text-[11px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
                                 {{ $project['category_name'] }}
                             </span>
 
-                            <h2 class="mt-2 text-lg font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-1">
+                            <h2
+                                class="mt-2 text-lg font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-1">
                                 {{ $project['title'] }}
                             </h2>
 
@@ -665,15 +833,18 @@
                             <!-- Tech Badges -->
                             <div class="mt-4 flex flex-wrap gap-1.5">
                                 @foreach ($project['tech'] as $t)
-                                    <span class="rounded-md bg-slate-100 dark:bg-white/5 px-2 py-0.5 text-[11px] font-medium text-slate-700 dark:text-gray-300">
+                                    <span
+                                        class="rounded-md bg-slate-100 dark:bg-white/5 px-2 py-0.5 text-[11px] font-medium text-slate-700 dark:text-gray-300">
                                         {{ $t }}
                                     </span>
                                 @endforeach
                             </div>
 
-                            <div class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4">
+                            <div
+                                class="mt-6 flex items-center justify-between border-t border-slate-100 dark:border-white/5 pt-4">
                                 @if (isset($project['slug']))
-                                    <a href="{{ route('projects.show', $project['slug']) }}" class="text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1">
+                                    <a href="{{ route('projects.show', $project['slug']) }}"
+                                        class="text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1">
                                         <span>View Case Study</span>
                                         <span>→</span>
                                     </a>
@@ -692,14 +863,16 @@
             <div id="empty-state" class="hidden mx-auto max-w-md py-16 text-center">
                 <p class="text-3xl">🔍</p>
                 <h3 class="mt-4 text-lg font-bold text-slate-900 dark:text-white">No projects found</h3>
-                <p class="mt-1 text-xs text-slate-500 dark:text-gray-400">Try adjusting your keyword or category filters.</p>
+                <p class="mt-1 text-xs text-slate-500 dark:text-gray-400">Try adjusting your keyword or category
+                    filters.</p>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
     <footer class="border-t border-slate-200 bg-slate-50 px-6 py-12 dark:border-white/5 dark:bg-[#08090D]">
-        <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
+        <div
+            class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
             <div>
                 <p class="text-sm font-bold text-slate-900 dark:text-white">Andhika Pratama</p>
                 <p class="mt-0.5 text-xs text-slate-500 dark:text-gray-400">Web Developer & Information Systems</p>
@@ -901,7 +1074,8 @@
             // Close on click outside navbar
             document.addEventListener('click', (e) => {
                 const navbar = document.getElementById('navbar');
-                if (navbar && !navbar.contains(e.target) && mobileMenu && mobileMenu.classList.contains('open')) {
+                if (navbar && !navbar.contains(e.target) && mobileMenu && mobileMenu.classList.contains(
+                        'open')) {
                     toggleMobileMenu(true);
                 }
             });

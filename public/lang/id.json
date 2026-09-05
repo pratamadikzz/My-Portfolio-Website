@@ -1,0 +1,86 @@
+{
+    "tittle": "Andhika Pratama - Pengembang Web & Sistem Informasi",
+    "nav_about": "Tentang",
+    "nav_education": "Pendidikan",
+    "nav_skills": "Keahlian",
+    "nav_certificates": "Sertifikat",
+    "nav_projects": "Proyek",
+    "nav_journey": "Perjalanan",
+    "nav_experience": "Pengalaman",
+    "nav_contact": "Kontak",
+    "nav_download_cv": "Unduh CV",
+
+    "custom_cursor": "Lihat",
+
+    "available_badge": "Terbuka untuk Peluang",
+    "heading1": "Halo, Saya",
+    "heading2": "Pengembang Web",
+
+    "desc": "Saya membangun aplikasi web modern yang dapat dikembangkan (scalable), mendalami sistem informasi, serta merancang pengalaman digital intuitif yang menjawab tantangan dunia nyata.",
+
+    "cta_projects": "Lihat Proyek Saya",
+    "cta_contact": "Mari Terhubung",
+    "cta_university": "Universitas Gunadarma",
+    "cta_web_dev": "Pengambang Web",
+
+    "float_education_badge": "Sistem Informasi",
+    "float_project_badge": "10+ Proyek yang telah dibangun",
+
+    "currently_building": "Sedang dibangun",
+    "currently_building_project_name": "Sistem Manajemen APAR & HYDRANT",
+    "currently_building_project_desc": "Digitalisasi inspeksi perlindungan kebakaran, pelacakan aset berbasis kode QR, dan pelaporan pemeliharaan ke dalam satu dasbor web terpadu.",
+    "currently_building_project_explore": "Jelajahi Proyek",
+
+    "about_me": "Tentang Saya",
+    "about_me1": "Didorong oleh rasa ingin tahu,",
+    "about_me2": "Belajar & Berkembang.",
+
+    "about_me1_desc": "Saya adalah mahasiswa Sistem Informasi di Universitas Gunadarma yang memiliki minat besar terhadap pengembangan web modern, rekayasa perangkat lunak, dan sistem basis data.",
+    "about_me2_desc": "Saya senang mengembangkan aplikasi web yang bersih, fungsional, dan berorientasi pada pengguna, yang mengubah alur kerja kompleks menjadi antarmuka sederhana dan intuitif. Saya terus mengeksplorasi teknologi baru serta mengembangkan kemampuan saya dalam pengembangan *full-stack* dan perangkat AI.",
+
+    "stats_projects": "Proyek yang telah dibangun",
+    "stats_major": "Sistem Informasi",
+    "stats_active_year": "Pengembang Aktif",
+    "stats_passion": "Hasrat untuk belajar",
+
+    "academic_title": "Akademik & Pelatihan",
+    "edu_title": "Pendidikan &",
+    "boot_title": "Kamp Pelatihan",
+    "edu_boot_desc": "Institusi formal, mitra akademis, dan bootcamp intensif yang terus membentuk landasan teknis saya.",
+
+    "grid_university_badge": "Universitas • S1",
+    "grid_university_name": "Universitas Gunadarma",
+    "grid_university_major": "Sistem Informasi (Information Systems)",
+    "grid_university_desc": "Mempelajari sistem informasi inti, pemrograman, desain basis data, rekayasa perangkat lunak, dan analitik bisnis.",
+    "grid_university_year": "2026 — Saat ini",
+
+    "grid_dicoding_badge": "Tech Academy • Mitra",
+    "grid_dicoding_name": "Dicoding Indonesia",
+    "grid_dicoding_major": "Jalur Pembelajaran AI & Microsoft Fabric",
+    "grid_dicoding_desc": "Bersertifikasi Data Science with Microsoft Fabric dan Artificial Intelligence Fundamentals dari Dicoding Academy.",
+    "grid_dicoding_year": "2025 — Saat ini",
+
+    "grid_hacktiv8_badge": "Bootcamp Intensif • Google AI",
+    "grid_hacktiv8_name": "hacktiv8 Indonesia",
+    "grid_hacktiv8_major": "AI untuk Kesiapan Kerja & Karier",
+    "grid_hacktiv8_desc": "Penguasaan produk AI Google, *prompt engineering*, dan program kesiapan karier untuk industri teknologi modern.",
+    "grid_hacktiv8_year": "2026",
+
+    "grid_rpl_badge": "Sekolah Kejuruan • Yayasan",
+    "grid_rpl_name": "SMKN 1 Gunungputri",
+    "grid_rpl_major": "Rekayasa Perangkat Lunak",
+    "grid_rpl_desc": "Membangun fondasi pemrograman inti dalam algoritma, OOP, basis data, HTML/CSS, dan pengembangan perangkat lunak terstruktur.",
+    "grid_rpl_year": "2022 — 2026",
+
+    "grid_microsoft_badge": "Komputasi Awan & Data • Microsoft",
+    "grid_microsoft_name": "Microsoft Learn",
+    "grid_microsoft_major": "Microsoft Fabric & Sains Data",
+    "grid_microsoft_desc": "Alur kerja data cloud, konsep Lakehouse, analitik Power BI, dan operasi Machine Learning di Microsoft Fabric.",
+    "grid_microsoft_year": "2025",
+
+    "grid_google_badge": "Ekosistem Pengembang",
+    "grid_google_name": "Google untuk Pengembang",
+    "grid_google_major": "AI & Teknologi Web Google",
+    "grid_google_desc": "Menerapkan standar web modern, perangkat pengembang, dan integrasi ekosistem AI Google.",
+    "grid_google_year": "2026"
+}

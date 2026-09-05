@@ -217,11 +217,11 @@
                 </a>
 
                 <!-- Theme Toggle Button -->
-                <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Toggle theme">
+                {{-- <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Toggle theme">
                     <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="h-5 w-5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.598.748-3.752A9.753 9.753 0 1 0 21.752 15.002Z" />
                     </svg>
-                </button>
+                </button> --}}
 
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-button" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 dark:border-white/10 bg-white/80 dark:bg-white/5 text-slate-700 dark:text-white shadow-sm transition hover:border-slate-300 dark:hover:border-white/20 sm:hidden" aria-label="Toggle menu" aria-expanded="false">
@@ -279,6 +279,10 @@
                         <div>
                             <span class="font-semibold text-slate-400 uppercase tracking-wider text-[10px]">Status</span>
                             <p class="mt-0.5 font-bold text-emerald-600 dark:text-emerald-400">{{ $project['status'] ?? 'Completed' }}</p>
+                        </div>
+                        <div>
+                            <span class="font-semibold text-slate-400 uppercase tracking-wider text-[10px]">Link Website</span>
+                            <a href="{{ $project['link'] ?? 'Completed' }}" target="_BLANK"><p class="mt-0.5 font-bold text-emerald-600 dark:text-emerald-400 underline">{{ $project['link'] ?? 'Visit Site' }}</p></a>
                         </div>
                     </div>
 
