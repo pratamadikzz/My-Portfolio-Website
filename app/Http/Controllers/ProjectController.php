@@ -8,7 +8,7 @@ class ProjectController extends Controller
 {
     public function index()
     {
-        return view('projects.index');
+        return view('projects');
     }
 
     public function show($slug)
@@ -208,7 +208,7 @@ class ProjectController extends Controller
                 'screenshots' => [],
             ],
 
-             'limbah' => [
+            'limbah' => [
                 'title' => 'Pengelolaan Limbah',
                 'category' => 'Web Application',
                 'description' => 'A financial management application designed to organize, record, and monitor personal financial activity.',
@@ -707,6 +707,5 @@ class ProjectController extends Controller
         $project['slug'] = $slug;
 
         return view('projects.show', compact('project'));
-
     }
 }

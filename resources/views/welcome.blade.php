@@ -4,15 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-        content="Andhika Pratama — Web Developer and Information Systems Student. Explore my projects, skills, education, experience, and technology journey.">
-
-    <title data-i18n="title">Andhika Pratama — Web Developer & Information Systems</title>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- Theme toggle disabled: this portfolio is light-mode only. -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <script>
         (function() {
             try {
@@ -288,7 +282,7 @@
         #toast-container {
             position: fixed;
             right: 24px;
-            bottom: 24px;
+            top: 24px;
             z-index: 100000;
             display: flex;
             flex-direction: column;
@@ -311,6 +305,7 @@
             font-size: 13px;
             font-weight: 500;
             animation: toastIn 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            will-change: transform, opacity;
         }
 
         body:not(.light-mode) .toast {
@@ -327,24 +322,36 @@
         @keyframes toastIn {
             from {
                 opacity: 0;
-                transform: translateY(15px) scale(0.95);
+                transform: translateX(40px) scale(0.95);
             }
 
             to {
                 opacity: 1;
-                transform: translateY(0) scale(1);
+                transform: translateX(0) scale(1);
             }
         }
 
         @keyframes toastOut {
             from {
                 opacity: 1;
-                transform: translateY(0) scale(1);
+                transform: translateX(0) scale(1);
             }
 
             to {
                 opacity: 0;
-                transform: translateY(15px) scale(0.95);
+                transform: translateX(40px) scale(0.95);
+            }
+        }
+
+        @media (max-width: 640px) {
+            #toast-container {
+                right: 16px;
+                left: 16px;
+                top: 16px;
+            }
+
+            .toast {
+                min-width: 0;
             }
         }
 
@@ -1034,10 +1041,11 @@
 
                 </div>
 
+                
                 <!-- Right Column: Profile Photo with Brush Background Effect (Req 8) -->
                 <div class="reveal stagger-2 flex justify-center lg:col-span-5 lg:justify-end">
                     <div class="hero-photo-wrapper relative flex items-center justify-center">
-
+                        <div></div>
                         <!-- Artistic Multi-layer Organic Brush Stroke SVG -->
                         <div
                             class="hero-brush-backdrop absolute inset-0 -m-10 pointer-events-none flex items-center justify-center">
@@ -1205,7 +1213,9 @@
                 <div class="grid grid-cols-2 gap-4 sm:gap-6">
                     <div
                         class="reveal stagger-1 rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-6 shadow-sm">
-                        <p class="text-3xl font-extrabold text-blue-600 dark:text-blue-400">10+</p>
+                        <p class="text-3xl font-extrabold text-blue-600 dark:text-blue-400">
+                            <span id="react-project-counter" data-target="10"></span>
+                        </p>
                         <p class="mt-2 text-sm font-medium text-slate-600 dark:text-gray-400"
                             data-i18n="stats_projects">Projects Built</p>
                     </div>
@@ -1990,7 +2000,7 @@
                             class="open-cert-modal inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition"
                             data-cert-index="0">
                             <span>View Certificate</span>
-                            <span class="text-sm">🔍</span>
+                            <i class="fa-solid fa-search"></i>
                         </button>
                     </div>
                 </div>
@@ -2035,7 +2045,7 @@
                             class="open-cert-modal inline-flex items-center gap-1.5 text-xs font-bold text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition"
                             data-cert-index="1">
                             <span>View Certificate</span>
-                            <span class="text-sm">🔍</span>
+                            <i class="fa-solid fa-search"></i>
                         </button>
                     </div>
                 </div>
@@ -2081,7 +2091,7 @@
                             class="open-cert-modal inline-flex items-center gap-1.5 text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition"
                             data-cert-index="2">
                             <span>View Certificate</span>
-                            <span class="text-sm">🔍</span>
+                            <i class="fa-solid fa-search"></i>
                         </button>
                     </div>
                 </div>
@@ -2127,7 +2137,7 @@
                             class="open-cert-modal inline-flex items-center gap-1.5 text-xs font-bold text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition"
                             data-cert-index="3">
                             <span>View Certificate</span>
-                            <span class="text-sm">🔍</span>
+                            <i class="fa-solid fa-search"></i>
                         </button>
                     </div>
                 </div>
@@ -2588,14 +2598,7 @@
             </div>
 
             <div class="mt-10 flex justify-center">
-                <button id="load-more-projects" type="button"
-                    class="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-800 shadow-sm transition hover:border-blue-500 hover:text-blue-600">
-                    <span>Load More Projects</span>
-                    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 5v14m-7-7 7 7 7-7" />
-                    </svg>
-                </button>
+                <div id="react-project-loader" data-projects-url="{{ route('projects') }}"></div>
             </div>
 
         </div>
@@ -2802,14 +2805,19 @@
                 <!-- Right Column: Interactive Contact Form -->
                 <div
                     class="reveal stagger-1 rounded-3xl border border-slate-200/90 dark:border-white/10 bg-white dark:bg-white/[0.03] p-8 shadow-sm backdrop-blur-xl">
-                    <form
-                        onsubmit="event.preventDefault(); showToast('✨ Message received! Thanks for reaching out.'); this.reset();"
-                        class="space-y-5">
+                    @if ($errors->any())
+                        <div class="mb-5 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                            {{ $errors->first() }}
+                        </div>
+                    @endif
+
+                    <form action="{{ route('contact.send') }}" method="POST" class="space-y-5">
+                        @csrf
                         <div>
                             <label
                                 class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-gray-300">Your
                                 Name</label>
-                            <input type="text" required placeholder="John Doe"
+                            <input type="text" name="name" value="{{ old('name') }}" required placeholder="John Doe"
                                 class="mt-2 w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/5 px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 outline-none transition focus:border-blue-500 focus:bg-white dark:focus:bg-white/10">
                         </div>
 
@@ -2817,14 +2825,14 @@
                             <label
                                 class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-gray-300">Your
                                 Email</label>
-                            <input type="email" required placeholder="john@example.com"
+                            <input type="email" name="email" value="{{ old('email') }}" required placeholder="john@example.com"
                                 class="mt-2 w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/5 px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 outline-none transition focus:border-blue-500 focus:bg-white dark:focus:bg-white/10">
                         </div>
 
                         <div>
                             <label
                                 class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-gray-300">Message</label>
-                            <textarea rows="4" required placeholder="Tell me about your project or inquiry..."
+                            <textarea rows="4" name="message" required placeholder="Tell me about your project or inquiry..."
                                 class="mt-2 w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/5 px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 outline-none transition focus:border-blue-500 focus:bg-white dark:focus:bg-white/10"></textarea>
                         </div>
 
@@ -3340,73 +3348,63 @@
 
 
             /* =====================================================
-                            THEME TOGGLE & PERSISTENCE DISABLED (LIGHT MODE ONLY)
-                        =====================================================
-                    const themeToggle = document.getElementById('theme-toggle');
-                    const themeIcon = document.getElementById('theme-icon');
+                                THEME TOGGLE & PERSISTENCE DISABLED (LIGHT MODE ONLY)
+                            =====================================================
+                        const themeToggle = document.getElementById('theme-toggle');
+                        const themeIcon = document.getElementById('theme-icon');
 
-                    function applyTheme(theme) {
-                        if (theme === 'dark') {
-                            document.documentElement.classList.add('dark-mode');
-                            document.documentElement.classList.remove('light-mode');
-                            document.body.classList.add('dark-mode');
-                            document.body.classList.remove('light-mode');
-                        } else {
-                            document.documentElement.classList.add('light-mode');
-                            document.documentElement.classList.remove('dark-mode');
-                            document.body.classList.add('light-mode');
-                            document.body.classList.remove('dark-mode');
+                        function applyTheme(theme) {
+                            if (theme === 'dark') {
+                                document.documentElement.classList.add('dark-mode');
+                                document.documentElement.classList.remove('light-mode');
+                                document.body.classList.add('dark-mode');
+                                document.body.classList.remove('light-mode');
+                            } else {
+                                document.documentElement.classList.add('light-mode');
+                                document.documentElement.classList.remove('dark-mode');
+                                document.body.classList.add('light-mode');
+                                document.body.classList.remove('dark-mode');
+                            }
+                            updateThemeIcon();
                         }
-                        updateThemeIcon();
-                    }
 
-                    function updateThemeIcon() {
-                        if (!themeIcon) return;
-                        const isDark = document.body.classList.contains('dark-mode');
+                        function updateThemeIcon() {
+                            if (!themeIcon) return;
+                            const isDark = document.body.classList.contains('dark-mode');
 
-                        if (isDark) {
-                            // Sun icon (click to switch to light)
-                            themeIcon.innerHTML = `
+                            if (isDark) {
+                                // Sun icon (click to switch to light)
+                                themeIcon.innerHTML = `
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1.5m0 15V21m9-9h-1.5M4.5 12H3m15.364-6.364-1.06 1.06M6.697 17.303l-1.06 1.061m12.728 0-1.06-1.061M6.697 6.697l-1.06-1.06M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Z" />
         `;
-                        } else {
-                            // Moon icon (click to switch to dark)
-                            themeIcon.innerHTML = `
+                            } else {
+                                // Moon icon (click to switch to dark)
+                                themeIcon.innerHTML = `
             <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.598.748-3.752A9.753 9.753 0 1 0 21.752 15.002Z" />
         `;
+                            }
                         }
-                    }
 
-                    const savedTheme = localStorage.getItem('portfolio-theme') || 'light';
-                    applyTheme(savedTheme);
+                        const savedTheme = localStorage.getItem('portfolio-theme') || 'light';
+                        applyTheme(savedTheme);
 
-                    if (themeToggle) {
-                        themeToggle.addEventListener('click', () => {
-                            const isCurrentlyDark = document.body.classList.contains('dark-mode');
-                            const nextTheme = isCurrentlyDark ? 'light' : 'dark';
+                        if (themeToggle) {
+                            themeToggle.addEventListener('click', () => {
+                                const isCurrentlyDark = document.body.classList.contains('dark-mode');
+                                const nextTheme = isCurrentlyDark ? 'light' : 'dark';
 
-                            localStorage.setItem('portfolio-theme', nextTheme);
-                            applyTheme(nextTheme);
+                                localStorage.setItem('portfolio-theme', nextTheme);
+                                applyTheme(nextTheme);
 
-                            showToast(
-                                nextTheme === 'dark' ? '🌙 Dark mode activated' : '☀️ Light mode activated',
-                                'info'
-                            );
-                        });
-                    }
+                                showToast(
+                                    nextTheme === 'dark' ? '🌙 Dark mode activated' : '☀️ Light mode activated',
+                                    'info'
+                                );
+                            });
+                        }
 
 
-                    */
-
-            const loadMoreButton = document.getElementById('load-more-projects');
-            if (loadMoreButton) {
-                loadMoreButton.addEventListener('click', () => {
-                    document.querySelectorAll('.load-more-project').forEach(card => {
-                        card.classList.add('is-visible');
-                    });
-                    loadMoreButton.remove();
-                });
-            }
+                        */
 
             const communityLogoRow = document.getElementById('community-logo-row');
             if (communityLogoRow) {
@@ -3700,6 +3698,8 @@
 
             const toast = document.createElement('div');
             toast.className = `toast toast-${type}`;
+            toast.setAttribute('role', 'status');
+            toast.setAttribute('aria-live', 'polite');
             toast.innerHTML = `
                 <span>${message}</span>
             `;
@@ -3710,6 +3710,12 @@
                 setTimeout(() => toast.remove(), 320);
             }, 2600);
         }
+
+        @if (session('contact_success'))
+            document.addEventListener('DOMContentLoaded', () => {
+                showToast(@json(session('contact_success')));
+            });
+        @endif
 
 
 
